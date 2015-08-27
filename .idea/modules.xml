@@ -3,8 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AndroidTest.iml" filepath="$PROJECT_DIR$/AndroidTest.iml" />
-      <module fileurl="file://$PROJECT_DIR$/androidlibrary/androidlibrary.iml" filepath="$PROJECT_DIR$/androidlibrary/androidlibrary.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app_android.iml" filepath="$PROJECT_DIR$/app/app_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/androidlibrary/lib_android.iml" filepath="$PROJECT_DIR$/androidlibrary/lib_android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javalib/lib_java.iml" filepath="$PROJECT_DIR$/javalib/lib_java.iml" />
     </modules>
   </component>
 </project>
