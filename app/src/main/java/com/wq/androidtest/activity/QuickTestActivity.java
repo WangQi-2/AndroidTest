@@ -6,9 +6,10 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.wq.androidlibrary.activity.BaseActivity;
 import com.wq.androidtest.R;
 
-public class QuickTestActivity extends Activity {
+public class QuickTestActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -10,13 +10,14 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.ListAdapter;
 
+import com.wq.androidlibrary.activity.BaseActivity;
 import com.wq.androidtest.R;
 import com.wq.androidtest.model.DemoEntryModel;
 import com.wq.androidtest.adapter.DemoEntryAdapter;
 
 import java.util.ArrayList;
 
-public class DemoTableActivity extends Activity {
+public class DemoTableActivity extends BaseActivity {
 
     GridView mDemoEntrys;
     DemoEntryAdapter mAdapter;
