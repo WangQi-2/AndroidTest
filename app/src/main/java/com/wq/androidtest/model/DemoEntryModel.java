@@ -8,11 +8,11 @@ import android.app.Activity;
 public class DemoEntryModel {
 
     private String des;
-    private Activity activity;
+    private Class clazz;
 
-    public DemoEntryModel(String des, Activity activity) {
+    public DemoEntryModel(String des, Class clazz) {
         this.des = des;
-        this.activity = activity;
+        this.clazz = clazz;
     }
 
     public String getDes() {
@@ -23,11 +23,11 @@ public class DemoEntryModel {
         this.des = des;
     }
 
-    public Activity getActivity() {
-        return activity;
+    public Class getClazz() {
+        return clazz;
     }
 
-    public void setActivity(Activity activity) {
-        this.activity = activity;
+    public void setClazz(Class clazz) {
+        this.clazz = clazz;
     }
 }

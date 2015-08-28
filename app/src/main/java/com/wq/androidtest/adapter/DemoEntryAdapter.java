@@ -47,21 +47,21 @@ public final class DemoEntryAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        ViewHolder holder;
+        TextView holder;
         if (convertView == null) {
             convertView = new TextView(mContext);
-            holder = new ViewHolder();
-            convertView.setTag(holder);
+            convertView.setTag(convertView);
+            holder = (TextView) convertView;
         } else {
-            holder = (ViewHolder) convertView.getTag();
+            holder = (TextView) convertView.getTag();
         }
-        holder.textView.setText(demoEntryModels.get(position).getDes());
+        holder.setText(demoEntryModels.get(position).getDes());
         return convertView;
     }
 
-    private class ViewHolder {
-        TextView textView;
-    }
+//    public static class ViewHolder {
+//        TextView textView;
+//    }
 
     public ArrayList<DemoEntryModel> getDemoEntryModels() {
         return demoEntryModels;
