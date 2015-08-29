@@ -45,6 +45,7 @@ public class DemoTableActivity extends BaseActivity {
     private void initData() {
         demoEntryModels = new ArrayList<>();
         demoEntryModels.add(new DemoEntryModel("快速入口", QuickTestActivity.class));
+        demoEntryModels.add(new DemoEntryModel("test focused", FocusTesetActivity.class));
     }
 
 

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 纯色 -->
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+    <color name="green">#FF00FF00</color>
+    <color name="yellow">#FFFFFF00</color>
+    <color name="blue">#FF0000FF</color>
+    <color name="red">#FFFF0000</color>
+
+    <!-- 透明色 -->
+    <color name="white_80transparent">#cdFFFFFF</color>
+    <color name="white_70transparent">#b2FFFFFF</color>
+    <color name="white_60transparent">#98FFFFFF</color>
+    <color name="white_50transparent">#80FFFFFF</color>
+    <color name="white_40transparent">#66FFFFFF</color>
+    <color name="white_30transparent">#4cFFFFFF</color>
+    <color name="white_20transparent">#33FFFFFF</color>
+
+    <color name="blcak_60transparent">#98000000</color>
+    <color name="blcak_30transparent">#48000000</color>
+    <color name="blcak_20transparent">#33000000</color>
+
+</resources>
