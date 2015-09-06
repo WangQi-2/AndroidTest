@@ -14,7 +14,7 @@ import java.security.Key;
  * Created by qiwang on 2015/8/29.
  * view可以取得它上下左右的focusedview，也可以重新设置
  */
-public class FocusTesetActivity extends BaseActivity{
+public class FocusTesetActivity extends BaseActivity {
 
     Button btn;
     Button button;
@@ -40,7 +40,8 @@ public class FocusTesetActivity extends BaseActivity{
         button6 = (Button) findViewById(R.id.button6);
         button7 = (Button) findViewById(R.id.button7);
         button8 = (Button) findViewById(R.id.button8);
-
+        //把view的next设置为自身,参数需要指定为它自己，指定为-1是没用的
+//        button8.setNextFocusForwardId(R.id.button8);
 
 
     }
