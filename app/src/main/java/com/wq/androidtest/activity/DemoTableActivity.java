@@ -46,6 +46,7 @@ public class DemoTableActivity extends BaseActivity {
         demoEntryModels = new ArrayList<>();
         demoEntryModels.add(new DemoEntryModel("快速入口", QuickTestActivity.class));
         demoEntryModels.add(new DemoEntryModel("test focused", FocusTesetActivity.class));
+        demoEntryModels.add(new DemoEntryModel("show ip", ShowIPActivity.class));
     }
 
 
