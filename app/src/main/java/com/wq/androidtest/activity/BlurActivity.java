@@ -8,6 +8,7 @@ import android.widget.Button;
 
 /**
  * Created by qiwang on 2015/9/6.
+ * TODO try two kind blur method:fastblur and renderscript
  */
 public class BlurActivity extends BaseActivity{
     @Override
