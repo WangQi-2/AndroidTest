@@ -27,6 +27,11 @@
         <activity android:name=".activity.QuickTestActivity"/>
         <activity android:name=".activity.FocusTesetActivity"/>
         <activity android:name=".activity.ShowIPActivity"/>
+        <activity android:name=".activity.EventBusDemoActivity"/>
+        <activity android:name=".activity.UpdateApkActivity"/>
+        <activity android:name=".activity.RatingActivity"/>
+        <activity android:name=".activity.ProgressButtonActivity"/>
+        <activity android:name=".activity.CircleProgressActivity"/>
+        <activity android:name=".activity.TextActivity"/>
     </application>
-
 </manifest>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CircleProgressBar">
+        <attr name="circle_radius" format="dimension|reference" />
+        <attr name="circle_border_width" format="dimension|reference" />
+        <attr name="circle_color" format="color|reference" />
+        <attr name="circle_alpha" format="integer|reference" />
+        <attr name="circle_start_angle" format="integer|reference" />
+        <attr name="centre_offset_x" format="dimension|reference" />
+        <attr name="centre_offset_y" format="dimension|reference" />
+        <attr name="circle_progress" format="integer|reference" />
+        <attr name="circle_draw_outter" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="ProgressBarButton">
+        <attr name="progress" format="integer|reference" />
+        <attr name="background_color" format="color|reference" />
+        <attr name="line_color_1" format="color|reference" />
+        <attr name="line_color_2" format="color|reference" />
+        <attr name="line_width" format="integer|reference" />
+        <attr name="border_color_focused" format="color|reference" />
+        <attr name="border_color_unfocused" format="color|reference" />
+        <attr name="border_width_focused" format="integer|reference" />
+        <attr name="border_width_unfocused" format="integer|reference" />
+        <attr name="text_color_focused" format="color|reference" />
+        <attr name="text_color_unfocused" format="color|reference" />
+        <attr name="shadow_width" format="dimension|reference" />
+    </declare-styleable>
+    <declare-styleable name="TvRatingBar">
+        <attr name="drawable_foreground" format="reference" />
+        <attr name="drawable_background" format="reference" />
+        <attr name="drawable_spacing" format="dimension|reference" />
+        <attr name="drawable_count" format="integer|reference" />
+        <attr name="drawable_max_progress" format="integer|reference" />
+        <attr name="drawable_cur_progress" format="integer|reference" />
+    </declare-styleable>
+
+</resources>

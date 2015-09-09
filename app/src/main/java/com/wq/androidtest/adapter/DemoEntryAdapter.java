@@ -54,6 +54,7 @@ public final class DemoEntryAdapter extends BaseAdapter {
         TextView holder;
         if (convertView == null) {
             TextView textView = new TextView(mContext);
+            textView.setFocusable(true);
             textView.setTextSize(25);
             textView.setGravity(Gravity.CENTER);
             textView.setPadding(5, 5, 5, 5);

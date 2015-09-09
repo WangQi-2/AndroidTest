@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="transparent">#00000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="white_80transparent">#cdFFFFFF</color>
+    <color name="white_70transparent">#b2FFFFFF</color>
+    <color name="white_60transparent">#98FFFFFF</color>
+    <color name="white_50transparent">#80FFFFFF</color>
+    <color name="white_40transparent">#66FFFFFF</color>
+    <color name="white_30transparent">#4cFFFFFF</color>
+    <color name="white_20transparent">#33FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="black_30transparent">#48000000</color>
+    <color name="black_20transparent">#33000000</color>
+    <color name="black_60transparent">#98000000</color>
+    <color name="black_85transparent">#d8000000</color>
+    <color name="orange_dark">#FF8C00</color>
+    <color name="gray">#8d9cab</color>
+    <color name="red">#FF0000</color>
+    <color name="darkblue">#4169E1</color>
+    <color name="hint_text">#b4c8d5</color>
+    <color name="hint_button_text">#969696</color>
+    <color name="home_category_unselect_text">#8cb4e6</color>
+    <color name="home_app_text_hint">#A9A9A9</color>
+    <color name="local_app_unselect_text">#480d0d0d</color>
+    <color name="local_app_tab_text">#68b4c4ff</color>
+    <color name="category_app_name_text">#7B8285</color>
+    <color name="appname_text">#ff383838</color>
+    <color name="version_feature_text">#7B8285</color>
+    <color name="version_text">#EB8310</color>
+
+    <!-- dialog text color -->
+    <color name="dialog_app_name_text">#383838</color>
+    <color name="dialog_app_version">#EB8310</color>
+    <color name="dialog_text">#7B8285</color>
+    <color name="dialog_app_info">#8D9CAB</color>
+    <color name="dialog_button_text">#98FFFFFF</color>
+    <color name="prompt_dialog_background">#DD8A9EB9</color>
+    <color name="dialog_background">#C8000000</color>
+    <color name="search_bg_color">#e8000000</color>
+    <color name="dialog_button_top_h_divider_color">#7f515256</color>
+    <color name="metro_item_title_bg_color_1">#417155</color>
+    <color name="metro_item_title_bg_color_2">#2c5775</color>
+    <color name="metro_item_title_bg_color_3">#454c4f</color>
+    <color name="metro_item_title_bg_color_4">#6c484c</color>
+    <color name="metro_item_title_bg_color_5">#4f3c46</color>
+    <color name="metro_item_title_bg_color_6">#9c8341</color>
+    <color name="metro_item_title_bg_color_7">#364051</color>
+    <color name="installi_waiting_text_color">#31b6eb</color>
+
+    <!-- metro_item text color -->
+    <color name="metro_item_title_bg_color_green">#66b89a</color>
+    <color name="metro_item_title_bg_color_gray">#37373d</color>
+    <color name="metro_item_title_bg_color_purple">#7a61b2</color>
+    <color name="metro_item_title_bg_color_red">#d9334b</color>
+    <color name="metro_item_title_bg_color_white">#dcdcdc</color>
+    <color name="metro_item_bg_color_green">#4c9e80</color>
+    <color name="metro_item_bg_color_gray">#2f2f34</color>
+    <color name="metro_item_bg_color_purple">#6a50a7</color>
+    <color name="metro_item_bg_color_red">#bf263b</color>
+    <color name="metro_item_bg_color_white">#bebebe</color>
+
+    <!-- btn color -->
+    <color name="btn_border_color_focused">#00B0FF</color>
+    <color name="btn_border_color_unfocused">#B2888888</color>
+
+    <color name="btn_bg_color">#851E1E1E</color>
+    <color name="btn_progress_color_one">#1A71E8</color>
+    <color name="btn_progress_color_two">#2282ED</color>
+    <color name="btn_text_color_focused">#FFFFFF</color>
+    <color name="btn_text_color_unfocused">#22FFFFFF</color>
+
+    <!-- appDateil color -->
+    <color name="app_info_bg">#37373d</color>
+    <color name="app_left_bg">#4c9e80</color>
+    <color name="app_detail_btn_bg">#08f0f0f0</color>
+
+</resources>
