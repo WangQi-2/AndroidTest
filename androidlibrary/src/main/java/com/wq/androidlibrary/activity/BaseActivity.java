@@ -7,7 +7,7 @@ import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.Window;
 
-import com.wq.androidlibrary.manager.ActivityManager;
+import com.wq.androidlibrary.manager.ActivityUtil;
 
 /**
  * Created by qiwang on 2015/8/27.
@@ -28,12 +28,12 @@ public abstract class BaseActivity extends Activity {
         mApp = getApplication();
         mCtx = this;
         mRes = getResources();
-        ActivityManager.getInstance().addActivity(this);
+        ActivityUtil.getInstance().addActivity(this);
     }
 
     @Override
     public void finish() {
         super.finish();
-        ActivityManager.getInstance().addActivity(this);
+        ActivityUtil.getInstance().addActivity(this);
     }
 }

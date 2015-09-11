@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import com.wq.androidlibrary.activity.BaseActivity;
-import com.wq.androidlibrary.util.NetWordUtil;
+import com.wq.androidtest.util.NetWordUtil;
 
 /**
  * Created by wangqi on 15/9/7.

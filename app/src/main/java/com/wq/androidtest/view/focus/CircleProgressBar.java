@@ -16,6 +16,7 @@ import com.wq.androidtest.R;
 
 
 /**
+ * TODO bug中间的是不透明的
  */
 public class CircleProgressBar extends View {
     
@@ -100,13 +101,12 @@ public class CircleProgressBar extends View {
         if (isDrawOutter) {
             drawOutter(canvas);
         }
-        
+
         drawProgressCircle(canvas);
-        
     }
     
     private void drawOutter(Canvas canvas) {
-        
+
         Bitmap target = Bitmap.createBitmap(mViewWidth, mViewHeight,
                 Bitmap.Config.ARGB_8888);
         
@@ -115,8 +115,7 @@ public class CircleProgressBar extends View {
         mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.DST_OUT));
         outterCanvas.drawCircle(mViewWidth / 2, mViewHeight / 2, mCircleRadius
                 + mBorderWidth, mPaint);
-        mPaint.reset();
-        mPaint.setAntiAlias(true);
+        mPaint.setXfermode(null);
         canvas.drawBitmap(target, 0, 0, mPaint);
     }
     

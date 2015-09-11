@@ -10,17 +10,17 @@ import java.util.List;
  * activity管理类，退出app时，先退出所有activity
  * 单例模式
  */
-public class ActivityManager {
+public class ActivityUtil {
     private List<Activity> mActivites;
-    private static ActivityManager mInstance;
+    private static ActivityUtil mInstance;
 
-    private ActivityManager() {
+    private ActivityUtil() {
         mActivites = new ArrayList<>();
     }
 
-    public static ActivityManager getInstance() {
+    public static ActivityUtil getInstance() {
         if (mInstance == null) {
-            mInstance = new ActivityManager();
+            mInstance = new ActivityUtil();
         }
         return mInstance;
     }

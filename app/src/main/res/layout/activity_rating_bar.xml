@@ -1,22 +1,21 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
     tools:context=".DemoTableActivity">
 
-    <com.wq.androidtest.view.focus.TvRatingBar
+    <com.wq.androidtest.view.focus.RatingProgress
+        android:id="@+id/ratingbar"
         android:layout_width="wrap_content"
-        android:background="@color/gray"
         android:layout_height="wrap_content"
+        android:background="@color/gray"
         app:drawable_background="@drawable/star_white"
-        app:drawable_foreground="@drawable/star_yellow"
         app:drawable_count="5"
+        app:drawable_foreground="@drawable/star_yellow"
         app:drawable_max_progress="10"
-        app:drawable_cur_progress="7"
-        app:drawable_spacing="10px"
-        />
+        app:drawable_spacing="10px" />
 
 
 </LinearLayout>

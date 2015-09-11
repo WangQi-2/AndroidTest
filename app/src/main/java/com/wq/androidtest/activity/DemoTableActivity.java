@@ -1,21 +1,18 @@
 package com.wq.androidtest.activity;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Adapter;
 import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.ListAdapter;
+import android.widget.Toast;
 
 import com.wq.androidlibrary.activity.BaseActivity;
 import com.wq.androidtest.R;
-import com.wq.androidtest.model.DemoEntryModel;
 import com.wq.androidtest.adapter.DemoEntryAdapter;
-import com.wq.androidtest.view.focus.CircleProgressBar;
+import com.wq.androidtest.model.DemoEntryModel;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 public class DemoTableActivity extends BaseActivity {
@@ -32,16 +29,13 @@ public class DemoTableActivity extends BaseActivity {
         setContentView(R.layout.activity_demo_table);
         mDemoEntrys = (GridView) findViewById(R.id.gv_demo_entry);
         Intent intent = getIntent();
-        if(intent == null)
-        {
+        if (intent == null) {
             initData();
+        } else {
+            demoEntryModels = (ArrayList<DemoEntryModel>) intent.getSerializableExtra(FUNC_MODELS);
         }
-        else {
-           demoEntryModels = (ArrayList<DemoEntryModel>) intent.getSerializableExtra(FUNC_MODELS);
-        }
-        if(demoEntryModels == null)
-        {
-           initData();
+        if (demoEntryModels == null) {
+            initData();
         }
         mAdapter = new DemoEntryAdapter(this, demoEntryModels);
         mDemoEntrys.setAdapter(mAdapter);
@@ -49,7 +43,13 @@ public class DemoTableActivity extends BaseActivity {
         mDemoEntrys.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent i = new Intent(DemoTableActivity.this, demoEntryModels.get(position).getClazz());
+                Intent i = null;
+                if (demoEntryModels.get(position).getChilds() != null) {
+                    i = new Intent(DemoTableActivity.this, DemoTableActivity.class);
+                    i.putExtra(FUNC_MODELS, (Serializable) demoEntryModels.get(position).getChilds());
+                } else {
+                    i = new Intent(DemoTableActivity.this, demoEntryModels.get(position).getClazz());
+                }
                 startActivity(i);
             }
         });
@@ -58,15 +58,21 @@ public class DemoTableActivity extends BaseActivity {
 
     private void initData() {
         demoEntryModels = new ArrayList<>();
-        demoEntryModels.add(new DemoEntryModel("快速入口", QuickTestActivity.class));
+        demoEntryModels.add(new DemoEntryModel("快速入口", RatingActivity.class));
         demoEntryModels.add(new DemoEntryModel("test focused", FocusTesetActivity.class));
         demoEntryModels.add(new DemoEntryModel("show ip", ShowIPActivity.class));
         demoEntryModels.add(new DemoEntryModel("eventbus", EventBusDemoActivity.class));
         demoEntryModels.add(new DemoEntryModel("update", UpdateApkActivity.class));
-        demoEntryModels.add(new DemoEntryModel("ratingbar", RatingActivity.class));
-        demoEntryModels.add(new DemoEntryModel("progressbutton", ProgressButtonActivity.class));
-        demoEntryModels.add(new DemoEntryModel("circleprogress", CircleProgressActivity.class));
         demoEntryModels.add(new DemoEntryModel("textstyle", TextActivity.class));
+        demoEntryModels.add(new DemoEntryModel("mListView height", ListViewHeightAcitvity.class));
+
+        //custom view
+        ArrayList<DemoEntryModel> list = new ArrayList<>();
+        list.add(new DemoEntryModel("ratingbar", RatingActivity.class));
+        list.add(new DemoEntryModel("progressbutton", ProgressButtonActivity.class));
+        list.add(new DemoEntryModel("circleprogress", CircleProgressActivity.class));
+        DemoEntryModel customModel = new DemoEntryModel("custom views", null, list);
+        demoEntryModels.add(customModel);
     }
 
 

@@ -1,4 +1,4 @@
-package com.wq.androidlibrary.util;
+package com.wq.androidtest.util;
 
 import android.text.TextUtils;
 

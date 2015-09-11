@@ -1,15 +1,19 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="horizontal"
+    android:background="@drawable/bg4"
+    android:gravity="center"
     tools:context=".DemoTableActivity">
+
 
     <com.wq.androidtest.view.focus.CircleProgressBar
         android:id="@+id/probar"
-        android:layout_width="400px"
-        app:circle_progress="55"
-        android:layout_height="400px" />
+        android:layout_width="match_parent"
+        app:circle_alpha="70"
+        app:circle_draw_outter="true"
+        app:circle_border_width="10px"
+        android:layout_height="match_parent" />
 
-</LinearLayout>
+</FrameLayout>

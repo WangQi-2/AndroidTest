@@ -13,6 +13,7 @@ import android.widget.BaseAdapter;
 import android.widget.Button;
 import android.widget.ListAdapter;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.wq.androidtest.R;
 import com.wq.androidtest.model.DemoEntryModel;
@@ -54,12 +55,14 @@ public final class DemoEntryAdapter extends BaseAdapter {
         TextView holder;
         if (convertView == null) {
             TextView textView = new TextView(mContext);
-            textView.setFocusable(true);
-            textView.setTextSize(25);
+            //TODO 这里true会影响item的点击事件,结合tv开发我或许可以知道为什么
+            textView.setFocusable(false);
+            textView.setTextSize(20);
+            textView.setClickable(false);
             textView.setGravity(Gravity.CENTER);
-            textView.setPadding(5, 5, 5, 5);
             textView.setTag(textView);
             textView.setBackgroundResource(R.drawable.bg_border);
+            textView.setPadding(0, 50, 0, 50);
             textView.setTextColor(Color.RED);
             holder = textView;
         } else {
