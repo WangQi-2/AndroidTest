@@ -1,4 +1,4 @@
-package com.wq.androidtest.view.focus;
+package com.wq.androidtest.view.customview;
 
 import android.content.Context;
 import android.content.res.TypedArray;

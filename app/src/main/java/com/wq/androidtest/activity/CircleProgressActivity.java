@@ -5,7 +5,7 @@ import android.os.CountDownTimer;
 
 import com.wq.androidlibrary.activity.BaseActivity;
 import com.wq.androidtest.R;
-import com.wq.androidtest.view.focus.CircleProgressBar;
+import com.wq.androidtest.view.customview.CircleProgressBar;
 
 /**
  * Created by wangqi on 15/9/9.

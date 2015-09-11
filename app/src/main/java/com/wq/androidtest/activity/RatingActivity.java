@@ -5,7 +5,7 @@ import android.os.CountDownTimer;
 
 import com.wq.androidlibrary.activity.BaseActivity;
 import com.wq.androidtest.R;
-import com.wq.androidtest.view.focus.RatingProgress;
+import com.wq.androidtest.view.customview.RatingProgress;
 
 /**
  * Created by wangqi on 15/9/9.

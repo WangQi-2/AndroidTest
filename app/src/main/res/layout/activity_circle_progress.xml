@@ -8,7 +8,7 @@
     tools:context=".DemoTableActivity">
 
 
-    <com.wq.androidtest.view.focus.CircleProgressBar
+    <com.wq.androidtest.view.customview.CircleProgressBar
         android:id="@+id/probar"
         android:layout_width="match_parent"
         app:circle_alpha="70"

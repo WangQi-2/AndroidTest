@@ -6,7 +6,7 @@
     android:orientation="horizontal"
     tools:context=".DemoTableActivity">
 
-    <com.wq.androidtest.view.focus.RatingProgress
+    <com.wq.androidtest.view.customview.RatingProgress
         android:id="@+id/ratingbar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

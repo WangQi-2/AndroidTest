@@ -1,6 +1,5 @@
 package com.wq.androidtest.view.focus;
 
-import android.app.Activity;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.KeyEvent;
