@@ -1,14 +1,10 @@
 package com.wq.androidtest.activity;
 
 import android.os.Bundle;
-import android.view.KeyEvent;
-import android.view.View;
 import android.widget.Button;
 
 import com.wq.androidlibrary.activity.BaseActivity;
 import com.wq.androidtest.R;
-
-import java.security.Key;
 
 /**
  * Created by qiwang on 2015/8/29.

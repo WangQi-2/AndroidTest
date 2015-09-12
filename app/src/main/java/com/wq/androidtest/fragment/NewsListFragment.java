@@ -20,6 +20,8 @@ import de.greenrobot.event.Subscribe;
  */
 public class NewsListFragment extends ListFragment {
 
+    ArrayList<News> newses;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +34,6 @@ public class NewsListFragment extends ListFragment {
         super.onDestroy();
     }
 
-    ArrayList<News> newses;
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);

@@ -6,9 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 
-
 import java.io.File;
-import java.util.Iterator;
 import java.util.List;
 
 /**

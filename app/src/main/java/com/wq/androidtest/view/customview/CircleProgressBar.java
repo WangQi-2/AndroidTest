@@ -19,12 +19,12 @@ import com.wq.androidtest.R;
  * TODO bug中间的是不透明的
  */
 public class CircleProgressBar extends View {
-    
+
     private final String TAG = getClass().getSimpleName();
-    
+
     int mViewWidth;
     int mViewHeight;
-    
+
     // 半径、颜色，透明度，开始角度
     int mCircleRadius;
     int mCircleColor;
@@ -36,14 +36,14 @@ public class CircleProgressBar extends View {
     // 圆心距离view中心的距离，可正可负
     int mCentreOffsetX;
     int mCentreOffsetY;
-    
+
     Paint mPaint;
     int mProgress;
-    
+
     public CircleProgressBar(Context context) {
         super(context);
     }
-    
+
     public CircleProgressBar(Context context, AttributeSet attrs) {
         super(context, attrs);
         TypedArray a = context.obtainStyledAttributes(attrs,
@@ -58,10 +58,10 @@ public class CircleProgressBar extends View {
         if (mCircleAlpha > 70 || mCircleAlpha < 0) {
             mCircleAlpha = 70;
         }
-        
+
         mStartAngle = (int) a.getInt(R.styleable.CircleProgressBar_circle_start_angle,
                 -90);
-        
+
         mCentreOffsetX = (int) a.getDimension(
                 R.styleable.CircleProgressBar_centre_offset_x, 0);
         mCentreOffsetY = (int) a.getDimension(
@@ -71,8 +71,7 @@ public class CircleProgressBar extends View {
                 false);
         if (mProgress < 0) {
             mProgress = 0;
-        }
-        else if (mProgress > 100) {
+        } else if (mProgress > 100) {
             mProgress = 100;
         }
         a.recycle();
@@ -80,7 +79,7 @@ public class CircleProgressBar extends View {
         mPaint.setAntiAlias(true);
         mPaint.setStyle(Paint.Style.FILL);
     }
-    
+
     public void setProgress(int progress) {
         mProgress = progress;
         if (progress > 100) {
@@ -91,25 +90,29 @@ public class CircleProgressBar extends View {
         }
         postInvalidate();
     }
-    
+
     @Override
     protected void onDraw(Canvas canvas) {
-        
+
+        if (mProgress == 100) {
+            return;
+        }
+
         mPaint.setColor(mCircleColor);
         mPaint.setAlpha(mCircleAlpha * 255 / 100);
-        
+
         if (isDrawOutter) {
             drawOutter(canvas);
         }
 
         drawProgressCircle(canvas);
     }
-    
+
     private void drawOutter(Canvas canvas) {
 
         Bitmap target = Bitmap.createBitmap(mViewWidth, mViewHeight,
                 Bitmap.Config.ARGB_8888);
-        
+
         Canvas outterCanvas = new Canvas(target);
         outterCanvas.drawRect(0, 0, mViewWidth, mViewHeight, mPaint);
         mPaint.setXfermode(new PorterDuffXfermode(PorterDuff.Mode.DST_OUT));
@@ -118,7 +121,7 @@ public class CircleProgressBar extends View {
         mPaint.setXfermode(null);
         canvas.drawBitmap(target, 0, 0, mPaint);
     }
-    
+
     private void drawProgressCircle(Canvas canvas) {
         int cx = mViewWidth / 2 + mCentreOffsetX + getPaddingLeft();
         int cy = mViewHeight / 2 + mCentreOffsetY + getPaddingTop();
@@ -128,13 +131,13 @@ public class CircleProgressBar extends View {
         canvas.drawArc(rectF, mStartAngle + mProgress * 360f / 100, sweepAngle, true,
                 mPaint);
     }
-    
+
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         mViewHeight = getMeasuredHeight() - getPaddingTop() - getPaddingBottom();
         mViewWidth = getMeasuredWidth() - getPaddingLeft() - getPaddingRight();
-        
+
         if (mCircleRadius == 0) {
             mCircleRadius = mViewWidth / 2 - mBorderWidth;
         }

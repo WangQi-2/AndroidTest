@@ -4,8 +4,10 @@ import android.os.Bundle;
 
 import com.wq.androidlibrary.activity.BaseActivity;
 
-public class QuickTestActivity extends BaseActivity {
-
+/**
+ * Created by wangqi on 15/9/11.
+ */
+public class ScreenInfoActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

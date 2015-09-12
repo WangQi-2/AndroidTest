@@ -9,6 +9,7 @@ public final class ClazzUtil {
 
     /**
      * 取得clazz对象所属类类名 getEncloseingClass是什么鬼
+     *
      * @param clazz
      * @return
      */

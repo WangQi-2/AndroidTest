@@ -7,26 +7,29 @@
 
 
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="abcABC"
+        android:textSize="60dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="abcABC"
         android:textSize="60dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:textStyle="bold" />
+
     <TextView
-        android:text="abcABC"
-        android:textSize="60dp"
-        android:textStyle="bold"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="清空"
+        android:textSize="60dp" />
+
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:text="清空"
         android:textSize="60dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-    <TextView
-        android:text="清空"
-        android:textSize="60dp"
-        android:textStyle="bold"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:textStyle="bold" />
 
 </LinearLayout>

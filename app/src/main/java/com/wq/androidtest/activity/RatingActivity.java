@@ -10,7 +10,7 @@ import com.wq.androidtest.view.customview.RatingProgress;
 /**
  * Created by wangqi on 15/9/9.
  */
-public class RatingActivity extends BaseActivity{
+public class RatingActivity extends BaseActivity {
     RatingProgress mRating;
     int count = 1;
 

@@ -8,8 +8,7 @@
     <com.wq.androidtest.view.customview.ProgressBarButton
         android:id="@+id/probtn"
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        />
+        android:layout_height="80dp" />
 
 
 </LinearLayout>

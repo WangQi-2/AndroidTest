@@ -10,9 +10,10 @@ import com.wq.androidtest.view.customview.ProgressBarButton;
 /**
  * Created by wangqi on 15/9/9.
  */
-public class ProgressButtonActivity extends BaseActivity{
+public class ProgressButtonActivity extends BaseActivity {
     int count;
     ProgressBarButton btn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

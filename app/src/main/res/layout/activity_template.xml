@@ -4,6 +4,6 @@
     android:layout_height="match_parent"
     android:orientation="horizontal"
     tools:context=".DemoTableActivity">
-<!--模板:空的布局 -->
+    <!--模板:空的布局 -->
 
 </LinearLayout>

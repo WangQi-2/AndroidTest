@@ -11,9 +11,9 @@
     <com.wq.androidtest.view.customview.CircleProgressBar
         android:id="@+id/probar"
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:circle_alpha="70"
-        app:circle_draw_outter="true"
         app:circle_border_width="10px"
-        android:layout_height="match_parent" />
+        app:circle_draw_outter="true" />
 
 </FrameLayout>
