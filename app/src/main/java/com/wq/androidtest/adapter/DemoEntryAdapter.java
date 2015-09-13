@@ -1,6 +1,7 @@
 package com.wq.androidtest.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.view.Gravity;
@@ -10,8 +11,11 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.wq.androidtest.R;
+import com.wq.androidtest.activity.BaseActivity;
+import com.wq.androidtest.activity.DemoTableActivity;
 import com.wq.androidtest.model.DemoEntryModel;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 /**
@@ -48,14 +52,31 @@ public final class DemoEntryAdapter extends BaseAdapter {
         if (convertView == null) {
             TextView textView = new TextView(mContext);
             //TODO 这里true会影响item的点击事件,结合tv开发我或许可以知道为什么
-            textView.setFocusable(false);
+            textView.setFocusable(true);
             textView.setTextSize(20);
-            textView.setClickable(false);
+            textView.setClickable(true);
             textView.setGravity(Gravity.CENTER);
             textView.setTag(textView);
-            textView.setBackgroundResource(R.drawable.bg_border);
-            textView.setPadding(0, 50, 0, 50);
             textView.setTextColor(Color.RED);
+            textView.setBackgroundResource(R.drawable.seletor_btn_bg);
+            //在setbgres之后调用
+            textView.setPadding(0, 10, 0, 10);
+            textView.setTag(R.id.position,new Integer(position));
+            textView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    int position = (Integer) v.getTag(R.id.position);
+                    Intent i = null;
+                    if (demoEntryModels.get(position).getChilds() != null) {
+                        i = new Intent(mContext, DemoTableActivity.class);
+                        i.putExtra(BaseActivity.FUNC_MODELS, (Serializable) demoEntryModels.get(position).getChilds());
+                    } else {
+                        i = new Intent(mContext, demoEntryModels.get(position).getClazz());
+                    }
+                    i.putExtra(BaseActivity.TITLE, demoEntryModels.get(position).getDes());
+                    mContext.startActivity(i);
+                }
+            });
             holder = textView;
         } else {
             holder = (TextView) convertView.getTag();

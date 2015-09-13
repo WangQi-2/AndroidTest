@@ -18,8 +18,8 @@ import com.wq.androidlibrary.manager.ActivityUtil;
  * 继承次activity
  */
 public class BaseActivity extends Activity {
-    protected static final String FUNC_MODELS = "func_models";
-    protected static final String TITLE = "title";
+    public static final String FUNC_MODELS = "func_models";
+    public static final String TITLE = "title";
     //全局对象
     Application mApp;
     Context mCtx;
