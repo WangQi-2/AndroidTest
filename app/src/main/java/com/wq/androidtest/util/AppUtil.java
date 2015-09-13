@@ -64,4 +64,7 @@ public class AppUtil {
         return ret;
     }
 
+    public static boolean hasInstallPermission(Context ctx){
+       return ctx.getPackageManager().checkPermission("android.permssion.INSTALL_PACKAGES", ctx.getPackageName())  >= 0;
+    }
 }

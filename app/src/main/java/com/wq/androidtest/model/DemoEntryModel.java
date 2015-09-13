@@ -15,7 +15,7 @@ public class DemoEntryModel implements Serializable {
     private List<DemoEntryModel> childs;
 
 
-    public DemoEntryModel(String des, Class<Activity> clazz) {
+    public DemoEntryModel(String des, Class clazz) {
         this.des = des;
         this.clazz = clazz;
     }

@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 public class DemoTableActivity extends BaseActivity {
 
-    private static final String FUNC_MODELS = "func_models";
+
 
     GridView mDemoEntrys;
     DemoEntryAdapter mAdapter;
@@ -48,6 +48,7 @@ public class DemoTableActivity extends BaseActivity {
                 } else {
                     i = new Intent(DemoTableActivity.this, demoEntryModels.get(position).getClazz());
                 }
+                i.putExtra(TITLE,demoEntryModels.get(position).getDes());
                 startActivity(i);
             }
         });
@@ -56,7 +57,7 @@ public class DemoTableActivity extends BaseActivity {
 
     private void initData() {
         demoEntryModels = new ArrayList<>();
-        demoEntryModels.add(new DemoEntryModel("快速入口", AnimationUtilTestActivity.class));
+        demoEntryModels.add(new DemoEntryModel("快速入口", QuickTestActivity.class));
         demoEntryModels.add(new DemoEntryModel("test focused", FocusTesetActivity.class));
         demoEntryModels.add(new DemoEntryModel("show ip", ShowIPActivity.class));
         demoEntryModels.add(new DemoEntryModel("eventbus", EventBusDemoActivity.class));
