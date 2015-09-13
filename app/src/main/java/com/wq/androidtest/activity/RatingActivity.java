@@ -3,7 +3,6 @@ package com.wq.androidtest.activity;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 
-import com.wq.androidlibrary.activity.BaseActivity;
 import com.wq.androidtest.R;
 import com.wq.androidtest.view.customview.RatingProgress;
 

@@ -6,7 +6,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
-import com.wq.androidlibrary.activity.BaseActivity;
 import com.wq.androidtest.R;
 import com.wq.androidtest.util.ViewUtil;
 

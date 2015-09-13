@@ -1,5 +1,7 @@
 package com.wq.androidtest.model;
 
+import android.app.Activity;
+
 import java.io.Serializable;
 import java.util.List;
 
@@ -13,7 +15,7 @@ public class DemoEntryModel implements Serializable {
     private List<DemoEntryModel> childs;
 
 
-    public DemoEntryModel(String des, Class clazz) {
+    public DemoEntryModel(String des, Class<Activity> clazz) {
         this.des = des;
         this.clazz = clazz;
     }

@@ -3,7 +3,6 @@ package com.wq.androidtest.activity;
 import android.os.Bundle;
 import android.widget.Button;
 
-import com.wq.androidlibrary.activity.BaseActivity;
 import com.wq.androidtest.R;
 
 /**

@@ -6,7 +6,6 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
 
-import com.wq.androidlibrary.activity.BaseActivity;
 import com.wq.androidtest.R;
 import com.wq.androidtest.adapter.DemoEntryAdapter;
 import com.wq.androidtest.model.DemoEntryModel;
@@ -57,13 +56,14 @@ public class DemoTableActivity extends BaseActivity {
 
     private void initData() {
         demoEntryModels = new ArrayList<>();
-        demoEntryModels.add(new DemoEntryModel("快速入口", RatingActivity.class));
+        demoEntryModels.add(new DemoEntryModel("快速入口", AnimationUtilTestActivity.class));
         demoEntryModels.add(new DemoEntryModel("test focused", FocusTesetActivity.class));
         demoEntryModels.add(new DemoEntryModel("show ip", ShowIPActivity.class));
         demoEntryModels.add(new DemoEntryModel("eventbus", EventBusDemoActivity.class));
         demoEntryModels.add(new DemoEntryModel("update", UpdateApkActivity.class));
         demoEntryModels.add(new DemoEntryModel("textstyle", TextActivity.class));
         demoEntryModels.add(new DemoEntryModel("mListView height", ListViewHeightAcitvity.class));
+        demoEntryModels.add(new DemoEntryModel("animUtilTest", AnimationUtilTestActivity.class));
 
         //custom view
         ArrayList<DemoEntryModel> list = new ArrayList<>();

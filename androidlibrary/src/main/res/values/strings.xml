@@ -1,3 +1,9 @@
 <resources>
+    <!-- app -->
     <string name="app_name">AndroidLibrary</string>
+
+    <!-- animation -->
+    <string name="enlarge">放大</string>
+    <string name="ensmall">缩小</string>
+    <string name="scale">缩放</string>
 </resources>

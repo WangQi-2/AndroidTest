@@ -2,7 +2,6 @@ package com.wq.androidtest.activity;
 
 import android.os.Bundle;
 
-import com.wq.androidlibrary.activity.BaseActivity;
 import com.wq.androidtest.R;
 
 /**

@@ -34,5 +34,6 @@
         <activity android:name=".activity.CircleProgressActivity" />
         <activity android:name=".activity.TextActivity" />
         <activity android:name=".activity.ListViewHeightAcitvity" />
+        <activity android:name=".activity.AnimationUtilTestActivity" />
     </application>
 </manifest>
