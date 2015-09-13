@@ -39,5 +39,6 @@
         <activity android:name=".activity.ListViewHeightAcitvity" />
         <activity android:name=".activity.AnimationUtilTestActivity" />
         <activity android:name=".activity.FlowLayoutActivity" />
+        <activity android:name=".activity.ScreenInfoActivity" />
     </application>
 </manifest>
