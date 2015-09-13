@@ -65,6 +65,7 @@ public class DemoTableActivity extends BaseActivity {
         demoEntryModels.add(new DemoEntryModel("textstyle", TextActivity.class));
         demoEntryModels.add(new DemoEntryModel("mListView height", ListViewHeightAcitvity.class));
         demoEntryModels.add(new DemoEntryModel("animUtilTest", AnimationUtilTestActivity.class));
+        demoEntryModels.add(new DemoEntryModel("flowlayout", FlowLayoutActivity.class));
 
         //custom view
         ArrayList<DemoEntryModel> list = new ArrayList<>();

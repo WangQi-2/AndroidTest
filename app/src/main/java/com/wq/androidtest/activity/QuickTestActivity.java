@@ -1,5 +1,7 @@
 package com.wq.androidtest.activity;
 
+import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.widget.Toast;
 
@@ -10,6 +12,11 @@ public class QuickTestActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Toast.makeText(this, AppUtil.hasInstallPermission(this) + "", Toast.LENGTH_LONG).show();
+        try {
+            ApplicationInfo info = getPackageManager().getApplicationInfo("com.wq.androidtest",0);
+            Toast.makeText(this, AppUtil.isSystemApp(this, info) + "", Toast.LENGTH_LONG).show();
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
     }
 }

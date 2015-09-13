@@ -4,6 +4,7 @@ import android.app.ActivityManager;
 import android.app.ActivityManager.RunningServiceInfo;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.ApplicationInfo;
 import android.net.Uri;
 
 import java.io.File;
@@ -64,7 +65,15 @@ public class AppUtil {
         return ret;
     }
 
-    public static boolean hasInstallPermission(Context ctx){
-       return ctx.getPackageManager().checkPermission("android.permssion.INSTALL_PACKAGES", ctx.getPackageName())  >= 0;
+    public static boolean hasInstallPermission(Context ctx) {
+        return ctx.getPackageManager().checkPermission("android.permssion.INSTALL_PACKAGES", ctx.getPackageName()) >= 0;
+    }
+
+    public static boolean isSystemApp(Context context, ApplicationInfo applicationInfo) {
+        int appFlags = applicationInfo.flags;
+        if ((appFlags & ApplicationInfo.FLAG_SYSTEM) == 0) {
+            return false;
+        }
+        return true;
     }
 }

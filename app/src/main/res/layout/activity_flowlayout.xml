@@ -1,0 +1,80 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <com.wq.androidtest.view.customview.FlowLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:text="textview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <Button
+            style="@style/round_btn"
+            android:text="1" />
+        <Button
+            style="@style/round_btn"
+            android:text="2" />
+        <Button
+            style="@style/round_btn"
+            android:text="3" />
+        <Button
+            style="@style/round_btn"
+            android:layout_width="100dp"
+            android:layout_height="200dp" />
+        <Button
+            style="@style/round_btn"
+            android:text="4" />
+        <Button
+            style="@style/round_btn"
+            android:text="button1" />
+        <Button
+            style="@style/round_btn"
+            android:text="button1" />
+        <Button
+            style="@style/round_btn"
+            android:text="button1" />
+        <Button
+            style="@style/round_btn"
+            android:text="1" />
+        <Button
+            style="@style/round_btn"
+            android:text="button1" />
+        <Button
+            style="@style/round_btn"
+            android:text="b" />
+        <Button
+            style="@style/round_btn"
+            android:text="button1aaaaaaaaaaaaaa" />
+        <Button
+            style="@style/round_btn"
+            android:text="button1" />
+        <Button
+            style="@style/round_btn"
+            android:text="8" />
+        <Button
+            style="@style/round_btn"
+            android:text="0" />
+        <Button
+            style="@style/round_btn"
+            android:text="button1" />
+        <Button
+            style="@style/round_btn"
+            android:text="button1" />
+        <Button
+            style="@style/round_btn"
+            android:text="button1" />
+        <Button
+            style="@style/round_btn"
+            android:text="button1" />
+        <Button
+            style="@style/round_btn"
+            android:text="button1" />
+
+
+    </com.wq.androidtest.view.customview.FlowLayout>
+
+</LinearLayout>
