@@ -20,7 +20,9 @@
     <dimen name="edittext_height">25dp</dimen>
     <dimen name="edittext_line_spacing">25dp</dimen>
     <!-- TextView -->
-    <dimen name="textview_width">25dp</dimen>
+    <dimen name="textview_width">100dp</dimen>
     <dimen name="textview_height">25dp</dimen>
     <dimen name="textview_line_spacing">25dp</dimen>
+    <dimen name="textview_pading">5dp</dimen>
+    <dimen name="textview_margin">5dp</dimen>
 </resources>

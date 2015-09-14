@@ -18,6 +18,7 @@ import com.wq.androidtest.util.ActivityUtil;
  * 继承次activity
  */
 public class BaseActivity extends Activity {
+    protected String TAG = this.getClass().getSimpleName();
     public static final String FUNC_MODELS = "func_models";
     public static final String TITLE = "title";
     //全局对象

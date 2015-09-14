@@ -2,9 +2,15 @@ package com.wq.androidtest.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.KeyEvent;
 import android.widget.GridView;
 
 import com.wq.androidtest.R;
+import com.wq.androidtest.activity.v7.CardViewActivity;
+import com.wq.androidtest.activity.v7.RecycleViewGridActivity;
+import com.wq.androidtest.activity.v7.RecycleViewListViewActivity;
+import com.wq.androidtest.activity.v7.RecycleViewPuBu2Activity;
+import com.wq.androidtest.activity.v7.RecycleViewPuBuActivity;
 import com.wq.androidtest.adapter.DemoEntryAdapter;
 import com.wq.androidtest.model.DemoEntryModel;
 
@@ -13,10 +19,9 @@ import java.util.ArrayList;
 public class DemoTableActivity extends BaseActivity {
 
 
-
     GridView mDemoEntrys;
     DemoEntryAdapter mAdapter;
-    ArrayList<DemoEntryModel> demoEntryModels;
+    public static ArrayList<DemoEntryModel> demoEntryModels;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +39,7 @@ public class DemoTableActivity extends BaseActivity {
         }
         mAdapter = new DemoEntryAdapter(this, demoEntryModels);
         mDemoEntrys.setAdapter(mAdapter);
-        mAdapter.getView(0,null,mDemoEntrys).requestFocus();
+        mAdapter.getView(0, null, mDemoEntrys).requestFocus();
 
 //        mDemoEntrys.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 //            @Override
@@ -77,7 +82,6 @@ public class DemoTableActivity extends BaseActivity {
         groupsList = new ArrayList<>();
 
 
-
         //single func
         demoEntryModels.add(new DemoEntryModel("test focused", FocusTesetActivity.class));
         demoEntryModels.add(new DemoEntryModel("show ip", ShowIPActivity.class));
@@ -90,7 +94,25 @@ public class DemoTableActivity extends BaseActivity {
         demoEntryModels.add(new DemoEntryModel("clipboard", ClipboardActivity.class));
         demoEntryModels.add(new DemoEntryModel("ems test", EmsTestActivity.class));
         demoEntryModels.add(new DemoEntryModel("cardview", CardViewActivity.class));
+        demoEntryModels.add(new DemoEntryModel("recyclelist", RecycleViewListViewActivity.class));
+        demoEntryModels.add(new DemoEntryModel("recyclegrid", RecycleViewGridActivity.class));
+        demoEntryModels.add(new DemoEntryModel("recyclepubu", RecycleViewPuBuActivity.class));
+        demoEntryModels.add(new DemoEntryModel("recyclepubu2", RecycleViewPuBu2Activity.class));
     }
 
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
 
+    @Override
+    public boolean onKeyUp(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK) {
+            return true;
+        }
+        return super.onKeyUp(keyCode, event);
+    }
 }

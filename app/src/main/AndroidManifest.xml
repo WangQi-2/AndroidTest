@@ -42,6 +42,10 @@
         <activity android:name=".activity.ScreenInfoActivity" />
         <activity android:name=".activity.ClipboardActivity" />
         <activity android:name=".activity.EmsTestActivity" />
-        <activity android:name=".activity.CardViewActivity" />
+        <activity android:name=".activity.v7.CardViewActivity" />
+        <activity android:name=".activity.v7.RecycleViewListViewActivity" />
+        <activity android:name=".activity.v7.RecycleViewGridActivity" />
+        <activity android:name=".activity.v7.RecycleViewPuBuActivity" />
+        <activity android:name=".activity.v7.RecycleViewPuBu2Activity" />
     </application>
 </manifest>
