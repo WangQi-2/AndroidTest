@@ -41,5 +41,7 @@
         <activity android:name=".activity.FlowLayoutActivity" />
         <activity android:name=".activity.ScreenInfoActivity" />
         <activity android:name=".activity.ClipboardActivity" />
+        <activity android:name=".activity.EmsTestActivity" />
+        <activity android:name=".activity.CardViewActivity" />
     </application>
 </manifest>

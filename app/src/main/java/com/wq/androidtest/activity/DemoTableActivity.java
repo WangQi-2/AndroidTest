@@ -55,7 +55,30 @@ public class DemoTableActivity extends BaseActivity {
 
     private void initData() {
         demoEntryModels = new ArrayList<>();
+
+        //quick access
         demoEntryModels.add(new DemoEntryModel("快速入口", ScreenInfoActivity.class));
+        //
+        ArrayList<DemoEntryModel> groupsList;
+        DemoEntryModel groupsModel;
+        //custom view
+        groupsList = new ArrayList<>();
+        groupsList.add(new DemoEntryModel("ratingbar", RatingActivity.class));
+        groupsList.add(new DemoEntryModel("progressbutton", ProgressButtonActivity.class));
+        groupsList.add(new DemoEntryModel("circleprogress", CircleProgressActivity.class));
+        groupsModel = new DemoEntryModel("***custom views", null, groupsList);
+        demoEntryModels.add(groupsModel);
+        //custom view group
+        groupsList = new ArrayList<>();
+        groupsList.add(new DemoEntryModel("flowlayout", FlowLayoutActivity.class));
+        groupsModel = new DemoEntryModel("***custom view groupsList", null, groupsList);
+        demoEntryModels.add(groupsModel);
+        //v7
+        groupsList = new ArrayList<>();
+
+
+
+        //single func
         demoEntryModels.add(new DemoEntryModel("test focused", FocusTesetActivity.class));
         demoEntryModels.add(new DemoEntryModel("show ip", ShowIPActivity.class));
         demoEntryModels.add(new DemoEntryModel("eventbus", EventBusDemoActivity.class));
@@ -63,17 +86,10 @@ public class DemoTableActivity extends BaseActivity {
         demoEntryModels.add(new DemoEntryModel("textstyle", TextActivity.class));
         demoEntryModels.add(new DemoEntryModel("mListView height", ListViewHeightAcitvity.class));
         demoEntryModels.add(new DemoEntryModel("animUtilTest", AnimationUtilTestActivity.class));
-        demoEntryModels.add(new DemoEntryModel("flowlayout", FlowLayoutActivity.class));
         demoEntryModels.add(new DemoEntryModel("screeninfo", ScreenInfoActivity.class));
         demoEntryModels.add(new DemoEntryModel("clipboard", ClipboardActivity.class));
-
-        //custom view
-        ArrayList<DemoEntryModel> list = new ArrayList<>();
-        list.add(new DemoEntryModel("ratingbar", RatingActivity.class));
-        list.add(new DemoEntryModel("progressbutton", ProgressButtonActivity.class));
-        list.add(new DemoEntryModel("circleprogress", CircleProgressActivity.class));
-        DemoEntryModel customModel = new DemoEntryModel("custom views", null, list);
-        demoEntryModels.add(customModel);
+        demoEntryModels.add(new DemoEntryModel("ems test", EmsTestActivity.class));
+        demoEntryModels.add(new DemoEntryModel("cardview", CardViewActivity.class));
     }
 
 

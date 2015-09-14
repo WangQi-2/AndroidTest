@@ -12,4 +12,8 @@
 
 
     <!-- EditText-->
+
+
+    <!-- TextView -->
+    <string name="Ms">MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM</string>
 </resources>
