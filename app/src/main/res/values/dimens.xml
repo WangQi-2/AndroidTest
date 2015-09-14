@@ -2,10 +2,21 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- 数值 -->
+    <dimen name="zero">0dp</dimen>
+
+
+    <!-- font -->
     <dimen name="title_big">25dp</dimen>
     <dimen name="title_normal">25dp</dimen>
     <dimen name="title_small">25dp</dimen>
     <dimen name="text_big">25dp</dimen>
     <dimen name="text_normal">25dp</dimen>
     <dimen name="text_small">25dp</dimen>
+
+    <!-- EditText -->
+    <dimen name="edittext_width">25dp</dimen>
+    <dimen name="edittext_height">25dp</dimen>
+    <dimen name="edittext_line_spacing">25dp</dimen>
 </resources>

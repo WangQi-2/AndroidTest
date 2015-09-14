@@ -9,4 +9,7 @@
     <string name="rotate">旋转</string>
     <string name="jump">跳起</string>
     <string name="land">落下</string>
+
+
+    <!-- EditText-->
 </resources>

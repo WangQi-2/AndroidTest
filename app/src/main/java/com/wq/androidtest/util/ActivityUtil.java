@@ -1,4 +1,4 @@
-package com.wq.androidlibrary.manager;
+package com.wq.androidtest.util;
 
 import android.app.Activity;
 

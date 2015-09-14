@@ -40,5 +40,6 @@
         <activity android:name=".activity.AnimationUtilTestActivity" />
         <activity android:name=".activity.FlowLayoutActivity" />
         <activity android:name=".activity.ScreenInfoActivity" />
+        <activity android:name=".activity.ClipboardActivity" />
     </application>
 </manifest>
