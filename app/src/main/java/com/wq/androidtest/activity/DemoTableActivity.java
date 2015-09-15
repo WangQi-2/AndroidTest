@@ -98,6 +98,7 @@ public class DemoTableActivity extends BaseActivity {
         demoEntryModels.add(new DemoEntryModel("recyclegrid", RecycleViewGridActivity.class));
         demoEntryModels.add(new DemoEntryModel("recyclepubu", RecycleViewPuBuActivity.class));
         demoEntryModels.add(new DemoEntryModel("recyclepubu2", RecycleViewPuBu2Activity.class));
+        demoEntryModels.add(new DemoEntryModel("risetextview", RiseTextViewActivity.class));
     }
 
     @Override

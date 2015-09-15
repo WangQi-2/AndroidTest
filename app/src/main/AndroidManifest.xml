@@ -47,5 +47,6 @@
         <activity android:name=".activity.v7.RecycleViewGridActivity" />
         <activity android:name=".activity.v7.RecycleViewPuBuActivity" />
         <activity android:name=".activity.v7.RecycleViewPuBu2Activity" />
+        <activity android:name=".activity.RiseTextViewActivity" />
     </application>
 </manifest>

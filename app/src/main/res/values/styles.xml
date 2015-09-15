@@ -13,4 +13,13 @@
         <item name="android:textColor">#ffffff</item>
     </style>
 
+    <style name="normal_textview">
+        <item name="android:layout_width">@dimen/textview_width</item>
+        <item name="android:layout_height">@dimen/textview_height</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_margin">@dimen/textview_margin</item>
+        <item name="android:background">@drawable/bg_btn_grey_round</item>
+        <item name="android:textColor">#ff0000</item>
+    </style>
+
 </resources>
