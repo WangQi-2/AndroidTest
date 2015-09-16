@@ -2,15 +2,14 @@ package com.wq.androidtest.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.KeyEvent;
 import android.widget.GridView;
 
 import com.wq.androidtest.R;
 import com.wq.androidtest.activity.customview.CircleProgressActivity;
-import com.wq.androidtest.activity.customview.FlowLayoutActivity;
 import com.wq.androidtest.activity.customview.ProgressButtonActivity;
 import com.wq.androidtest.activity.customview.RatingActivity;
 import com.wq.androidtest.activity.customview.RiseTextViewActivity;
+import com.wq.androidtest.activity.customviewgroup.FlowLayoutActivity;
 import com.wq.androidtest.activity.v7.CardViewActivity;
 import com.wq.androidtest.activity.v7.RecycleViewGridActivity;
 import com.wq.androidtest.activity.v7.RecycleViewListViewActivity;
@@ -86,6 +85,14 @@ public class DemoTableActivity extends BaseActivity {
         //v7
         groupsList = new ArrayList<>();
 
+
+        //sliding
+        groupsList = new ArrayList<>();
+        groupsList.add(new DemoEntryModel("outScroll", OutScrollViewActivity.class));
+        groupsList.add(new DemoEntryModel("scroll in scroll", ScrollInScrollActivity.class));
+        groupsModel = new DemoEntryModel("*** sliding", null, groupsList);
+        demoEntryModels.add(groupsModel);
+
         //single func
         demoEntryModels.add(new DemoEntryModel("test focused", FocusTesetActivity.class));
         demoEntryModels.add(new DemoEntryModel("show ip", ShowIPActivity.class));
@@ -104,21 +111,5 @@ public class DemoTableActivity extends BaseActivity {
         demoEntryModels.add(new DemoEntryModel("recyclepubu2", RecycleViewPuBu2Activity.class));
         demoEntryModels.add(new DemoEntryModel("risetextview", RiseTextViewActivity.class));
         demoEntryModels.add(new DemoEntryModel("enabletest", ViewEnableTestActivity.class));
-    }
-
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_BACK) {
-            return true;
-        }
-        return super.onKeyDown(keyCode, event);
-    }
-
-    @Override
-    public boolean onKeyUp(int keyCode, KeyEvent event) {
-        if (keyCode == KeyEvent.KEYCODE_BACK) {
-            return true;
-        }
-        return super.onKeyUp(keyCode, event);
     }
 }

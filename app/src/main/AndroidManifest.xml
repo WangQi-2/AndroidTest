@@ -38,7 +38,7 @@
         <activity android:name=".activity.TextActivity" />
         <activity android:name=".activity.ListViewHeightAcitvity" />
         <activity android:name=".activity.AnimationUtilTestActivity" />
-        <activity android:name=".activity.customview.FlowLayoutActivity" />
+        <activity android:name=".activity.customviewgroup.FlowLayoutActivity" />
         <activity android:name=".activity.ScreenInfoActivity" />
         <activity android:name=".activity.ClipboardActivity" />
         <activity android:name=".activity.EmsTestActivity" />
@@ -49,5 +49,7 @@
         <activity android:name=".activity.v7.RecycleViewPuBu2Activity" />
         <activity android:name=".activity.customview.RiseTextViewActivity" />
         <activity android:name=".activity.ViewEnableTestActivity" />
+        <activity android:name=".activity.OutScrollViewActivity" />
+        <activity android:name=".activity.ScrollInScrollActivity" />
     </application>
 </manifest>

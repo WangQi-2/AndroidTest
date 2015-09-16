@@ -1,4 +1,4 @@
-package com.wq.androidtest.view.customview;
+package com.wq.androidtest.view.group;
 
 import android.content.Context;
 import android.util.AttributeSet;

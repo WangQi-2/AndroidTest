@@ -1,4 +1,4 @@
-package com.wq.androidtest.activity.customview;
+package com.wq.androidtest.activity.customviewgroup;
 
 import android.os.Bundle;
 

@@ -3,7 +3,7 @@
     android:layout_height="match_parent"
     android:orientation="horizontal">
 
-    <com.wq.androidtest.view.customview.FlowLayout
+    <com.wq.androidtest.view.group.FlowLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -75,6 +75,6 @@
             android:text="button1" />
 
 
-    </com.wq.androidtest.view.customview.FlowLayout>
+    </com.wq.androidtest.view.group.FlowLayout>
 
 </LinearLayout>
