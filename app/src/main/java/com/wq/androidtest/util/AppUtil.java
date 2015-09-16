@@ -6,6 +6,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageManager;
 import android.net.Uri;
 
 import java.io.File;
@@ -85,10 +86,23 @@ public class AppUtil {
     public static void startActivity(Context context, String packagename, String className) {
         Intent intent = new Intent(Intent.ACTION_MAIN);
         intent.addCategory(Intent.CATEGORY_LAUNCHER);
-        ComponentName cn = new ComponentName(packagename,className);
+        ComponentName cn = new ComponentName(packagename, className);
         intent.setComponent(cn);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED);
         //TODO CONTEXT 分类
         context.startActivity(intent);
+    }
+
+    public static String getMetaData(Context context, String name) {
+        try {
+            ApplicationInfo info = context.getPackageManager().getApplicationInfo(context.getPackageName(), PackageManager.GET_META_DATA);
+            Object o = info.metaData.get(name);
+            if (o != null) {
+                return o.toString();
+            }
+        } catch (PackageManager.NameNotFoundException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 }
