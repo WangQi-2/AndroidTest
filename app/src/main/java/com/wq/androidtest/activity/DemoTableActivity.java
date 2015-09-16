@@ -90,7 +90,7 @@ public class DemoTableActivity extends BaseActivity {
         groupsList = new ArrayList<>();
         groupsList.add(new DemoEntryModel("outScroll", OutScrollViewActivity.class));
         groupsList.add(new DemoEntryModel("scroll in scroll", ScrollInScrollActivity.class));
-        groupsModel = new DemoEntryModel("*** sliding", null, groupsList);
+        groupsModel = new DemoEntryModel("*** scrollview", null, groupsList);
         demoEntryModels.add(groupsModel);
 
         //single func
@@ -111,5 +111,6 @@ public class DemoTableActivity extends BaseActivity {
         demoEntryModels.add(new DemoEntryModel("recyclepubu2", RecycleViewPuBu2Activity.class));
         demoEntryModels.add(new DemoEntryModel("risetextview", RiseTextViewActivity.class));
         demoEntryModels.add(new DemoEntryModel("enabletest", ViewEnableTestActivity.class));
+        demoEntryModels.add(new DemoEntryModel("view trans", ViewTransActivity.class));
     }
 }

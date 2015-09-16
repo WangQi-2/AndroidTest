@@ -51,5 +51,6 @@
         <activity android:name=".activity.ViewEnableTestActivity" />
         <activity android:name=".activity.OutScrollViewActivity" />
         <activity android:name=".activity.ScrollInScrollActivity" />
+        <activity android:name=".activity.ViewTransActivity" />
     </application>
 </manifest>
