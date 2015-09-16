@@ -56,4 +56,10 @@ public class NetWordUtil {
         }
         return null;
     }
+
+    public static String getWifiMacAddress(Context context) {
+        WifiManager wifiManager = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
+        WifiInfo wifiInfo = wifiManager.getConnectionInfo();
+        return wifiInfo.getBSSID();
+    }
 }

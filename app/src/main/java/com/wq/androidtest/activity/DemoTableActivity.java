@@ -112,5 +112,6 @@ public class DemoTableActivity extends BaseActivity {
         demoEntryModels.add(new DemoEntryModel("risetextview", RiseTextViewActivity.class));
         demoEntryModels.add(new DemoEntryModel("enabletest", ViewEnableTestActivity.class));
         demoEntryModels.add(new DemoEntryModel("view trans", ViewTransActivity.class));
+        demoEntryModels.add(new DemoEntryModel("deviceInfo", DeviceInfoActivity.class));
     }
 }
