@@ -32,13 +32,13 @@
         <activity android:name=".activity.ShowIPActivity" />
         <activity android:name=".activity.EventBusDemoActivity" />
         <activity android:name=".activity.UpdateApkActivity" />
-        <activity android:name=".activity.RatingActivity" />
-        <activity android:name=".activity.ProgressButtonActivity" />
-        <activity android:name=".activity.CircleProgressActivity" />
+        <activity android:name=".activity.customview.RatingActivity" />
+        <activity android:name=".activity.customview.ProgressButtonActivity" />
+        <activity android:name=".activity.customview.CircleProgressActivity" />
         <activity android:name=".activity.TextActivity" />
         <activity android:name=".activity.ListViewHeightAcitvity" />
         <activity android:name=".activity.AnimationUtilTestActivity" />
-        <activity android:name=".activity.FlowLayoutActivity" />
+        <activity android:name=".activity.customview.FlowLayoutActivity" />
         <activity android:name=".activity.ScreenInfoActivity" />
         <activity android:name=".activity.ClipboardActivity" />
         <activity android:name=".activity.EmsTestActivity" />
@@ -47,6 +47,7 @@
         <activity android:name=".activity.v7.RecycleViewGridActivity" />
         <activity android:name=".activity.v7.RecycleViewPuBuActivity" />
         <activity android:name=".activity.v7.RecycleViewPuBu2Activity" />
-        <activity android:name=".activity.RiseTextViewActivity" />
+        <activity android:name=".activity.customview.RiseTextViewActivity" />
+        <activity android:name=".activity.ViewEnableTestActivity" />
     </application>
 </manifest>

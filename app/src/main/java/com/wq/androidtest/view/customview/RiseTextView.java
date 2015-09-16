@@ -52,6 +52,7 @@ public class RiseTextView extends TextView {
     double cur = 0;
 
     public void start() {
+        //TODO 刷新失败,两种方法都不可以
 
         if (numText == null) {
             numText = getText().toString();

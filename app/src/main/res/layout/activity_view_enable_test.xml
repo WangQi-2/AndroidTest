@@ -1,0 +1,31 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn1"
+        android:text="enable false"
+        android:enabled="false"
+        style="@style/round_btn" />
+    <Button
+        android:id="@+id/btn2"
+        android:text="focusable false"
+        android:focusable="false"
+        style="@style/round_btn" />
+    <Button
+        android:id="@+id/btn3"
+        android:text="click false"
+        android:clickable="false"
+        style="@style/round_btn" />
+    <Button
+        android:id="@+id/btn4"
+        style="@style/round_btn" />
+    <Button
+        android:id="@+id/btn5"
+        style="@style/round_btn" />
+    <Button
+        android:id="@+id/btn6"
+        style="@style/round_btn" />
+
+</LinearLayout>

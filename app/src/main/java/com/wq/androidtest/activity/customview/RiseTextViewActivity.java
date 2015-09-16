@@ -1,9 +1,11 @@
-package com.wq.androidtest.activity;
+package com.wq.androidtest.activity.customview;
 
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.widget.TextView;
 
 import com.wq.androidtest.R;
+import com.wq.androidtest.activity.BaseActivity;
 import com.wq.androidtest.view.customview.RiseTextView;
 
 /**
@@ -21,23 +23,22 @@ public class RiseTextViewActivity extends BaseActivity {
         setContentView(R.layout.activity_rise_textview);
         textView = (TextView) findViewById(R.id.text1);
         textView.setText("" + 1000);
-//        CountDownTimer timer = new CountDownTimer(10000, 3000) {
-//            @Override
-//            public void onTick(long millisUntilFinished) {
-//                //1
-//                ToastUtil.showToast(mCtx,"threadId ontick:" + Thread.currentThread().getId());
-//                textView.setText(count++ + "");
-//            }
-//
-//            @Override
-//            public void onFinish() {
-//                //1
-//                ToastUtil.showToast(mCtx,"threadId onfinish:" + Thread.currentThread().getId());
-//                textView.setText(count++ + "");
-//            }
-//        };
-//        timer.start();
+        CountDownTimer timer = new CountDownTimer(10000, 100) {
+            @Override
+            public void onTick(long millisUntilFinished) {
+                //1
+//                ToastUtil.showToast(mCtx, "threadId ontick:" + Thread.currentThread().getId());
+                textView.setText(count++ + "");
+            }
 
+            @Override
+            public void onFinish() {
+                //1
+//                ToastUtil.showToast(mCtx,"threadId onfinish:" + Thread.currentThread().getId());
+                textView.setText(count++ + "");
+            }
+        };
+        timer.start();
         textView1 = (RiseTextView) findViewById(R.id.text2);
         textView1.setNumText("999888");
 //        textView1.start();

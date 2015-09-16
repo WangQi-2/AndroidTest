@@ -1,9 +1,10 @@
-package com.wq.androidtest.activity;
+package com.wq.androidtest.activity.customview;
 
 import android.os.Bundle;
 import android.os.CountDownTimer;
 
 import com.wq.androidtest.R;
+import com.wq.androidtest.activity.BaseActivity;
 import com.wq.androidtest.view.customview.CircleProgressBar;
 
 /**

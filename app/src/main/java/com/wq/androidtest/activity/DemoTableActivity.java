@@ -6,6 +6,11 @@ import android.view.KeyEvent;
 import android.widget.GridView;
 
 import com.wq.androidtest.R;
+import com.wq.androidtest.activity.customview.CircleProgressActivity;
+import com.wq.androidtest.activity.customview.FlowLayoutActivity;
+import com.wq.androidtest.activity.customview.ProgressButtonActivity;
+import com.wq.androidtest.activity.customview.RatingActivity;
+import com.wq.androidtest.activity.customview.RiseTextViewActivity;
 import com.wq.androidtest.activity.v7.CardViewActivity;
 import com.wq.androidtest.activity.v7.RecycleViewGridActivity;
 import com.wq.androidtest.activity.v7.RecycleViewListViewActivity;
@@ -81,7 +86,6 @@ public class DemoTableActivity extends BaseActivity {
         //v7
         groupsList = new ArrayList<>();
 
-
         //single func
         demoEntryModels.add(new DemoEntryModel("test focused", FocusTesetActivity.class));
         demoEntryModels.add(new DemoEntryModel("show ip", ShowIPActivity.class));
@@ -99,6 +103,7 @@ public class DemoTableActivity extends BaseActivity {
         demoEntryModels.add(new DemoEntryModel("recyclepubu", RecycleViewPuBuActivity.class));
         demoEntryModels.add(new DemoEntryModel("recyclepubu2", RecycleViewPuBu2Activity.class));
         demoEntryModels.add(new DemoEntryModel("risetextview", RiseTextViewActivity.class));
+        demoEntryModels.add(new DemoEntryModel("enabletest", ViewEnableTestActivity.class));
     }
 
     @Override

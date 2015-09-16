@@ -2,6 +2,7 @@ package com.wq.androidtest.util;
 
 import android.app.ActivityManager;
 import android.app.ActivityManager.RunningServiceInfo;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
@@ -17,7 +18,6 @@ import java.util.List;
 public class AppUtil {
 
     //TODO 添加静默卸载
-    //TODO 添加系统权限判断
     //TODO andbase里有一个返回cpu核心数,有啥用?
 
     public static void installApk(Context context, File apkfile) {
@@ -75,5 +75,20 @@ public class AppUtil {
             return false;
         }
         return true;
+    }
+
+    public static void startActivity(Context context, Class clazz) {
+        Intent intent = new Intent(context, clazz);
+        context.startActivity(intent);
+    }
+
+    public static void startActivity(Context context, String packagename, String className) {
+        Intent intent = new Intent(Intent.ACTION_MAIN);
+        intent.addCategory(Intent.CATEGORY_LAUNCHER);
+        ComponentName cn = new ComponentName(packagename,className);
+        intent.setComponent(cn);
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED);
+        //TODO CONTEXT 分类
+        context.startActivity(intent);
     }
 }
