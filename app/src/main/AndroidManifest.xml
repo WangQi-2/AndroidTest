@@ -55,5 +55,15 @@
         <activity android:name=".activity.ViewTransActivity" />
         <activity android:name=".activity.DeviceInfoActivity" />
         <activity android:name=".activity.NotificationActivity" />
+
+        <receiver android:name=".widget.OnePicAppWidgetProvider">
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/appwidget_provider_one_pic" />
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+        </receiver>
     </application>
 </manifest>
