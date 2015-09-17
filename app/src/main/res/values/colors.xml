@@ -3,6 +3,16 @@
 
     <color name="transparent">#00000000</color>
     <color name="white">#FFFFFFFF</color>
+
+
+
+    <color name="lignt_green">#0ac39e</color>
+
+
+
+
+    <!-- xiamiandoushishi-->
+
     <color name="white_80transparent">#cdFFFFFF</color>
     <color name="white_70transparent">#b2FFFFFF</color>
     <color name="white_60transparent">#98FFFFFF</color>
@@ -75,5 +85,9 @@
     <color name="app_info_bg">#37373d</color>
     <color name="app_left_bg">#4c9e80</color>
     <color name="app_detail_btn_bg">#08f0f0f0</color>
+
+
+
+
 
 </resources>

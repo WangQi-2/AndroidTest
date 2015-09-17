@@ -3,4 +3,26 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+
+    <!-- other -->
+    <string name="default1">默认</string>
+    <string name="custom">自定义</string>
+
+
+    <!-- animation -->
+    <string name="enlarge">放大</string>
+    <string name="ensmall">缩小</string>
+    <string name="scale">缩放</string>
+    <string name="rotate">旋转</string>
+    <string name="jump">跳起</string>
+    <string name="land">落下</string>
+
+
+    <!-- EditText-->
+
+
+    <!-- TextView -->
+    <string name="Ms">MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM</string>
+
+
 </resources>

@@ -54,5 +54,6 @@
         <activity android:name=".activity.ScrollInScrollActivity" />
         <activity android:name=".activity.ViewTransActivity" />
         <activity android:name=".activity.DeviceInfoActivity" />
+        <activity android:name=".activity.NotificationActivity" />
     </application>
 </manifest>
