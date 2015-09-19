@@ -23,6 +23,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
@@ -326,6 +327,19 @@ public class BitmapUtil {
         if (bitmap != null && !bitmap.isRecycled()) {
             bitmap.recycle();
         }
+    }
+
+    public static void BitmapToFile(Bitmap bitmap, String filePath) {
+        FileOutputStream fos;
+        try {
+            fos = new FileOutputStream(filePath);
+            byte[] bytes = bitmapToBytes(bitmap, Bitmap.CompressFormat.PNG);
+            fos.write(bytes);
+            fos.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 
 }
