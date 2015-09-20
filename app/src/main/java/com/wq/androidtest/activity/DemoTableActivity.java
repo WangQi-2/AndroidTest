@@ -6,6 +6,7 @@ import android.widget.GridView;
 
 import com.wq.androidtest.R;
 import com.wq.androidtest.activity.customview.CircleProgressActivity;
+import com.wq.androidtest.activity.customview.CircleViewActivity;
 import com.wq.androidtest.activity.customview.ProgressButtonActivity;
 import com.wq.androidtest.activity.customview.RatingActivity;
 import com.wq.androidtest.activity.customview.RiseTextViewActivity;
@@ -114,5 +115,6 @@ public class DemoTableActivity extends BaseActivity {
         demoEntryModels.add(new DemoEntryModel("view trans", ViewTransActivity.class));
         demoEntryModels.add(new DemoEntryModel("deviceInfo", DeviceInfoActivity.class));
         demoEntryModels.add(new DemoEntryModel("notification", NotificationActivity.class));
+        demoEntryModels.add(new DemoEntryModel("circleview", CircleViewActivity.class));
     }
 }

@@ -56,6 +56,8 @@
         <activity android:name=".activity.ViewTransActivity" />
         <activity android:name=".activity.DeviceInfoActivity" />
         <activity android:name=".activity.NotificationActivity" />
+        <activity android:name=".activity.customview.CircleViewActivity" />
+
 
         <!-- 桌面小控件-->
         <receiver android:name=".widget.OnePicAppWidgetProvider">
