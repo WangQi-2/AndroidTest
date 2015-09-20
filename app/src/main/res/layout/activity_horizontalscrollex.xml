@@ -1,0 +1,38 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/gray"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <com.wq.androidtest.activity.customview.HorizontalScrollViewEx
+        android:id="@+id/container"
+        android:background="@color/yellow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            style="@style/AppTheme.Button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Button1" />
+
+        <Button
+            style="@style/AppTheme.Button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Button2" />
+
+        <Button
+            style="@style/AppTheme.Button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Button3" />
+
+        <Button
+            style="@style/AppTheme.Button"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Button4" />
+    </com.wq.androidtest.activity.customview.HorizontalScrollViewEx>
+
+</LinearLayout>
