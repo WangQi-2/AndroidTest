@@ -3,6 +3,9 @@ package com.wq.androidtest.activity.v7;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.view.animation.LayoutAnimationController;
 
 import com.wq.androidtest.R;
 import com.wq.androidtest.activity.BaseActivity;
@@ -22,5 +25,11 @@ public class RecycleViewListViewActivity extends BaseActivity {
         recyclerView = (RecyclerView) findViewById(R.id.recycleview);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.setAdapter(new RecycleAdapter());
+        //// TODO: 15/9/21 这个utils 系统的anim 和这个controller
+        Animation animation = AnimationUtils.loadAnimation(this, android.R.anim.slide_in_left);
+        LayoutAnimationController controller = new LayoutAnimationController(animation);
+        controller.setDelay(0.5f);
+        controller.setOrder(LayoutAnimationController.ORDER_RANDOM);
+        recyclerView.setLayoutAnimation(controller);
     }
 }

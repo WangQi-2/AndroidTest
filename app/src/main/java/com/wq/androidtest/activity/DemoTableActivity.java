@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.widget.GridView;
 
 import com.wq.androidtest.R;
+import com.wq.androidtest.activity.anim.AnimActivity;
 import com.wq.androidtest.activity.customview.CircleProgressActivity;
 import com.wq.androidtest.activity.customview.CircleViewActivity;
 import com.wq.androidtest.activity.customview.HorizontalScrollExActivity;
@@ -118,5 +119,6 @@ public class DemoTableActivity extends BaseActivity {
         demoEntryModels.add(new DemoEntryModel("notification", NotificationActivity.class));
         demoEntryModels.add(new DemoEntryModel("circleview", CircleViewActivity.class));
         demoEntryModels.add(new DemoEntryModel("horizontalscorllex", HorizontalScrollExActivity.class));
+        demoEntryModels.add(new DemoEntryModel("anim", AnimActivity.class));
     }
 }
