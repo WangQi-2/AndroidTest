@@ -9,6 +9,7 @@ import com.wq.androidtest.activity.anim.AnimActivity;
 import com.wq.androidtest.activity.customview.CircleProgressActivity;
 import com.wq.androidtest.activity.customview.CircleViewActivity;
 import com.wq.androidtest.activity.customview.HorizontalScrollExActivity;
+import com.wq.androidtest.activity.customview.NumberClockActivity;
 import com.wq.androidtest.activity.customview.ProgressButtonActivity;
 import com.wq.androidtest.activity.customview.RatingActivity;
 import com.wq.androidtest.activity.customview.RiseTextViewActivity;
@@ -120,5 +121,6 @@ public class DemoTableActivity extends BaseActivity {
         demoEntryModels.add(new DemoEntryModel("circleview", CircleViewActivity.class));
         demoEntryModels.add(new DemoEntryModel("horizontalscorllex", HorizontalScrollExActivity.class));
         demoEntryModels.add(new DemoEntryModel("anim", AnimActivity.class));
+        demoEntryModels.add(new DemoEntryModel("number clock", NumberClockActivity.class));
     }
 }
