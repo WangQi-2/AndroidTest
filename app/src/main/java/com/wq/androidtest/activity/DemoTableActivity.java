@@ -8,8 +8,8 @@ import com.wq.androidtest.R;
 import com.wq.androidtest.activity.anim.AnimActivity;
 import com.wq.androidtest.activity.customview.CircleProgressActivity;
 import com.wq.androidtest.activity.customview.CircleViewActivity;
-import com.wq.androidtest.activity.customview.HorizontalScrollExActivity;
 import com.wq.androidtest.activity.customview.FontMetricsActivity;
+import com.wq.androidtest.activity.customview.HorizontalScrollExActivity;
 import com.wq.androidtest.activity.customview.ProgressButtonActivity;
 import com.wq.androidtest.activity.customview.RatingActivity;
 import com.wq.androidtest.activity.customview.RiseTextViewActivity;
@@ -124,5 +124,6 @@ public class DemoTableActivity extends BaseActivity {
         demoEntryModels.add(new DemoEntryModel("number clock", FontMetricsActivity.class));
         demoEntryModels.add(new DemoEntryModel("imagesize", ImageSizeActivity.class));
         demoEntryModels.add(new DemoEntryModel("ripple", RippleLayoutActivity.class));
+        demoEntryModels.add(new DemoEntryModel("customDrawable", CustomDrawableActivity.class));
     }
 }

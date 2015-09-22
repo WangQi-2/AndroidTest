@@ -62,6 +62,7 @@
         <activity android:name=".activity.anim.AnimActivity" />
         <activity android:name=".activity.ImageSizeActivity" />
         <activity android:name=".activity.RippleLayoutActivity" />
+        <activity android:name=".activity.CustomDrawableActivity" />
 
 
         <!-- 桌面小控件-->
