@@ -123,5 +123,6 @@ public class DemoTableActivity extends BaseActivity {
         demoEntryModels.add(new DemoEntryModel("anim", AnimActivity.class));
         demoEntryModels.add(new DemoEntryModel("number clock", FontMetricsActivity.class));
         demoEntryModels.add(new DemoEntryModel("imagesize", ImageSizeActivity.class));
+        demoEntryModels.add(new DemoEntryModel("ripple", RippleLayoutActivity.class));
     }
 }
