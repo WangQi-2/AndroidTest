@@ -63,6 +63,7 @@
         <activity android:name=".activity.ImageSizeActivity" />
         <activity android:name=".activity.RippleLayoutActivity" />
         <activity android:name=".activity.CustomDrawableActivity" />
+        <activity android:name=".activity.BlurDialogActivity" />
 
 
         <!-- 桌面小控件-->
