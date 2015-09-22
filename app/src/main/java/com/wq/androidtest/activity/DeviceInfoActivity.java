@@ -3,7 +3,7 @@ package com.wq.androidtest.activity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import com.wq.androidtest.util.DeviceUtil;
+import com.wq.androidlibrary.util.DeviceUtil;
 
 /**
  * Created by wangqi on 15/9/16.

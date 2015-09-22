@@ -7,8 +7,8 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 import com.wq.androidtest.R;
-import com.wq.androidtest.util.AnimationUtil;
-import com.wq.androidtest.util.ToastUtil;
+import com.wq.androidlibrary.util.AnimationUtil;
+import com.wq.androidlibrary.util.ToastUtil;
 
 /**
  * Created by wangqi on 15/9/16.

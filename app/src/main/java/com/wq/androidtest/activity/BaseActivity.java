@@ -11,7 +11,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 
 import com.wq.androidlibrary.R;
-import com.wq.androidtest.util.ActivityUtil;
+import com.wq.androidlibrary.util.ActivityUtil;
 
 /**
  * Created by qiwang on 2015/8/27.

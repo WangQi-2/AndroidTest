@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.wq.androidtest.util.FileUtil;
+import com.wq.androidlibrary.util.FileUtil;
 
 import java.io.File;
 

@@ -7,7 +7,7 @@ import android.widget.Button;
 import android.widget.ListView;
 
 import com.wq.androidtest.R;
-import com.wq.androidtest.util.ViewUtil;
+import com.wq.androidlibrary.util.ViewUtil;
 
 import java.util.ArrayList;
 import java.util.List;

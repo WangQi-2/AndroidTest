@@ -5,7 +5,7 @@ import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.widget.Toast;
 
-import com.wq.androidtest.util.AppUtil;
+import com.wq.androidlibrary.util.AppUtil;
 
 public class QuickTestActivity extends BaseActivity {
 

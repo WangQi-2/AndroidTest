@@ -1,4 +1,4 @@
-package com.wq.androidtest.util;
+package com.wq.androidlibrary.util;
 
 import android.view.View;
 import android.view.animation.AccelerateDecelerateInterpolator;

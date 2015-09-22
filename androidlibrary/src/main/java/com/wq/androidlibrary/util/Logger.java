@@ -1,4 +1,4 @@
-package com.wq.androidlibrary.temp;
+package com.wq.androidlibrary.util;
 
 import android.text.TextUtils;
 

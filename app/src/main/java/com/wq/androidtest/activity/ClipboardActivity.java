@@ -8,7 +8,7 @@ import android.view.View;
 import android.widget.EditText;
 
 import com.wq.androidtest.R;
-import com.wq.androidtest.util.ToastUtil;
+import com.wq.androidlibrary.util.ToastUtil;
 
 /**
  * Created by wangqi on 15/9/14.

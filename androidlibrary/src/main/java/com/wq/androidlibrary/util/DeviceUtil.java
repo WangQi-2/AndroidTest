@@ -1,4 +1,4 @@
-package com.wq.androidtest.util;
+package com.wq.androidlibrary.util;
 
 import android.content.Context;
 import android.os.Build;

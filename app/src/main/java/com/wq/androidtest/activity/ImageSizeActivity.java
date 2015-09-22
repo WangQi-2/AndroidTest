@@ -12,7 +12,7 @@ import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.wq.androidtest.R;
-import com.wq.androidtest.util.BitmapUtil;
+import com.wq.androidlibrary.util.BitmapUtil;
 import com.wq.androidtest.util.Logger;
 
 import java.io.IOException;

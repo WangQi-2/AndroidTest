@@ -5,7 +5,7 @@ import android.util.DisplayMetrics;
 import android.widget.TextView;
 
 import com.wq.androidtest.R;
-import com.wq.androidtest.util.ScreenUtil;
+import com.wq.androidlibrary.util.ScreenUtil;
 
 /**
  * Created by wangqi on 15/9/11.
