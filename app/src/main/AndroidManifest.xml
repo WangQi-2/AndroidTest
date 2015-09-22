@@ -58,8 +58,9 @@
         <activity android:name=".activity.NotificationActivity" />
         <activity android:name=".activity.customview.CircleViewActivity" />
         <activity android:name=".activity.customview.HorizontalScrollExActivity" />
-        <activity android:name=".activity.customview.NumberClockActivity" />
+        <activity android:name=".activity.customview.FontMetricsActivity" />
         <activity android:name=".activity.anim.AnimActivity" />
+        <activity android:name=".activity.ImageSizeActivity" />
 
 
         <!-- 桌面小控件-->

@@ -8,7 +8,7 @@ import com.wq.androidtest.activity.BaseActivity;
 /**
  * Created by wangqi on 15/9/21.
  */
-public class NumberClockActivity extends BaseActivity{
+public class FontMetricsActivity extends BaseActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

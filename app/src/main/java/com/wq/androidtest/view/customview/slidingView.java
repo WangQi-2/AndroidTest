@@ -3,15 +3,15 @@ package com.wq.androidtest.view.customview;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
-import android.view.View;
 import android.view.ViewConfiguration;
+import android.widget.TextView;
 
 import com.nineoldandroids.view.ViewHelper;
 
 /**
  * Created by wangqi on 15/9/21.
  */
-public class slidingView extends View {
+public class slidingView extends TextView {
 
     private int mSlop;
     private int mLastX;

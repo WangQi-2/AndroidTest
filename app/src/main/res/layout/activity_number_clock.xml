@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <com.wq.androidtest.view.customview.NumberClockView
+    <com.wq.androidtest.view.customview.FontMetricsView
         android:layout_width="100dp"
         android:background="@color/gray"
         android:layout_height="100dp" />
