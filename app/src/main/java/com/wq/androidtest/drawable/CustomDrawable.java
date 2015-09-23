@@ -1,12 +1,17 @@
 package com.wq.androidtest.drawable;
 
+import android.animation.AnimatorSet;
+import android.animation.ObjectAnimator;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.ColorFilter;
 import android.graphics.Paint;
-import android.graphics.PixelFormat;
 import android.graphics.Rect;
 import android.graphics.drawable.Drawable;
+import android.view.animation.Animation;
+import android.view.animation.LinearInterpolator;
+
+import com.wq.androidtest.util.Logger;
 
 /**
  * Created by wangqi on 15/9/22.
@@ -16,6 +21,25 @@ public class CustomDrawable extends Drawable {
     Paint redPaint;
     Paint greenPaint;
 
+    float scale;
+    int alpha;
+    AnimatorSet animatorSet;
+    int duration = 5000;
+
+    public float getScale() {
+        return scale;
+    }
+
+    public void setScale(float scale) {
+        this.scale = scale;
+        invalidateSelf();
+    }
+
+    @Override
+    public int getAlpha() {
+        return alpha;
+    }
+
     public CustomDrawable() {
         redPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         redPaint.setColor(Color.RED);
@@ -23,6 +47,19 @@ public class CustomDrawable extends Drawable {
         greenPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
         greenPaint.setAlpha(50);
         greenPaint.setColor(Color.GREEN);
+
+        animatorSet = new AnimatorSet();
+        ObjectAnimator scaleAnim = ObjectAnimator.ofFloat(this, "scale", 0f, 1f);
+        scaleAnim.setDuration(duration);
+        scaleAnim.setRepeatCount(Animation.INFINITE);
+        scaleAnim.setRepeatMode(Animation.REVERSE);
+        scaleAnim.setInterpolator(new LinearInterpolator());
+        ObjectAnimator alphaAnim = ObjectAnimator.ofInt(this, "alpha", 255, 0);
+        alphaAnim.setDuration(duration);
+        alphaAnim.setRepeatCount(Animation.INFINITE);
+        alphaAnim.setRepeatMode(Animation.REVERSE);
+        alphaAnim.setInterpolator(new LinearInterpolator());
+        animatorSet.playTogether(scaleAnim, alphaAnim);
     }
 
     @Override
@@ -32,7 +69,14 @@ public class CustomDrawable extends Drawable {
         float cx = rect.exactCenterX();
         float cy = rect.exactCenterY();
         canvas.drawRect(rect, greenPaint);
-        canvas.drawCircle(cx, cy, Math.min(cx, cy), redPaint);
+        float radius = Math.min(cx, cy);
+        canvas.drawCircle(cx, cy, radius * scale, redPaint);
+    }
+
+    public void startAnimation() {
+        if (animatorSet != null) {
+            animatorSet.start();
+        }
 
     }
 
@@ -41,17 +85,20 @@ public class CustomDrawable extends Drawable {
     public void setAlpha(int alpha) {
         redPaint.setAlpha(alpha);
         greenPaint.setAlpha(alpha);
+        Logger.e("***********************scale:" + scale + ", alpha:" + alpha);
+        invalidateSelf();
     }
 
     // TODO: 15/9/22
     @Override
     public void setColorFilter(ColorFilter cf) {
-
+        redPaint.setColorFilter(cf);
+        greenPaint.setColorFilter(cf);
     }
 
     // TODO: 15/9/22
     @Override
     public int getOpacity() {
-        return PixelFormat.TRANSLUCENT;
+        return redPaint.getAlpha();
     }
 }

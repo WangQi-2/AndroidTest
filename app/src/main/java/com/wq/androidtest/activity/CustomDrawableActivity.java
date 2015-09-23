@@ -15,6 +15,8 @@ public class CustomDrawableActivity extends BaseActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_customdrawable);
         TextView text = (TextView) findViewById(R.id.text);
-        text.setBackgroundDrawable(new CustomDrawable());
+        CustomDrawable customDrawable = new CustomDrawable();
+        text.setBackgroundDrawable(customDrawable);
+        customDrawable.startAnimation();
     }
 }
