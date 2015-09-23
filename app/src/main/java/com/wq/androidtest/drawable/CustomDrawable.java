@@ -85,7 +85,9 @@ public class CustomDrawable extends Drawable {
     public void setAlpha(int alpha) {
         redPaint.setAlpha(alpha);
         greenPaint.setAlpha(alpha);
+        // TODO: 15/9/23 这个log没有打出来
         Logger.e("***********************scale:" + scale + ", alpha:" + alpha);
+        // TODO: 15/9/23  
         invalidateSelf();
     }
 

@@ -64,6 +64,7 @@
         <activity android:name=".activity.RippleLayoutActivity" />
         <activity android:name=".activity.CustomDrawableActivity" />
         <activity android:name=".activity.BlurDialogActivity" />
+        <activity android:name=".activity.FakeExitActivity" />
 
 
         <!-- 桌面小控件-->

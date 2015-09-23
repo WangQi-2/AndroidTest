@@ -126,5 +126,6 @@ public class DemoTableActivity extends BaseActivity {
         demoEntryModels.add(new DemoEntryModel("ripple", RippleLayoutActivity.class));
         demoEntryModels.add(new DemoEntryModel("customDrawable", CustomDrawableActivity.class));
         demoEntryModels.add(new DemoEntryModel("blurDialog", BlurDialogActivity.class));
+        demoEntryModels.add(new DemoEntryModel("back", FakeExitActivity.class));
     }
 }
