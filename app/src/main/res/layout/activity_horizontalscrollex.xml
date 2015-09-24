@@ -13,11 +13,13 @@
         <Button
             style="@style/AppTheme.Button"
             android:layout_width="match_parent"
+            android:background="@color/red"
             android:layout_height="match_parent"
             android:text="Button1" />
 
         <Button
             style="@style/AppTheme.Button"
+            android:background="@color/yellow"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Button2" />
@@ -30,6 +32,7 @@
 
         <Button
             style="@style/AppTheme.Button"
+            android:background="@color/green"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Button4" />

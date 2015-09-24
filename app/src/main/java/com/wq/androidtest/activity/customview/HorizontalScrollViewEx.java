@@ -88,6 +88,7 @@ public class HorizontalScrollViewEx extends ViewGroup {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
+        // TODO: 15/9/23
         mVelocityTracker.addMovement(event);
         int x = (int) event.getX();
         int y = (int) event.getY();
