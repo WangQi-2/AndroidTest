@@ -24,5 +24,9 @@
     <!-- TextView -->
     <string name="Ms">MMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMMM</string>
 
+    <!-- -->
+    <string name="capital_on">ON</string>
+    <string name="capital_off">OFF</string>
+
 
 </resources>

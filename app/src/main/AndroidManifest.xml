@@ -65,6 +65,7 @@
         <activity android:name=".activity.CustomDrawableActivity" />
         <activity android:name=".activity.BlurDialogActivity" />
         <activity android:name=".activity.FakeExitActivity" />
+        <activity android:name=".activity.SwitchActivity" />
 
         <!-- 桌面小控件-->
         <receiver android:name=".widget.OnePicAppWidgetProvider">

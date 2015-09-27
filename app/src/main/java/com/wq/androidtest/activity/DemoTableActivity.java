@@ -79,44 +79,46 @@ public class DemoTableActivity extends BaseActivity {
         groupsList.add(new DemoEntryModel("ratingbar", RatingActivity.class));
         groupsList.add(new DemoEntryModel("progressbutton", ProgressButtonActivity.class));
         groupsList.add(new DemoEntryModel("circleprogress", CircleProgressActivity.class));
-        groupsModel = new DemoEntryModel("***custom views", null, groupsList);
+        groupsModel = new DemoEntryModel("*views", null, groupsList);
         demoEntryModels.add(groupsModel);
         //custom view group
         groupsList = new ArrayList<>();
         groupsList.add(new DemoEntryModel("flowlayout", FlowLayoutActivity.class));
-        groupsModel = new DemoEntryModel("***custom view groupsList", null, groupsList);
+        groupsModel = new DemoEntryModel("*viewgroups", null, groupsList);
         demoEntryModels.add(groupsModel);
-        //v7
+        //orignal
         groupsList = new ArrayList<>();
+        groupsList.add(new DemoEntryModel("cardview", CardViewActivity.class));
+        groupsList.add(new DemoEntryModel("recyclelist", RecycleViewListViewActivity.class));
+        groupsList.add(new DemoEntryModel("recyclegrid", RecycleViewGridActivity.class));
+        groupsList.add(new DemoEntryModel("recyclepubu", RecycleViewPuBuActivity.class));
+        groupsList.add(new DemoEntryModel("recyclepubu2", RecycleViewPuBu2Activity.class));
+        groupsList.add(new DemoEntryModel("switch", SwitchActivity.class));
+        groupsList.add(new DemoEntryModel("textstyle", TextActivity.class));
+        groupsList.add(new DemoEntryModel("test focused", FocusTesetActivity.class));
+        groupsList.add(new DemoEntryModel("clipboard", ClipboardActivity.class));
+        groupsList.add(new DemoEntryModel("screeninfo", ScreenInfoActivity.class));
+        groupsList.add(new DemoEntryModel("ems test", EmsTestActivity.class));
+        groupsList.add(new DemoEntryModel("deviceInfo", DeviceInfoActivity.class));
+        groupsModel = new DemoEntryModel("*orignal", null, groupsList);
+        demoEntryModels.add(groupsModel);
 
-
-        //sliding
+        //scroll
         groupsList = new ArrayList<>();
         groupsList.add(new DemoEntryModel("outScroll", OutScrollViewActivity.class));
         groupsList.add(new DemoEntryModel("scroll in scroll", ScrollInScrollActivity.class));
-        groupsModel = new DemoEntryModel("*** scrollview", null, groupsList);
+        groupsModel = new DemoEntryModel("*scrollview", null, groupsList);
         demoEntryModels.add(groupsModel);
 
         //single func
-        demoEntryModels.add(new DemoEntryModel("test focused", FocusTesetActivity.class));
         demoEntryModels.add(new DemoEntryModel("show ip", ShowIPActivity.class));
         demoEntryModels.add(new DemoEntryModel("eventbus", EventBusDemoActivity.class));
         demoEntryModels.add(new DemoEntryModel("update", UpdateApkActivity.class));
-        demoEntryModels.add(new DemoEntryModel("textstyle", TextActivity.class));
         demoEntryModels.add(new DemoEntryModel("mListView height", ListViewHeightAcitvity.class));
         demoEntryModels.add(new DemoEntryModel("animUtilTest", AnimationUtilTestActivity.class));
-        demoEntryModels.add(new DemoEntryModel("screeninfo", ScreenInfoActivity.class));
-        demoEntryModels.add(new DemoEntryModel("clipboard", ClipboardActivity.class));
-        demoEntryModels.add(new DemoEntryModel("ems test", EmsTestActivity.class));
-        demoEntryModels.add(new DemoEntryModel("cardview", CardViewActivity.class));
-        demoEntryModels.add(new DemoEntryModel("recyclelist", RecycleViewListViewActivity.class));
-        demoEntryModels.add(new DemoEntryModel("recyclegrid", RecycleViewGridActivity.class));
-        demoEntryModels.add(new DemoEntryModel("recyclepubu", RecycleViewPuBuActivity.class));
-        demoEntryModels.add(new DemoEntryModel("recyclepubu2", RecycleViewPuBu2Activity.class));
         demoEntryModels.add(new DemoEntryModel("risetextview", RiseTextViewActivity.class));
         demoEntryModels.add(new DemoEntryModel("enabletest", ViewEnableTestActivity.class));
         demoEntryModels.add(new DemoEntryModel("view trans", ViewTransActivity.class));
-        demoEntryModels.add(new DemoEntryModel("deviceInfo", DeviceInfoActivity.class));
         demoEntryModels.add(new DemoEntryModel("notification", NotificationActivity.class));
         demoEntryModels.add(new DemoEntryModel("circleview", CircleViewActivity.class));
         demoEntryModels.add(new DemoEntryModel("horizontalscorllex", HorizontalScrollExActivity.class));

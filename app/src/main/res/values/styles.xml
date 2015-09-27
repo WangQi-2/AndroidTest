@@ -18,6 +18,16 @@
         <item name="android:layout_height">match_parent</item>
     </style>
 
+    <!--switch-->
+    <style name="AppTheme.Switch">
+        <item name="android:thumb">@drawable/star_yellow</item>
+        <item name="android:textOn">@string/capital_on</item>
+        <item name="android:textOff">@string/capital_off</item>
+        <item name="android:thumbTextPadding">12dip</item>
+        <item name="android:switchMinWidth">96dip</item>
+        <item name="android:switchPadding">16dip</item>
+    </style>
+
     <!-- TextView-->
     <style name="AppTheme.WWTextView" parent="AppTheme.WWButton"></style>
     <style name="AppTheme.MMTextView" parent="AppTheme.MMButton"></style>
