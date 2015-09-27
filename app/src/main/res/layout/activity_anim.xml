@@ -5,27 +5,27 @@
 
     <Button
         android:id="@+id/showActivityBtn"
-        style="@style/AppTheme.Button"
+        style="@style/AppTheme.WWButton"
         android:onClick="showActivity"
         android:text="fade out" />
 
     <Button
         android:id="@+id/showButton"
-        style="@style/AppTheme.Button"
+        style="@style/AppTheme.WWButton"
         android:layout_height="50dp"
         android:onClick="showButton"
         android:text="enlarge button" />
 
     <Button
         android:id="@+id/showLayoutBtn"
-        style="@style/AppTheme.Button"
+        style="@style/AppTheme.WWButton"
         android:onClick="showLayout"
         android:text="layout amin" />
 
     <com.wq.androidtest.view.customview.slidingView
         android:layout_marginTop="10dp"
         android:text="按住拖动"
-        style="@style/AppTheme.Button"
+        style="@style/AppTheme.WWButton"
         android:layout_width="200dp"
         android:layout_height="200dp" />
 

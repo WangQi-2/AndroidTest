@@ -4,7 +4,7 @@
     android:orientation="vertical">
 
     <TextView
-        style="@style/AppTheme.Button"
+        style="@style/AppTheme.WWButton"
         android:text="hello"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />

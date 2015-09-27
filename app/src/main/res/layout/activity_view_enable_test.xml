@@ -7,25 +7,25 @@
         android:id="@+id/btn1"
         android:text="enable false"
         android:enabled="false"
-        style="@style/round_btn" />
+        style="@style/AppTheme.WWButton" />
     <Button
         android:id="@+id/btn2"
         android:text="focusable false"
         android:focusable="false"
-        style="@style/round_btn" />
+        style="@style/AppTheme.WWButton" />
     <Button
         android:id="@+id/btn3"
         android:text="click false"
         android:clickable="false"
-        style="@style/round_btn" />
+        style="@style/AppTheme.WWButton" />
     <Button
         android:id="@+id/btn4"
-        style="@style/round_btn" />
+        style="@style/AppTheme.WWButton" />
     <Button
         android:id="@+id/btn5"
-        style="@style/round_btn" />
+        style="@style/AppTheme.WWButton" />
     <Button
         android:id="@+id/btn6"
-        style="@style/round_btn" />
+        style="@style/AppTheme.WWButton" />
 
 </LinearLayout>

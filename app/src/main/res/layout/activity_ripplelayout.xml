@@ -11,7 +11,7 @@
         android:background="@color/yellow">
 
         <Button
-            style="@style/AppTheme.Button"
+            style="@style/AppTheme.WWButton"
             android:layout_width="150dp"
             android:onClick="onclick"
             android:layout_height="150dp" />

@@ -1,5 +1,6 @@
 package com.wq.androidtest.activity;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.app.Application;
 import android.content.Context;
@@ -34,7 +35,10 @@ public class BaseActivity extends Activity {
         if (i != null) {
             String title = i.getStringExtra(TITLE);
             if (!TextUtils.isEmpty(title)) {
-                getActionBar().setTitle(title);
+                ActionBar actionBar = getActionBar();
+                if (actionBar != null) {
+                    actionBar.setTitle(title);
+                }
             }
         }
 

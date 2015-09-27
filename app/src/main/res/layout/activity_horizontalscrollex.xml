@@ -11,27 +11,27 @@
         android:layout_height="match_parent">
 
         <Button
-            style="@style/AppTheme.Button"
+            style="@style/AppTheme.WWButton"
             android:layout_width="match_parent"
             android:background="@color/red"
             android:layout_height="match_parent"
             android:text="Button1" />
 
         <Button
-            style="@style/AppTheme.Button"
+            style="@style/AppTheme.WWButton"
             android:background="@color/yellow"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Button2" />
 
         <Button
-            style="@style/AppTheme.Button"
+            style="@style/AppTheme.WWButton"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:text="Button3" />
 
         <Button
-            style="@style/AppTheme.Button"
+            style="@style/AppTheme.WWButton"
             android:background="@color/green"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

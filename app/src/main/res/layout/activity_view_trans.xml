@@ -6,22 +6,22 @@
 
     <Button
         android:id="@+id/btn1"
-        style="@style/round_btn"
+        style="@style/AppTheme.WWButton"
         android:text="scrollby" />
 
     <Button
         android:id="@+id/btn2"
-        style="@style/round_btn"
+        style="@style/AppTheme.WWButton"
         android:text="scrollto" />
 
     <Button
         android:id="@+id/btn3"
-        style="@style/round_btn"
+        style="@style/AppTheme.WWButton"
         android:text="anim" />
 
     <Button
         android:id="@+id/btn4"
-        style="@style/round_btn"
+        style="@style/AppTheme.WWButton"
         android:text="layout" />
 
     <ImageView

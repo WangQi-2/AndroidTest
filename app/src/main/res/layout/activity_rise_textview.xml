@@ -6,10 +6,10 @@
 
     <TextView
         android:id="@+id/text1"
-        style="@style/normal_textview" />
+        style="@style/AppTheme.WWTextView" />
 
     <com.wq.androidtest.view.customview.RiseTextView
         android:id="@+id/text2"
-        style="@style/normal_textview" />
+        style="@style/AppTheme.WWTextView" />
 
 </LinearLayout>

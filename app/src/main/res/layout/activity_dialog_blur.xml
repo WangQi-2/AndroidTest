@@ -6,7 +6,7 @@
 
     <Button
         android:id="@+id/showdialog"
-        style="@style/AppTheme.Button"
+        style="@style/AppTheme.WWButton"
         />
 
 </LinearLayout>

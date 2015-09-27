@@ -31,7 +31,7 @@
         </activity>
         <activity android:name=".activity.QuickTestActivity" />
         <activity android:name=".activity.FocusTesetActivity" />
-        <activity android:name=".activity.ShowIPActivity" />
+        <activity android:name=".activity.ShowIPActivity" android:theme="@style/AppTheme.FloatActivity"/>
         <activity android:name=".activity.EventBusDemoActivity" />
         <activity android:name=".activity.UpdateApkActivity" />
         <activity android:name=".activity.customview.RatingActivity" />
@@ -65,7 +65,6 @@
         <activity android:name=".activity.CustomDrawableActivity" />
         <activity android:name=".activity.BlurDialogActivity" />
         <activity android:name=".activity.FakeExitActivity" />
-
 
         <!-- 桌面小控件-->
         <receiver android:name=".widget.OnePicAppWidgetProvider">

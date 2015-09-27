@@ -7,7 +7,7 @@
     <Button
         android:text="退出"
         android:onClick="click"
-        style="@style/AppTheme.Button"
+        style="@style/AppTheme.WWButton"
         />
 
 </LinearLayout>

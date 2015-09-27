@@ -5,12 +5,12 @@
 
     <Button
         android:id="@+id/defaultBtn"
-        style="@style/AppTheme.Button"
+        style="@style/AppTheme.WWButton"
         android:text="@string/default1" />
 
     <Button
         android:id="@+id/customBtn"
-        style="@style/AppTheme.Button"
+        style="@style/AppTheme.WWButton"
         android:text="@string/custom" />
 
 </LinearLayout>

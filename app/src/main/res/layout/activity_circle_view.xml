@@ -5,7 +5,7 @@
     android:orientation="vertical">
 
     <Button
-        style="@style/AppTheme.Button"
+        style="@style/AppTheme.WWButton"
         android:text="button" />
 
     <com.wq.androidtest.view.customview.CircleView

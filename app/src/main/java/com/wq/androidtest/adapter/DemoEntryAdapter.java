@@ -51,6 +51,7 @@ public final class DemoEntryAdapter extends BaseAdapter {
         TextView holder;
         if (convertView == null) {
             TextView textView = new TextView(mContext);
+            textView.setTextAppearance(mContext,R.style.AppTheme_WWTextView);
             //TODO 这里true会影响item的点击事件,结合tv开发我或许可以知道为什么
             textView.setFocusable(true);
             textView.setTextSize(20);
