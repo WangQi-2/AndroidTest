@@ -88,6 +88,7 @@ public class DemoTableActivity extends BaseActivity {
         demoEntryModels.add(groupsModel);
         //anim
         groupsList = new ArrayList<>();
+        groupsList.add(new DemoEntryModel("layoutanim", LayoutAnimationActivity.class));
         groupsModel = new DemoEntryModel("*anim", null, groupsList);
         demoEntryModels.add(groupsModel);
         //orignal
