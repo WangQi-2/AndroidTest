@@ -2,12 +2,15 @@ package com.wq.androidtest.activity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.view.animation.LayoutAnimationController;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 
-import com.wq.androidtest.R;
 import com.wq.androidlibrary.util.ViewUtil;
+import com.wq.androidtest.R;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,6 +39,12 @@ public class ListViewHeightAcitvity extends BaseActivity implements View.OnClick
         mBtn.setOnClickListener(this);
         mBtn1 = (Button) findViewById(R.id.btn1);
         mBtn1.setOnClickListener(this);
+
+        Animation animation = AnimationUtils.loadAnimation(this,R.anim.anim_slide_in);
+        LayoutAnimationController controller = new LayoutAnimationController(animation);
+        controller.setDelay(0.5f);
+        controller.setOrder(LayoutAnimationController.ORDER_NORMAL);
+        mListView.setLayoutAnimation(controller);
     }
 
     @Override

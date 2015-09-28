@@ -1,7 +1,10 @@
 package com.wq.androidtest.view.customview;
 
+import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.util.AttributeSet;
+import android.view.animation.Animation;
+import android.view.animation.LinearInterpolator;
 import android.widget.TextView;
 
 /**
@@ -10,102 +13,45 @@ import android.widget.TextView;
  */
 public class RiseTextView extends TextView {
 
-    private static final long DELTA_TIME = 200;
-    private long duration;
-    private String numText;
-    private boolean isInt;
+    private static final int DURATION = 5000;
+    private String text;
 
+    public float getNum() {
+        return num;
+    }
+
+    public void setNum(float num) {
+        this.num = num;
+        setText("" + num);
+    }
+
+    private float num;
+    private ObjectAnimator objectAnimator;
 
     public RiseTextView(Context context) {
         this(context, null);
+        init();
+    }
+
+    private void init() {
+        objectAnimator = ObjectAnimator.ofFloat(this, "num", 0f, num);
+        objectAnimator.setDuration(DURATION);
+        objectAnimator.setInterpolator(new LinearInterpolator());
+        objectAnimator.setRepeatCount(1);
+        objectAnimator.setRepeatMode(Animation.REVERSE);
+    }
+
+    public void start(){
+        objectAnimator.start();
     }
 
     public RiseTextView(Context context, AttributeSet attrs) {
         super(context, attrs);
+        init();
     }
 
-    //TODO where use
     public RiseTextView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-    }
-
-
-    public void setNumText(String s) {
-
-        if (s.contains(".")) {
-            isInt = false;
-        } else {
-            isInt = true;
-        }
-        this.numText = s;
-    }
-
-
-    public void setDuration(long millis) {
-        this.duration = millis;
-    }
-
-
-    double numDouble;
-    double delta;
-
-    double cur = 0;
-
-    public void start() {
-        //TODO 刷新失败,两种方法都不可以
-
-        if (numText == null) {
-            numText = getText().toString();
-        }
-        if (duration == 0) {
-            duration = 10000;
-        }
-
-        numDouble = Double.parseDouble(numText);
-        delta = numDouble / (double) duration / DELTA_TIME;
-
-        Thread thread = new Thread() {
-            @Override
-            public void run() {
-                int i = 0;
-                while (i < duration / DELTA_TIME) {
-                    try {
-                        sleep(DELTA_TIME);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-                    if (isInt) {
-                        setText((int) cur + "");
-                    } else {
-                        setText(cur + "");
-                    }
-                    cur = +delta;
-                    i++;
-                    invalidate();
-                }
-                setText(numText);
-            }
-        };
-        post(thread);
-
-
-//        CountDownTimer timer = new CountDownTimer(duration, DELTA_TIME) {
-//            @Override
-//            public void onTick(long millisUntilFinished) {
-//
-//                if (isInt) {
-//                    setText((int) cur + "");
-//                } else {
-//                    setText(cur + "");
-//                }
-//                cur = +delta;
-//            }
-//
-//            @Override
-//            public void onFinish() {
-//                setText(numText);
-//            }
-//        };
-//        timer.start();
+        init();
     }
 }

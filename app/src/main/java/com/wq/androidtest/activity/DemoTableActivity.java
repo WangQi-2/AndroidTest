@@ -86,6 +86,10 @@ public class DemoTableActivity extends BaseActivity {
         groupsList.add(new DemoEntryModel("flowlayout", FlowLayoutActivity.class));
         groupsModel = new DemoEntryModel("*viewgroups", null, groupsList);
         demoEntryModels.add(groupsModel);
+        //anim
+        groupsList = new ArrayList<>();
+        groupsModel = new DemoEntryModel("*anim", null, groupsList);
+        demoEntryModels.add(groupsModel);
         //orignal
         groupsList = new ArrayList<>();
         groupsList.add(new DemoEntryModel("cardview", CardViewActivity.class));

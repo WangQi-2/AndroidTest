@@ -3,6 +3,9 @@ package com.wq.androidtest.activity.v7;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.view.animation.LayoutAnimationController;
 
 import com.wq.androidtest.R;
 import com.wq.androidtest.activity.BaseActivity;
@@ -20,5 +23,10 @@ public class RecycleViewPuBuActivity extends BaseActivity{
         recyclerView = (RecyclerView) findViewById(R.id.recycleview);
         recyclerView.setLayoutManager(new StaggeredGridLayoutManager(4, StaggeredGridLayoutManager.VERTICAL));
         recyclerView.setAdapter(new RecycleAdapter());
+        Animation animation = AnimationUtils.loadAnimation(this,R.anim.anim_slide_in);
+        LayoutAnimationController controller = new LayoutAnimationController(animation);
+        controller.setDelay(0.1f);
+        controller.setOrder(LayoutAnimationController.ORDER_NORMAL);
+        recyclerView.setLayoutAnimation(controller);
     }
 }
