@@ -77,13 +77,16 @@ public class DemoTableActivity extends BaseActivity {
         //custom view
         groupsList = new ArrayList<>();
         groupsList.add(new DemoEntryModel("ratingbar", RatingActivity.class));
+        groupsList.add(new DemoEntryModel("circleview", CircleViewActivity.class));
         groupsList.add(new DemoEntryModel("progressbutton", ProgressButtonActivity.class));
         groupsList.add(new DemoEntryModel("circleprogress", CircleProgressActivity.class));
         groupsModel = new DemoEntryModel("*views", null, groupsList);
         demoEntryModels.add(groupsModel);
         //custom view group
         groupsList = new ArrayList<>();
+        groupsList.add(new DemoEntryModel("horizontalscorllex", HorizontalScrollExActivity.class));
         groupsList.add(new DemoEntryModel("flowlayout", FlowLayoutActivity.class));
+        groupsList.add(new DemoEntryModel("ripple", RippleLayoutActivity.class));
         groupsModel = new DemoEntryModel("*viewgroups", null, groupsList);
         demoEntryModels.add(groupsModel);
         //anim
@@ -125,12 +128,9 @@ public class DemoTableActivity extends BaseActivity {
         demoEntryModels.add(new DemoEntryModel("enabletest", ViewEnableTestActivity.class));
         demoEntryModels.add(new DemoEntryModel("view trans", ViewTransActivity.class));
         demoEntryModels.add(new DemoEntryModel("notification", NotificationActivity.class));
-        demoEntryModels.add(new DemoEntryModel("circleview", CircleViewActivity.class));
-        demoEntryModels.add(new DemoEntryModel("horizontalscorllex", HorizontalScrollExActivity.class));
         demoEntryModels.add(new DemoEntryModel("anim", AnimActivity.class));
         demoEntryModels.add(new DemoEntryModel("number clock", FontMetricsActivity.class));
         demoEntryModels.add(new DemoEntryModel("imagesize", ImageSizeActivity.class));
-        demoEntryModels.add(new DemoEntryModel("ripple", RippleLayoutActivity.class));
         demoEntryModels.add(new DemoEntryModel("customDrawable", CustomDrawableActivity.class));
         demoEntryModels.add(new DemoEntryModel("blurDialog", BlurDialogActivity.class));
         demoEntryModels.add(new DemoEntryModel("back", FakeExitActivity.class));

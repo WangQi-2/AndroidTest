@@ -15,7 +15,7 @@ import java.util.Calendar;
 public final class Logger {
 
     //设置一个默认的TAG
-    public static final String TAG = "LOCAL_LOG";
+    public static final String TAG = "x504";
     //起始执行时间
     public static long startLogTimeInMillis = 0;
     //标记日志是否允许（打开）

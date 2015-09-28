@@ -1,10 +1,8 @@
 package com.wq.androidtest.view.customview;
 
-import android.animation.ObjectAnimator;
+import android.animation.ValueAnimator;
 import android.content.Context;
 import android.util.AttributeSet;
-import android.view.animation.Animation;
-import android.view.animation.LinearInterpolator;
 import android.widget.TextView;
 
 /**
@@ -13,36 +11,61 @@ import android.widget.TextView;
  */
 public class RiseTextView extends TextView {
 
-    private static final int DURATION = 5000;
-    private String text;
-
-    public float getNum() {
-        return num;
-    }
+    private static final int DURATION = 1000;
+    private static final int INT = 1;
+    private static final int FLOAT = 2;
+    final static int[] sizeTable = { 9, 99, 999, 9999, 99999, 999999, 9999999,
+            99999999, 999999999, Integer.MAX_VALUE };
+    private int numType;
+    private float num;
+    ValueAnimator valueAnimator;
 
     public void setNum(float num) {
         this.num = num;
-        setText("" + num);
+        numType = FLOAT;
     }
 
-    private float num;
-    private ObjectAnimator objectAnimator;
+    public void setNum(int num) {
+        this.num = num;
+        numType = INT;
+    }
+
+    private void init() {
+    }
+
+    int preLen;
+    public void start() {
+        valueAnimator = ValueAnimator.ofFloat(0f, num);
+        valueAnimator.setDuration(DURATION);
+        valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
+
+            @Override
+            public void onAnimationUpdate(ValueAnimator animation) {
+                Float ret = (Float) valueAnimator.getAnimatedValue();
+                switch (numType) {
+                    case INT:
+                        setText(String.format("%.0f", ret));
+                        break;
+                    case FLOAT:
+                        setText(String.format("%.2f", ret));
+                        break;
+                }
+            }
+        });
+        valueAnimator.start();
+    }
+
+    //获得整数部分长度
+    static int sizeOfInt(float x) {
+        for (int i = 0;; i++){
+            if (x <= sizeTable[i])
+                return i + 1;
+        }
+    }
 
     public RiseTextView(Context context) {
         this(context, null);
         init();
-    }
-
-    private void init() {
-        objectAnimator = ObjectAnimator.ofFloat(this, "num", 0f, num);
-        objectAnimator.setDuration(DURATION);
-        objectAnimator.setInterpolator(new LinearInterpolator());
-        objectAnimator.setRepeatCount(1);
-        objectAnimator.setRepeatMode(Animation.REVERSE);
-    }
-
-    public void start(){
-        objectAnimator.start();
     }
 
     public RiseTextView(Context context, AttributeSet attrs) {

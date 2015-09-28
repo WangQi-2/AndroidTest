@@ -40,7 +40,7 @@ public class RiseTextViewActivity extends BaseActivity {
         };
         timer.start();
         textView1 = (RiseTextView) findViewById(R.id.text2);
-        textView1.setNum(999999);
+        textView1.setNum(899999.90f);
         textView1.start();
 
     }
