@@ -67,6 +67,7 @@
         <activity android:name=".activity.FakeExitActivity" />
         <activity android:name=".activity.SwitchActivity" />
         <activity android:name=".activity.LayoutAnimationActivity" />
+        <activity android:name=".activity.FButtonActivity" />
 
         <!-- 桌面小控件-->
         <receiver android:name=".widget.OnePicAppWidgetProvider">

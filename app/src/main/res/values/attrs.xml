@@ -35,4 +35,12 @@
         <attr name="drawable_cur_progress" format="integer|reference" />
     </declare-styleable>
 
+    <declare-styleable name="FButton">
+        <attr name="shadowEnabled" format="boolean|reference" />
+        <attr name="buttonColor" format="color|reference" />
+        <attr name="shadowColor" format="color|reference" />
+        <attr name="shadowHeight" format="dimension|reference" />
+        <attr name="cornerRadius" format="dimension|reference" />
+    </declare-styleable>
+
 </resources>

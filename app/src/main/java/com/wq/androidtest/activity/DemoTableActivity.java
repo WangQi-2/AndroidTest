@@ -134,5 +134,6 @@ public class DemoTableActivity extends BaseActivity {
         demoEntryModels.add(new DemoEntryModel("customDrawable", CustomDrawableActivity.class));
         demoEntryModels.add(new DemoEntryModel("blurDialog", BlurDialogActivity.class));
         demoEntryModels.add(new DemoEntryModel("back", FakeExitActivity.class));
+        demoEntryModels.add(new DemoEntryModel("fbutton", FButtonActivity.class));
     }
 }

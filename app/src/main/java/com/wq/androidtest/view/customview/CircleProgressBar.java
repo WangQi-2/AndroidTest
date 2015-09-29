@@ -16,7 +16,6 @@ import com.wq.androidtest.R;
 
 
 /**
- * TODO bug中间的是不透明的
  */
 public class CircleProgressBar extends View {
 
@@ -50,6 +49,7 @@ public class CircleProgressBar extends View {
                 R.styleable.CircleProgressBar);
         mCircleRadius = (int) a.getDimension(R.styleable.CircleProgressBar_circle_radius,
                 0);
+        // FIXME: 15/9/29
         mBorderWidth = (int) a.getDimension(
                 R.styleable.CircleProgressBar_circle_border_width, 4);
         mCircleColor = a
