@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <com.wq.androidtest.view.flatui.FlatButton
+        android:id="@+id/blue"
+        style="@style/AppTheme.WWButton"
+        android:background="@color/blue3"
+        android:onClick="click"
+        android:text="blue" />
+
+    <com.wq.androidtest.view.flatui.FlatButton
+        android:id="@+id/green"
+        style="@style/AppTheme.WWButton"
+        android:background="@color/green3"
+        android:onClick="click"
+        android:text="green" />
+
+    <com.wq.androidtest.view.flatui.FlatButton
+        android:id="@+id/red"
+        style="@style/AppTheme.WWButton"
+        android:background="@color/red3"
+        android:onClick="click"
+        android:text="red" />
+
+
+</LinearLayout>

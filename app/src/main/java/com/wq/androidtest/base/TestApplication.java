@@ -16,7 +16,8 @@ public class TestApplication extends Application {
 
 
         //crash
-        CrashHandler.getInstance().init(this);
+        //// FIXME: 15/9/30
+//        CrashHandler.getInstance().init(this);
     }
 
     public static TestApplication getsInstance() {
