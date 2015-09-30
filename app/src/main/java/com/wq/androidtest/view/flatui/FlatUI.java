@@ -1,7 +1,5 @@
 package com.wq.androidtest.view.flatui;
 
-import com.wq.androidtest.util.Logger;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,7 +18,6 @@ public class FlatUI {
     }
 
     public static void changeTheme(int color) {
-        Logger.e("changeTheme:" + color);
         for (FlatView flatView : flatViews) {
             flatView.getAttributes().setColor(color);
         }
