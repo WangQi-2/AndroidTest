@@ -14,10 +14,11 @@ import com.wq.androidtest.anim.CubeRightInAnimation;
  */
 public class CubeAnimActivity extends BaseActivity {
 
-    static final long DURATION = 5000;
+    static final long DURATION = 1000;
 
-    View cubeOutView;
-    View cubeInView;
+    View first;
+    View second;
+    View third;
 
     Animation cubeOutAnim;
     Animation cubeInAnim;
@@ -36,12 +37,22 @@ public class CubeAnimActivity extends BaseActivity {
         cubeInAnim.setDuration(DURATION);
         cubeInAnim.setFillAfter(true);
         cubeInAnim.setRepeatMode(Animation.REVERSE);
-        cubeInAnim.setRepeatCount(1);
+//        cubeInAnim.setRepeatCount(1);
         cubeOutAnim.setDuration(DURATION);
         cubeOutAnim.setFillAfter(true);
         cubeOutAnim.setRepeatMode(Animation.REVERSE);
-        cubeOutAnim.setRepeatCount(1);
+//        cubeOutAnim.setRepeatCount(1);
 
+
+    }
+
+    private void initViews() {
+        first = findViewById(R.id.first);
+        second = findViewById(R.id.second);
+        third = findViewById(R.id.third);
+    }
+
+    private void startSecond() {
         cubeInAnim.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation animation) {
@@ -50,7 +61,7 @@ public class CubeAnimActivity extends BaseActivity {
 
             @Override
             public void onAnimationEnd(Animation animation) {
-//                cubeInView.bringToFront();
+                second.bringToFront();
             }
 
             @Override
@@ -58,39 +69,86 @@ public class CubeAnimActivity extends BaseActivity {
 
             }
         });
-
-    }
-
-    private void initViews() {
-        cubeInView = findViewById(R.id.restore);
-        cubeOutView = findViewById(R.id.start);
-    }
-
-    private void startAnim() {
-        ToastUtil.showToast(this, "start");
-        cubeInView.startAnimation(cubeInAnim);
-        cubeOutView.startAnimation(cubeOutAnim);
+        first.setVisibility(View.VISIBLE);
+        second.setVisibility(View.VISIBLE);
+        third.setVisibility(View.GONE);
+        first.startAnimation(cubeOutAnim);
+        second.startAnimation(cubeInAnim);
         // TODO: 15/10/2 下面四句无效
-//        cubeOutView.setAnimation(cubeOutAnim);
-//        cubeInView.setAnimation(cubeInAnim);
+//        first.setAnimation(cubeOutAnim);
+//        second.setAnimation(cubeInAnim);
 //        cubeInAnim.start();
 //        cubeOutAnim.start();
         // TODO: 15/10/2 what 4?
 //        cubeOutAnim.startNow();
     }
 
+    //TODO HOW TO RESTORE
     private void restoreAnim() {
         ToastUtil.showToast(this, "restore");
     }
 
     public void click(View view) {
         switch (view.getId()) {
-            case R.id.start:
-                startAnim();
+            case R.id.first:
+                startSecond();
                 break;
-            case R.id.restore:
-                restoreAnim();
+            case R.id.second:
+                startThird();
+                break;
+            case R.id.third:
+                startFirst();
                 break;
         }
+    }
+
+    private void startFirst() {
+        cubeInAnim.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                first.bringToFront();
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+        first.setVisibility(View.VISIBLE);
+        second.setVisibility(View.GONE);
+        third.setVisibility(View.VISIBLE);
+        third.startAnimation(cubeOutAnim);
+        first.startAnimation(cubeInAnim);
+
+    }
+
+    private void startThird() {
+        cubeInAnim.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                third.bringToFront();
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+        first.setVisibility(View.GONE);
+        second.setVisibility(View.VISIBLE);
+        third.setVisibility(View.VISIBLE);
+        second.startAnimation(cubeOutAnim);
+        third.startAnimation(cubeInAnim);
+
     }
 }
