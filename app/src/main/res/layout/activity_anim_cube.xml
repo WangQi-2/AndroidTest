@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/restore"
+            style="@style/AppTheme.MMButton"
+            android:background="@drawable/bg_btn_blue_round"
+            android:onClick="click"
+            android:padding="20dp"
+            android:text="restore" />
+
+        <Button
+            android:id="@+id/start"
+            style="@style/AppTheme.MMButton"
+            android:background="@drawable/bg_btn_green_round"
+            android:onClick="click"
+            android:padding="20dp"
+            android:text="start" />
+
+
+    </FrameLayout>
+
+
+</LinearLayout>

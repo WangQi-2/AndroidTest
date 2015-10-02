@@ -2,12 +2,13 @@ package com.wq.androidtest.view.group;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import android.view.MotionEvent;
 import android.widget.ScrollView;
 
 /**
  * Created by wangqi on 15/9/28.
+ *
  */
+
 public class InnerScrollView extends ScrollView {
     public InnerScrollView(Context context) {
         super(context);
@@ -23,12 +24,12 @@ public class InnerScrollView extends ScrollView {
 
     float lastX = 0;
     float lastY = 0;
-
-    @Override
-    public boolean onTouchEvent(MotionEvent ev) {
-
-        boolean consumed = true;
-
+// TODO: 15/9/30 也许这个类根本是不需要的
+//    @Override
+//    public boolean onTouchEvent(MotionEvent ev) {
+//
+//        boolean consumed = true;
+//
 //        switch (ev.getAction()) {
 //
 //            case MotionEvent.ACTION_DOWN:
@@ -42,16 +43,14 @@ public class InnerScrollView extends ScrollView {
 //                int maxHeight = getChildAt(0).getMeasuredHeight();
 //                String info = "scrollY:" + scrollY + ", height:" + height + ", maxHeight:" + maxHeight;
 //                Logger.e(info);
-//
-//                if (deltaY < 0 && scrollY + height >= maxHeight) {
-//                    consumed = false;
-//                }
-//                if (deltaY > 0 && scrollY == 0) {
-//                    consumed = false;
-//                }
+//                consumed = ViewCompat.canScrollVertically(this, (int) deltaY);
 //                break;
 //        }
-        return super.onTouchEvent(ev);
+//
+//        if (consumed) {
+//            super.onTouchEvent(ev);
+//        }
+//        return consumed;
+//    }
 
-    }
 }

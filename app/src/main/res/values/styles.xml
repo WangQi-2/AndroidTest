@@ -9,7 +9,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_margin">4dp</item>
         <item name="android:gravity">center</item>
-        <item name="android:background">@drawable/bg_btn_blue_round</item>
+        <item name="android:background">@drawable/bg_btn_green_round</item>
         <item name="android:textColor">@color/black</item>
     </style>
 

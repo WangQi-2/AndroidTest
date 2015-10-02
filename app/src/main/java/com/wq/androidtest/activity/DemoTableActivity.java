@@ -6,6 +6,7 @@ import android.widget.GridView;
 
 import com.wq.androidtest.R;
 import com.wq.androidtest.activity.anim.AnimActivity;
+import com.wq.androidtest.activity.anim.AnimTestActivity;
 import com.wq.androidtest.activity.customview.CircleProgressActivity;
 import com.wq.androidtest.activity.customview.CircleViewActivity;
 import com.wq.androidtest.activity.customview.FontMetricsActivity;
@@ -136,5 +137,7 @@ public class DemoTableActivity extends BaseActivity {
         demoEntryModels.add(new DemoEntryModel("back", FakeExitActivity.class));
         demoEntryModels.add(new DemoEntryModel("fbutton", FButtonActivity.class));
         demoEntryModels.add(new DemoEntryModel("flatUI", FlatUIActivity.class));
+        demoEntryModels.add(new DemoEntryModel("animtest", AnimTestActivity.class));
+        demoEntryModels.add(new DemoEntryModel("cube ainm",CubeAnimActivity.class));
     }
 }

@@ -13,14 +13,14 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:scaleType="fitCenter"
+            android:scaleType="centerCrop"
             android:src="@drawable/bg1" />
 
         <com.wq.androidtest.view.group.InnerScrollView
             android:layout_width="match_parent"
-            android:layout_height="400dp"
-            android:background="@color/green"
-            android:padding="10dp">
+            android:layout_height="200dp"
+            android:background="@color/red2"
+            android:padding="5dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -30,13 +30,13 @@
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:scaleType="fitCenter"
+                    android:scaleType="centerCrop"
                     android:src="@drawable/bg5" />
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:scaleType="fitCenter"
+                    android:scaleType="centerCrop"
                     android:src="@drawable/bg6" />
             </LinearLayout>
         </com.wq.androidtest.view.group.InnerScrollView>
@@ -45,7 +45,7 @@
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:scaleType="fitCenter"
+            android:scaleType="centerCrop"
             android:src="@drawable/bg4" />
     </LinearLayout>
 
