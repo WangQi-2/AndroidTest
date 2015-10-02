@@ -13,7 +13,7 @@
             style="@style/AppTheme.MMButton"
             android:background="@color/blue2"
             android:onClick="click"
-            android:text="grey" />
+            android:text="blue" />
         <Button
             android:id="@+id/second"
             style="@style/AppTheme.MMButton"
