@@ -16,7 +16,6 @@ public class FakeExitActivity extends BaseActivity {
     }
 
     public void click(View view) {
-        // TODO: 15/9/23
         moveTaskToBack(true);
     }
 }

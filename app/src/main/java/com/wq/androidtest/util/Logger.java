@@ -95,7 +95,6 @@ public final class Logger {
         logEnabled_e = error;
     }
 
-    //TODO 这里需要完善
     private static String getLocation() {
         final String className = Logger.class.getName();
         final StackTraceElement[] traces = Thread.currentThread().getStackTrace();

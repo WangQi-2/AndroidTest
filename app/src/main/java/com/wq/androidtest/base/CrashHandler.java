@@ -35,15 +35,11 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler {
     }
 
     public void init(Context context) {
-        // TODO: 15/9/20
         mDefaultCrashHandler = Thread.getDefaultUncaughtExceptionHandler();
-        // TODO: 15/9/20
         Thread.setDefaultUncaughtExceptionHandler(this);
-        // TODO: 15/9/20
         mContext = context.getApplicationContext();
     }
 
-    // TODO: 15/9/20
     @Override
     public void uncaughtException(Thread thread, Throwable ex) {
         try {
@@ -56,13 +52,12 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler {
         if (mDefaultCrashHandler != null) {
             mDefaultCrashHandler.uncaughtException(thread, ex);
         } else {
-            // TODO: 15/9/20 java.lang.Process vs android.os.Process
             android.os.Process.killProcess(Process.myPid());
         }
     }
 
 
-    // TODO: 15/9/20  
+    // TODO: 15/10/08
     private void uploadExceptionToServer(Throwable ex) {
 
     }
@@ -71,12 +66,10 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler {
     private static final String FILE_NAME = "crash";
     private static final String FILE_NAME_SUFFIX = ".trace";
 
-    // TODO: 15/9/20 need?? yes ,add quanju debug
     boolean DEBUG = false;
 
     private void dumpExceptionToSDCard(Throwable ex) {
         if (!Environment.getExternalStorageState().equals(Environment.MEDIA_MOUNTED)) {
-            // TODO: 15/9/20  add logger.w
             Logger.e(TAG, "sdcard unmounted,skip dump exception");
             return;
         }
@@ -87,12 +80,10 @@ public class CrashHandler implements Thread.UncaughtExceptionHandler {
         }
 
         long current = System.currentTimeMillis();
-        // TODO: 15/9/20 add a util
         String time = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date(current));
         File file = new File(PATH + FILE_NAME + time + FILE_NAME_SUFFIX);
 
         try {
-            //// TODO: 15/9/20  
             PrintWriter pw = new PrintWriter(new BufferedWriter(new FileWriter(file)));
             pw.println(time);
             PackageManager pm = mContext.getPackageManager();

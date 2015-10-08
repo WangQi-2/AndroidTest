@@ -2,7 +2,6 @@ package com.wq.androidtest.view.focus;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import android.view.KeyEvent;
 import android.view.View;
 import android.widget.Button;
 
@@ -36,25 +35,4 @@ public class ChangeFocusButton extends Button {
             }
         });
     }
-
-    @Override
-    public boolean onKeyDown(int keyCode, KeyEvent event) {
-
-        //FIXME
-//        if (keyCode == KeyEvent.KEYCODE_DPAD_DOWN) {
-//            //这里拿到的id是-1，干
-//            int downId = getNextFocusDownId();
-//            Context context = getContext();
-//            if (context instanceof Activity) {
-//                View downView = ((Activity) context).findViewById(downId);
-//                if (downView != null && this.getBottom() <= downView.getTop()) {
-//                    setNextFocusDownId(this.getId());
-//                }
-//            }
-//        }
-
-        return super.onKeyDown(keyCode, event);
-    }
-
-
 }

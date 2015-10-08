@@ -47,10 +47,9 @@ public class CircleProgressBar extends View {
         super(context, attrs);
         TypedArray a = context.obtainStyledAttributes(attrs,
                 R.styleable.CircleProgressBar);
-        mCircleRadius = (int) a.getDimension(R.styleable.CircleProgressBar_circle_radius,
+        mCircleRadius = (int) a.getDimensionPixelSize(R.styleable.CircleProgressBar_circle_radius,
                 0);
-        // FIXME: 15/9/29
-        mBorderWidth = (int) a.getDimension(
+        mBorderWidth = (int) a.getDimensionPixelSize(
                 R.styleable.CircleProgressBar_circle_border_width, 4);
         mCircleColor = a
                 .getColor(R.styleable.CircleProgressBar_circle_color, Color.BLACK);
@@ -62,9 +61,9 @@ public class CircleProgressBar extends View {
         mStartAngle = (int) a.getInt(R.styleable.CircleProgressBar_circle_start_angle,
                 -90);
 
-        mCentreOffsetX = (int) a.getDimension(
+        mCentreOffsetX = (int) a.getDimensionPixelSize(
                 R.styleable.CircleProgressBar_centre_offset_x, 0);
-        mCentreOffsetY = (int) a.getDimension(
+        mCentreOffsetY = (int) a.getDimensionPixelSize(
                 R.styleable.CircleProgressBar_centre_offset_y, 0);
         mProgress = (int) a.getInt(R.styleable.CircleProgressBar_circle_progress, 0);
         isDrawOutter = a.getBoolean(R.styleable.CircleProgressBar_circle_draw_outter,

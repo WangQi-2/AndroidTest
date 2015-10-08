@@ -9,7 +9,6 @@ import android.view.View;
 
 /**
  * Created by wangqi on 15/9/21.
- * TODO 文本绘制先等等,先搞定view吧
  */
 public class FontMetricsView extends View {
 

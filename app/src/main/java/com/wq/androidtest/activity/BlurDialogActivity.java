@@ -1,6 +1,5 @@
 package com.wq.androidtest.activity;
 
-import android.app.Activity;
 import android.app.Dialog;
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -24,13 +23,12 @@ import com.wq.androidtest.R;
 /**
  * Created by wangqi on 15/9/22.
  */
-public class BlurDialogActivity extends Activity implements View.OnClickListener{
+public class BlurDialogActivity extends BaseActivity implements View.OnClickListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        // TODO: 15/9/22 继承baseactivity就会报错
         requestWindowFeature(Window.FEATURE_NO_TITLE);
+        super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_dialog_blur);
         Button button = (Button) findViewById(R.id.showdialog);
         button.setOnClickListener(this);
@@ -42,7 +40,6 @@ public class BlurDialogActivity extends Activity implements View.OnClickListener
 
         Dialog dialog = new Dialog(this);
         dialog.setContentView(R.layout.dialog_ff);
-        // TODO: 15/9/22 add style
         View decorView = getWindow().getDecorView();
         Display display = getWindowManager().getDefaultDisplay();
 

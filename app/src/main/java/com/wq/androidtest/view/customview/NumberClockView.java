@@ -6,7 +6,6 @@ import android.widget.TextView;
 
 /**
  * Created by wangqi on 15/9/21.
- * todo 数字时// 计算每一个坐标
  float baseX = 0;
  float baseY = 100;
  float topY = baseY + fontMetrics.top;

@@ -14,13 +14,4 @@ public class CircleViewActivity extends BaseActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_circle_view);
     }
-
-
-    // TODO: 15/9/20   oncreate
-//    @Override
-//    public void onCreate(Bundle savedInstanceState, PersistableBundle persistentState) {
-//        super.onCreate(savedInstanceState, persistentState);
-//        setContentView(R.layout.activity_circle_view);
-//
-//    }
 }

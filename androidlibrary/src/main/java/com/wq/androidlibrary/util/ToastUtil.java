@@ -45,15 +45,5 @@ public class ToastUtil {
         message.what = SHOW_TOAST;
         message.obj = str;
         toastHandler.sendMessage(message);
-
-        //TODO andbase 的写法
-//        Message msg = baseHandler.obtainMessage(SHOW_TOAST);
-//        Bundle bundle = new Bundle();
-//        bundle.putString("TEXT", text);
-//        msg.setData(bundle);
-
-
-
-
     }
 }

@@ -33,7 +33,6 @@ public class slidingView extends TextView {
     }
 
     private void init() {
-        // TODO: 15/9/21 viewconfiguration 
         mSlop = ViewConfiguration.get(getContext()).getScaledTouchSlop();
     }
 
@@ -48,7 +47,6 @@ public class slidingView extends TextView {
             int deltaY = y - mLastY;
             int transX = (int) (ViewHelper.getTranslationX(this) + deltaX);
             int transY = (int) (ViewHelper.getTranslationY(this) + deltaY);
-            // TODO: 15/9/21 nine old, orignal ?
             ViewHelper.setTranslationX(this, transX);
             ViewHelper.setTranslationY(this, transY);
         }

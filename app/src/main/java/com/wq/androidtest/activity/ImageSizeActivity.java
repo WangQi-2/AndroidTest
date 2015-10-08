@@ -20,7 +20,7 @@ import java.io.InputStream;
 
 /**
  * Created by wangqi on 15/9/22.
- * todo 在drawable中会被放大两倍??? 通过styleArray获取会缩小九分之一???
+ * todo 15/10/08 在drawable中会被放大两倍??? 通过styleArray获取会缩小九分之一???
  */
 public class ImageSizeActivity extends BaseActivity {
 

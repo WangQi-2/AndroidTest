@@ -11,8 +11,6 @@ import android.graphics.drawable.Drawable;
 import android.view.animation.Animation;
 import android.view.animation.LinearInterpolator;
 
-import com.wq.androidtest.util.Logger;
-
 /**
  * Created by wangqi on 15/9/22.
  */
@@ -64,7 +62,6 @@ public class CustomDrawable extends Drawable {
 
     @Override
     public void draw(Canvas canvas) {
-        // TODO: 15/9/22  
         Rect rect = getBounds();
         float cx = rect.exactCenterX();
         float cy = rect.exactCenterY();
@@ -79,26 +76,19 @@ public class CustomDrawable extends Drawable {
         }
 
     }
-
-    // TODO: 15/9/22
     @Override
     public void setAlpha(int alpha) {
         redPaint.setAlpha(alpha);
         greenPaint.setAlpha(alpha);
-        // TODO: 15/9/23 这个log没有打出来
-        Logger.e("***********************scale:" + scale + ", alpha:" + alpha);
-        // TODO: 15/9/23  
         invalidateSelf();
     }
 
-    // TODO: 15/9/22
     @Override
     public void setColorFilter(ColorFilter cf) {
         redPaint.setColorFilter(cf);
         greenPaint.setColorFilter(cf);
     }
 
-    // TODO: 15/9/22
     @Override
     public int getOpacity() {
         return redPaint.getAlpha();

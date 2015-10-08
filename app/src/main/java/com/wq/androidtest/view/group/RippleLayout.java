@@ -55,7 +55,6 @@ public class RippleLayout extends LinearLayout {
         int distanceX = Math.max(Math.abs(width - circleCenterX), Math.abs(circleCenterX));
         int distanceY = Math.max(Math.abs(height - circleCenterY), Math.abs(circleCenterY));
 
-        //// TODO: 15/9/23 这里搞个动画来做可能更好
         if (circleRadius < Math.sqrt(distanceX * distanceX + distanceY * distanceY)) {
             canvas.drawCircle(circleCenterX, circleCenterY, circleRadius, mPaint);
             circleRadius += 10;

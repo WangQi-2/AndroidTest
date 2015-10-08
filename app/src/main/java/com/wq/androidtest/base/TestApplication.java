@@ -16,7 +16,6 @@ public class TestApplication extends Application {
 
 
         //crash
-        //// FIXME: 15/9/30
 //        CrashHandler.getInstance().init(this);
     }
 

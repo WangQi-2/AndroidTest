@@ -16,7 +16,6 @@ import com.wq.androidtest.R;
 
 
 /**
- * TODO 优化
  * 评分条 目前仅支持step 为0.5  仅支持显示isindicator
  *
  * @author qiwang

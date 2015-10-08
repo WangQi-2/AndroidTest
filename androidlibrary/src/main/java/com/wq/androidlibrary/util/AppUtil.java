@@ -21,16 +21,12 @@ import java.util.List;
  */
 public class AppUtil {
 
-    //TODO 添加静默卸载
-    //TODO andbase里有一个返回cpu核心数,有啥用?
 
     public static void installApk(Context context, File apkfile) {
         Intent intent = new Intent();
-        //TODO what for?
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         intent.setAction(Intent.ACTION_VIEW);
         intent.setDataAndType(Uri.fromFile(apkfile), "application/vnd.adnroid.package-archive");
-        //TODO STARTACTIVITY?
         context.startActivity(intent);
     }
 
@@ -62,7 +58,6 @@ public class AppUtil {
             e.printStackTrace();
         }
         if (service != null) {
-            //TODO 为什么通过context来停止
             ret = context.stopService(service);
         }
         return ret;

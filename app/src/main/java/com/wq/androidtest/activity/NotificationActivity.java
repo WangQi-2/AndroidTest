@@ -41,22 +41,18 @@ public class NotificationActivity extends BaseActivity implements View.OnClickLi
         switch (v.getId()) {
 
             case R.id.defaultBtn:
-                // TODO: 15/9/17
                 Notification defaultNotif = new Notification();
                 defaultNotif.icon = R.drawable.star_yellow;
                 defaultNotif.tickerText = "hello";
                 defaultNotif.when = System.currentTimeMillis();
                 defaultNotif.flags = Notification.FLAG_AUTO_CANCEL;
                 Intent intent = new Intent(this, TextActivity.class);
-                //TODO
                 PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
-                //TODO
                 defaultNotif.setLatestEventInfo(this, "hellowrold", "this is a notification", pendingIntent);
                 manager.notify(1, defaultNotif);
                 break;
             case R.id.customBtn:
 
-                //TODO 这里要搞一下activity启动模式
                 Notification customNotif = new Notification();
                 customNotif.icon = R.drawable.star_yellow;
                 customNotif.tickerText = "custom notification";

@@ -82,6 +82,7 @@ public class ProgressBarButton extends Button {
                 R.styleable.ProgressBarButton_border_color_unfocused,
                 unfocusedBorderColor);
 
+        // TODO: 15/10/8 getint?? 
         mFocusedBorderWidth = a.getInt(
                 R.styleable.ProgressBarButton_border_width_focused, 3);
         mUnFocusedBorderWidth = a.getInt(

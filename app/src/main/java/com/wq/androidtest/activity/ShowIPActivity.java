@@ -16,6 +16,5 @@ public class ShowIPActivity extends BaseActivity {
         TextView textView = new TextView(this);
         setContentView(textView);
         textView.setText(NetWordUtil.getLocalIp(this));
-        //TODO ADD SCREENINFO MAC AND SO ON
     }
 }

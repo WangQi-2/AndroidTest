@@ -9,6 +9,7 @@ import android.widget.ScrollView;
  *
  */
 
+// TODO: 15/10/8 delete this class?? 
 public class InnerScrollView extends ScrollView {
     public InnerScrollView(Context context) {
         super(context);
@@ -24,7 +25,6 @@ public class InnerScrollView extends ScrollView {
 
     float lastX = 0;
     float lastY = 0;
-// TODO: 15/9/30 也许这个类根本是不需要的
 //    @Override
 //    public boolean onTouchEvent(MotionEvent ev) {
 //

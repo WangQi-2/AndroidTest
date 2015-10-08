@@ -36,7 +36,6 @@ public class BitmapUtil {
 
     public static Bitmap getBitmap(String url) {
         Bitmap bitmap = null;
-        //TODO java.net network frame
         URLConnection con = null;
         InputStream is = null;
         try {
@@ -45,18 +44,15 @@ public class BitmapUtil {
             con.setDoInput(true);
             con.connect();
             is = con.getInputStream();
-            //TODO BitmapFactory
 //            bitmap = BitmapFactory.decodeStream(is);
             bitmap = BitmapFactory.decodeStream(is, null, null);
         } catch (Exception e) {
-            //TODO lib log
         } finally {
             try {
                 if (is != null) {
                     is.close();
                 }
             } catch (Exception e) {
-                //TODO lib log
             }
         }
         return bitmap;
@@ -67,10 +63,9 @@ public class BitmapUtil {
 
         try {
             bitmap = BitmapFactory.decodeFile(file.getPath());
-            //TODO JAVA FILE SYSTEM
 //            bitmap = BitmapFactory.decodeFile(file.getAbsolutePath());
         } catch (Exception e) {
-            //TODO lib log
+            // TODO: 15/10/8 吞噬
         }
         return bitmap;
     }
@@ -99,7 +94,6 @@ public class BitmapUtil {
         int srcWidth = options.outWidth;
         int srcHeight = options.outHeight;
         float scale = getScale(srcWidth, srcHeight, desireWidth, desiredHeight);
-        //TODO 这里需要判断scale是否为0??? andbase did it
         int dstWidth = (int) (srcWidth * scale);
         int dstHeight = (int) (srcHeight * scale);
 
@@ -144,9 +138,7 @@ public class BitmapUtil {
 
     public static Bitmap getBitmap(View view) {
         Bitmap bitmap = null;
-        //TODO
         bitmap = Bitmap.createBitmap(view.getDrawingCache());
-        //TODO
         view.setDrawingCacheEnabled(false);
         return bitmap;
     }
@@ -194,7 +186,6 @@ public class BitmapUtil {
         } else {
             desireHeight = height;
         }
-        //TODO maybe return the same one??
         Bitmap dst = Bitmap.createBitmap(src, offsetX, offsetY, desiredWidth, desireHeight);
         return dst;
     }
@@ -210,7 +201,6 @@ public class BitmapUtil {
         double wr = (double) srcWidth / desiredWidth;
         double hr = (double) srcHeight / desiredHeight;
         double ratio = Math.min(wr, hr);
-        //TODO SAMPLESIZE
         int sampleSize = 1;
         while ((sampleSize * 2) <= ratio) {
             sampleSize *= 2;
@@ -219,7 +209,6 @@ public class BitmapUtil {
     }
 
     public static Bitmap drawableToBitmap2(Drawable drawable) {
-        //TODO PixelFormat
         Bitmap bitmap = Bitmap.createBitmap(drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight(), drawable.getOpacity() != PixelFormat.OPAQUE ? Bitmap.Config.ARGB_8888 : Bitmap.Config.RGB_565);
         Canvas canvas = new Canvas(bitmap);
         drawable.setBounds(0, 0, drawable.getIntrinsicWidth(), drawable.getIntrinsicHeight());
@@ -240,7 +229,6 @@ public class BitmapUtil {
     }
 
     public static TransitionDrawable bitmapToTransitionDrawable(Resources resources, Bitmap bitmap) {
-        //TODO transitiondrawable colordrawable bitmapdrawable
         TransitionDrawable transitionDrawable = null;
         transitionDrawable = new TransitionDrawable(new Drawable[]{new ColorDrawable(resources.getColor(android.R.color.transparent)), new BitmapDrawable(resources, bitmap)});
         return transitionDrawable;
@@ -306,7 +294,6 @@ public class BitmapUtil {
         int reflectionGap = 1;
         int width = bitmap.getWidth();
         int height = bitmap.getHeight();
-        //TODO
         Matrix matrix = new Matrix();
         matrix.preScale(1, -1);
         Bitmap reflectionBmp = Bitmap.createBitmap(bitmap, 0, height / 2, 0, height, matrix, false);

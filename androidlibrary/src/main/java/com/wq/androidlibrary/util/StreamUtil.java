@@ -8,7 +8,6 @@ import java.io.InputStream;
 public class StreamUtil {
 
     public static byte[] getBytes(InputStream is) {
-        //TODO
         return null;
     }
 }

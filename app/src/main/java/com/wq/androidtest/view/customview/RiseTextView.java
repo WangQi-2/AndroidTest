@@ -8,7 +8,7 @@ import android.widget.TextView;
 /**
  * Created by wangqi on 15/9/15.
  * 仿支付宝,textview数字动态增长
- * fixme float很容易溢出
+ *  fixme 15/10/08 float很容易溢出
  */
 public class RiseTextView extends TextView {
 

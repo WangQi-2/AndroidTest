@@ -54,9 +54,7 @@ public class FlowLayout extends ViewGroup {
 
         for (int i = 0; i < childCount; i++) {
             View child = getChildAt(i);
-            //TODO do what?
             measureChild(child, widthMeasureSpec, heightMeasureSpec);
-            //TODO can cast?
             MarginLayoutParams layoutParams = (MarginLayoutParams) child.getLayoutParams();
             int childWidth = child.getWidth() + layoutParams.leftMargin + layoutParams.rightMargin;
             int childHeight = child.getHeight() + layoutParams.topMargin + layoutParams.bottomMargin;

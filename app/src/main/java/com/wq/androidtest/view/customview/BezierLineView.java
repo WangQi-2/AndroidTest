@@ -16,7 +16,7 @@ import java.util.List;
 
 /**
  * Created by wangqi on 15/10/8.
- * todo 简单的贝塞尔曲线，但是多点贝塞尔曲线怎么实现？
+ * todo 15/10/8 简单的贝塞尔曲线，但是多点贝塞尔曲线怎么实现？
  */
 public class BezierLineView extends View {
 

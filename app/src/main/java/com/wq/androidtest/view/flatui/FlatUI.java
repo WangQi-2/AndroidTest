@@ -5,7 +5,6 @@ import java.util.List;
 
 /**
  * Created by wangqi on 15/9/30.
- * fixme 目前theme就是一个背景色而已
  */
 public class FlatUI {
     private static List<FlatView> flatViews = new ArrayList<>();

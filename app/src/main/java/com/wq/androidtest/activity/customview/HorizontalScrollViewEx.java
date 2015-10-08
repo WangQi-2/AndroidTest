@@ -51,9 +51,10 @@ public class HorizontalScrollViewEx extends ViewGroup {
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
         boolean intercepted = false;
-        //// TODO: 15/9/20  int or float
+        //// TODO: 15/10/8 int or float
         int x = (int) ev.getX();
         int y = (int) ev.getY();
+        float x1 = getX();
 
         switch (ev.getAction()) {
             case MotionEvent.ACTION_DOWN:
@@ -77,7 +78,7 @@ public class HorizontalScrollViewEx extends ViewGroup {
                 break;
         }
         Logger.d("intercepted = " + intercepted);
-        //// TODO: 15/9/20  下面又赋值 
+        // TODO: 15/10/8 这里的xy赋值是必须的
         mLastX = x;
         mLastY = y;
         mLastXIntercept = x;
@@ -88,7 +89,6 @@ public class HorizontalScrollViewEx extends ViewGroup {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        // TODO: 15/9/23
         mVelocityTracker.addMovement(event);
         int x = (int) event.getX();
         int y = (int) event.getY();
@@ -158,7 +158,6 @@ public class HorizontalScrollViewEx extends ViewGroup {
         int childLeft = 0;
         int childCount = getChildCount();
         mChildSize = childCount;
-        //TODO 没有处理margin padding??
         for (int i = 0; i < childCount; i++) {
             View child = getChildAt(i);
             int childWidth = child.getMeasuredWidth();

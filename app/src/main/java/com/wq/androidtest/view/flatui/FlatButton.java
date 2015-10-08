@@ -6,7 +6,6 @@ import android.widget.Button;
 
 /**
  * Created by wangqi on 15/9/30.
- * fixme 加入动画特效
  */
 public class FlatButton extends Button implements FlatView, Attributes.AttributesChangeListener {
 

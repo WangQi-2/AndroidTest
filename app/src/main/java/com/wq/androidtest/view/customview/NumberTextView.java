@@ -7,6 +7,7 @@ import android.widget.TextView;
 /**
  * Created by wangqi on 15/9/14.
  */
+// TODO: 15/10/8 delete ??
 public class NumberTextView extends TextView{
     public NumberTextView(Context context) {
         super(context);
@@ -16,7 +17,6 @@ public class NumberTextView extends TextView{
         super(context, attrs);
     }
 
-    //TODO how to use
     public NumberTextView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }

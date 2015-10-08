@@ -27,7 +27,6 @@ public class FButton extends Button implements View.OnTouchListener {
     private final int SHADOW_HEIGHT = 20;
     private final int RADIUS = 20;
 
-    //// TODO: 15/9/29 注释不错
     //custom values
     private boolean isShadowEnabled = true;
     private int mButtonColor;
@@ -51,7 +50,6 @@ public class FButton extends Button implements View.OnTouchListener {
         setOnTouchListener(this);
     }
 
-    // TODO: 15/9/29 2 constructor
     public FButton(Context context, AttributeSet attrs) {
         super(context, attrs);
         //函数结构
@@ -74,21 +72,16 @@ public class FButton extends Button implements View.OnTouchListener {
         refresh();
     }
 
-    // TODO: 15/9/29 view的所有回调函数
-    // TODO: 15/9/29 view touch事件被消费或者不消费,后续事件如何处理
-    // TODO: 15/9/29 ontouch事件对事件传播的影响
     @Override
     public boolean onTouch(View v, MotionEvent motionEvent) {
 
         switch (motionEvent.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 updateBackground(pressedDrawable);
-                //// TODO: 15/9/29 两次调整padding,大小是否有影响
                 setPadding(mPaddingLeft, mPaddingTop + mShadowHeight, mPaddingRight, mPaddingBottom);
                 break;
             case MotionEvent.ACTION_MOVE:
                 Rect r = new Rect();
-                //// TODO: 15/9/29  为什么不是返回值赋值
                 getLocalVisibleRect(r);
                 if (!r.contains((int) motionEvent.getX(), (int) motionEvent.getY() + 3 * mShadowHeight) &&
                         !r.contains((int) motionEvent.getX(), (int) motionEvent.getY() - 3 * mShadowHeight)) {
@@ -97,7 +90,6 @@ public class FButton extends Button implements View.OnTouchListener {
                     setPadding(mPaddingLeft, mPaddingTop, mPaddingRight, mPaddingBottom);
                 }
                 break;
-            // TODO: 15/9/29 motionevent事件有哪些
             case MotionEvent.ACTION_UP:
             case MotionEvent.ACTION_OUTSIDE:
             case MotionEvent.ACTION_CANCEL:
@@ -112,7 +104,6 @@ public class FButton extends Button implements View.OnTouchListener {
         //init default values
         isShadowEnabled = true;
         Resources resources = getResources();
-        // TODO: 15/9/29 would be null??
         if (resources == null) return;
         mButtonColor = BUTTON_COLOR;
         mShadowColor = SHADOW_COLOR;
@@ -123,7 +114,6 @@ public class FButton extends Button implements View.OnTouchListener {
     private void parseAttrs(Context context, AttributeSet attrs) {
         //Load from custom attributes
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.FButton);
-        // TODO: 15/9/29 would be null??
         if (typedArray == null) return;
 
         for (int i = 0; i < typedArray.getIndexCount(); i++) {
@@ -139,7 +129,6 @@ public class FButton extends Button implements View.OnTouchListener {
                     mShadowColor = typedArray.getColor(index, SHADOW_COLOR);
                     break;
                 case R.styleable.FButton_shadowHeight:
-                    //// TODO: 15/9/29 我一直用错了??
                     mShadowHeight = typedArray.getDimensionPixelSize(index, SHADOW_HEIGHT);
                     break;
                 case R.styleable.FButton_cornerRadius:
@@ -159,11 +148,10 @@ public class FButton extends Button implements View.OnTouchListener {
                     break;
             }
         }
-        //// TODO: 15/9/29  ??
         typedArray.recycle();
     }
 
-    //// FIXME: 15/9/29 not support enable now
+    //not support enable now
     private void refresh() {
 
         pressedDrawable = createDrawable(mCornerRadius, Color.TRANSPARENT, mButtonColor);
@@ -176,7 +164,6 @@ public class FButton extends Button implements View.OnTouchListener {
 
     private LayerDrawable createDrawable(int radius, int topColor, int bottomColor) {
 
-        //todo
         float[] outerRaidus = new float[]{radius, radius, radius, radius, radius, radius, radius, radius};
         RoundRectShape rectShape = new RoundRectShape(outerRaidus, null, null);
         ShapeDrawable topDrawable = new ShapeDrawable(rectShape);

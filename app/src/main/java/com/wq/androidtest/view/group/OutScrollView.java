@@ -34,7 +34,7 @@ public class OutScrollView extends ScrollView {
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
-        //TODO 为什么,我觉得被注释的代码就应该OK了??
+        //TODO 15/10/08 为什么,我觉得被注释的代码就应该OK了??
 //        return mDetector.onTouchEvent(ev);
         return super.onInterceptTouchEvent(ev) && mDetector.onTouchEvent(ev);
 //        return super.onInterceptTouchEvent(ev);

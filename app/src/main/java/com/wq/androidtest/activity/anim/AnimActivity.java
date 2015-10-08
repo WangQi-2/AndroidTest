@@ -43,7 +43,6 @@ public class AnimActivity extends BaseActivity {
         valueAnimator.addUpdateListener(new ValueAnimator.AnimatorUpdateListener() {
             private IntEvaluator evaluator = new IntEvaluator();
 
-            //// TODO: 15/9/21 这个sdk版本要求比较高啊
             @Override
             public void onAnimationUpdate(ValueAnimator animation) {
                 int currentvalue = (int) valueAnimator.getAnimatedValue();

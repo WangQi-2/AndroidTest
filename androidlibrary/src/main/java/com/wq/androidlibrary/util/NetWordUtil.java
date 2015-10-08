@@ -11,7 +11,6 @@ import java.util.Enumeration;
 
 /**
  * Created by wangqi on 15/9/7.
- * TODO what if wifi is closed
  */
 public class NetWordUtil {
 
@@ -33,16 +32,12 @@ public class NetWordUtil {
 
     /**
      * gprs
-     * TODO what is gprs ??
-     *
      * @return
      */
     public static String getLocalIp2() {
         try {
-            //TODO networkinterface ???
             for (Enumeration<NetworkInterface> en = NetworkInterface.getNetworkInterfaces(); en.hasMoreElements(); ) {
                 NetworkInterface intf = en.nextElement();
-                //TODO inetaddress ???
                 for (Enumeration<InetAddress> ipAddr = intf.getInetAddresses(); ipAddr.hasMoreElements(); ) {
                     InetAddress inetAddress = ipAddr.nextElement();
                     if (!inetAddress.isLoopbackAddress()) {
