@@ -16,7 +16,8 @@ public class AnimationUtil {
     private final static long mDuration = 2000L;
 
     public static void enlargeView(View view,float scale){
-        //TODO bringToFront
+        // TODO: 15/10/8 Change the view's z order in the tree, so it's on top of other sibling
+        // TODO: 15/10/8 和linearlayout有什么关系
         view.bringToFront();
 
     }

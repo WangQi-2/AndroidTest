@@ -9,7 +9,10 @@ import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
 import android.net.Uri;
 
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.List;
 
 /**
@@ -40,7 +43,6 @@ public class AppUtil {
     }
 
     public static boolean isServiceRuning(Context context, String className) {
-        //TODO 为什么叫activity_service
         ActivityManager activityManager = (ActivityManager) context.getSystemService(Context.ACCOUNT_SERVICE);
         List<RunningServiceInfo> serviceInfos = activityManager.getRunningServices(Integer.MAX_VALUE);
         for (RunningServiceInfo runningServiceInfo : serviceInfos) {
@@ -89,7 +91,6 @@ public class AppUtil {
         ComponentName cn = new ComponentName(packagename, className);
         intent.setComponent(cn);
         intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_RESET_TASK_IF_NEEDED);
-        //TODO CONTEXT 分类
         context.startActivity(intent);
     }
 
@@ -104,5 +105,65 @@ public class AppUtil {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public static void silentInstall(String filePath) {
+        String[] args = {"pm", "install", "-r", filePath};
+        runProcess(args);
+    }
+
+    public static void silentUnInstall(String packName) {
+        String[] args = {"pm", "uninstall", packName};
+        runProcess(args);
+    }
+
+    private static void runProcess(String[] args) {
+        Process process = null;
+        BufferedReader bufferedReaderErr = null;
+        BufferedReader bufferedReaderOut = null;
+        InputStream errStream = null;
+        InputStream outStream = null;
+        StringBuilder sbErr = new StringBuilder();
+        StringBuilder sbOut = new StringBuilder();
+
+        try {
+            // TODO: 15/10/8 process
+            process = new ProcessBuilder(args).start();
+            process.waitFor();
+            errStream = process.getErrorStream();
+            bufferedReaderErr = new BufferedReader(new InputStreamReader(errStream));
+            String line;
+            while ((line = bufferedReaderErr.readLine()) != null) {
+                sbErr.append(line);
+            }
+
+            outStream = process.getInputStream();
+            bufferedReaderOut = new BufferedReader(new InputStreamReader(outStream));
+            while ((line = bufferedReaderOut.readLine()) != null) {
+                sbOut.append(line);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (bufferedReaderErr != null) {
+                    bufferedReaderErr.close();
+                }
+                if (bufferedReaderOut != null) {
+                    bufferedReaderOut.close();
+                }
+                if (outStream != null) {
+                    outStream.close();
+                }
+                if (errStream != null) {
+                    errStream.close();
+                }
+
+                process.destroy();
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
 }
