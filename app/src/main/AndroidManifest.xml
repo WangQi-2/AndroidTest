@@ -73,6 +73,7 @@
         <activity android:name=".activity.FlatUIActivity" />
         <activity android:name=".activity.CubeAnimActivity" />
         <activity android:name=".activity.anim.AnimTestActivity" />
+        <activity android:name=".activity.customview.BezierActivity" />
 
         <!-- 桌面小控件-->
         <receiver android:name=".widget.OnePicAppWidgetProvider">
