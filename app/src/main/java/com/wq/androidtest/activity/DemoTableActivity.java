@@ -2,8 +2,11 @@ package com.wq.androidtest.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.GridView;
 
+import com.wq.androidlibrary.util.ToastUtil;
 import com.wq.androidtest.R;
 import com.wq.androidtest.activity.anim.AnimActivity;
 import com.wq.androidtest.activity.anim.AnimTestActivity;
@@ -24,6 +27,7 @@ import com.wq.androidtest.activity.v7.RecycleViewPuBuActivity;
 import com.wq.androidtest.adapter.DemoEntryAdapter;
 import com.wq.androidtest.model.DemoEntryModel;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 public class DemoTableActivity extends BaseActivity {
@@ -49,22 +53,23 @@ public class DemoTableActivity extends BaseActivity {
         }
         mAdapter = new DemoEntryAdapter(this, demoEntryModels);
         mDemoEntrys.setAdapter(mAdapter);
-        mAdapter.getView(0, null, mDemoEntrys).requestFocus();
+//        mAdapter.getView(0, null, mDemoEntrys).requestFocus();
 
-//        mDemoEntrys.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-//            @Override
-//            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                Intent i = null;
-//                if (demoEntryModels.get(position).getChilds() != null) {
-//                    i = new Intent(DemoTableActivity.this, DemoTableActivity.class);
-//                    i.putExtra(FUNC_MODELS, (Serializable) demoEntryModels.get(position).getChilds());
-//                } else {
-//                    i = new Intent(DemoTableActivity.this, demoEntryModels.get(position).getClazz());
-//                }
-//                i.putExtra(TITLE,demoEntryModels.get(position).getDes());
-//                startActivity(i);
-//            }
-//        });
+        mDemoEntrys.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                ToastUtil.showToast(mCtx,"item clicked");
+                Intent i = null;
+                if (demoEntryModels.get(position).getChilds() != null) {
+                    i = new Intent(DemoTableActivity.this, DemoTableActivity.class);
+                    i.putExtra(FUNC_MODELS, (Serializable) demoEntryModels.get(position).getChilds());
+                } else {
+                    i = new Intent(DemoTableActivity.this, demoEntryModels.get(position).getClazz());
+                }
+                i.putExtra(TITLE,demoEntryModels.get(position).getDes());
+                startActivity(i);
+            }
+        });
 
     }
 
@@ -141,5 +146,6 @@ public class DemoTableActivity extends BaseActivity {
         demoEntryModels.add(new DemoEntryModel("animtest", AnimTestActivity.class));
         demoEntryModels.add(new DemoEntryModel("cube ainm",CubeAnimActivity.class));
         demoEntryModels.add(new DemoEntryModel("bezier",BezierActivity.class));
+        demoEntryModels.add(new DemoEntryModel("floatingview",FloatingWindowActivity.class));
     }
 }

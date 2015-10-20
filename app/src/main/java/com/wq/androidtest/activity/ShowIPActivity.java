@@ -3,7 +3,7 @@ package com.wq.androidtest.activity;
 import android.os.Bundle;
 import android.widget.TextView;
 
-import com.wq.androidlibrary.util.NetWordUtil;
+import com.wq.androidlibrary.util.NetWorkUtil;
 
 /**
  * Created by wangqi on 15/9/7.
@@ -15,6 +15,6 @@ public class ShowIPActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         TextView textView = new TextView(this);
         setContentView(textView);
-        textView.setText(NetWordUtil.getLocalIp(this));
+        textView.setText(NetWorkUtil.getLocalIp(this));
     }
 }

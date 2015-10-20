@@ -24,6 +24,6 @@ public class DeviceUtil {
     }
 
     public static String getMacAddress(Context context) {
-        return NetWordUtil.getWifiMacAddress(context);
+        return NetWorkUtil.getWifiMacAddress(context);
     }
 }

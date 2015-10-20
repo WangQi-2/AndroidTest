@@ -27,11 +27,11 @@ public class ToastUtil {
     };
 
     public static void showToast(Context context, int res) {
-        Toast.makeText(context, res, Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, res, Toast.LENGTH_LONG).show();
     }
 
     public static void showToast(Context context, String str) {
-        Toast.makeText(context, str, Toast.LENGTH_SHORT).show();
+        Toast.makeText(context, str, Toast.LENGTH_LONG).show();
     }
 
     public static void showToastInThread(Context context, int res) {
