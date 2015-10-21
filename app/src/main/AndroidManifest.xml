@@ -45,13 +45,15 @@
             android:theme="@style/AppTheme.FloatActivity" />
         <activity android:name=".activity.EventBusDemoActivity" />
         <activity android:name=".activity.UpdateApkActivity">
+        </activity>
+        <activity android:name=".activity.customview.RatingActivity" />
+        <activity android:name=".activity.PopupActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.customview.RatingActivity" />
         <activity android:name=".activity.customview.ProgressButtonActivity" />
         <activity android:name=".activity.customview.CircleProgressActivity" />
         <activity android:name=".activity.TextActivity" />
