@@ -28,7 +28,7 @@ public class PopupActivity extends BaseActivity {
 
     private void showpopup() {
         Button button = new Button(this);
-        button.setText("hell");
+        button.setText("dismiss");
         final PopupWindow popupWindow = new PopupWindow(button, ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT, true);
         popupWindow.setTouchable(true);
         popupWindow.setBackgroundDrawable(getResources().getDrawable(R.drawable.bg1));

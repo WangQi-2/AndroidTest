@@ -48,5 +48,4 @@ public class FloatingWindowActivity extends BaseActivity {
         mWindowManager.addView(smallWindow, smallWindowParams);
         mWindowManager.updateViewLayout(smallWindow, smallWindowParams);
     }
-
 }
