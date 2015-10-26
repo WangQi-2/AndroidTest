@@ -5,7 +5,14 @@
     android:orientation="vertical">
 
     <Button
+        android:id="@+id/show_fw"
         style="@style/AppTheme.WWButton"
-        android:onClick="click" />
+        android:text="show fw" />
+
+    <Button
+        android:id="@+id/remove_fw"
+        style="@style/AppTheme.WWButton"
+        android:layout_marginTop="20dp"
+        android:text="remove fw" />
 
 </LinearLayout>

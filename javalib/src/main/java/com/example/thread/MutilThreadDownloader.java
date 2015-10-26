@@ -23,7 +23,7 @@ public class MutilThreadDownloader {
                 if (i == THREAD_COUNT - 1) {
                     endIndex = filesize;
                 }
-                new DownLoadThread(urlstr,i,startIndex,endIndex).start();
+                new DownLoadThread(urlstr, i, startIndex, endIndex).start();
             }
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -55,7 +55,7 @@ public class MutilThreadDownloader {
         }
     }
 
-    public static class DownLoadThread extends Thread{
+    public static class DownLoadThread extends Thread {
         private String path;
         private long threadId;
         private long startIndex;
@@ -73,26 +73,26 @@ public class MutilThreadDownloader {
         public void run() {
             try {
                 URL url = new URL(path);
-                HttpURLConnection conn = (HttpURLConnection)url.openConnection();
+                HttpURLConnection conn = (HttpURLConnection) url.openConnection();
                 conn.setConnectTimeout(5000);
                 conn.setRequestMethod("GET");
-                conn.setRequestProperty("Range", "bytes="+startIndex+"-"+endIndex);
+                conn.setRequestProperty("Range", "bytes=" + startIndex + "-" + endIndex);
                 int code = conn.getResponseCode();
-                System.out.println("code:"+code);
+                System.out.println("code:" + code);
                 InputStream is = conn.getInputStream();
                 RandomAccessFile raf = new RandomAccessFile(SAVE_FILE_NAME, "rwd");
                 raf.seek(startIndex);
 
                 int size = 0;
-                int len = 0;
+                int len;
                 byte[] buffer = new byte[1024];
                 while ((len = is.read(buffer)) != -1) {
                     raf.write(buffer, 0, len);
-                    size+=len;
+                    size += len;
                 }
                 is.close();
                 raf.close();
-                System.out.println("线程："+threadId+"下载完毕 ,download size: " + size);
+                System.out.println("线程：" + threadId + "下载完毕 ,download size: " + size);
 
             } catch (Exception e) {
                 e.printStackTrace();

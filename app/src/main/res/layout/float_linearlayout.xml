@@ -1,0 +1,14 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/floating_btn"
+        style="@style/AppTheme.WWButton"
+        android:background="@color/red2"
+        android:padding="20dp"
+        android:text="floating" />
+
+</LinearLayout>
