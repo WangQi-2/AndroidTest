@@ -91,6 +91,7 @@
         <activity android:name=".activity.customview.BezierActivity" />
         <activity android:name=".activity.FloatingWindowActivity" />
 
+        <service android:name=".service.FxService"/>
         <!-- 桌面小控件-->
         <receiver android:name=".widget.OnePicAppWidgetProvider">
             <meta-data

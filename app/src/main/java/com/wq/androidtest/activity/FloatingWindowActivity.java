@@ -33,7 +33,8 @@ public class FloatingWindowActivity extends BaseActivity implements View.OnClick
             case R.id.show_fw:
                 i = new Intent(this, FxService.class);
                 startService(i);
-                moveTaskToBack(true);
+                finish();
+//                moveTaskToBack(true);
                 break;
             case R.id.remove_fw:
                 i = new Intent(this, FxService.class);
