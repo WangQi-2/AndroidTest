@@ -14,7 +14,6 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
-import com.wq.androidlibrary.util.ToastUtil;
 import com.wq.androidtest.R;
 
 
@@ -65,7 +64,6 @@ public class FxService extends Service
         LayoutInflater inflater = LayoutInflater.from(getApplication());
         mFloatLayout = (LinearLayout) inflater.inflate(R.layout.float_layout, null);
         mWindowManager.addView(mFloatLayout, wmParams);
-        ToastUtil.showToast(this,"addview");
 
         Log.i(TAG, "mFloatLayout-->left" + mFloatLayout.getLeft());
         Log.i(TAG, "mFloatLayout-->right" + mFloatLayout.getRight());
