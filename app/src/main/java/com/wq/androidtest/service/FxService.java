@@ -44,9 +44,9 @@ public class FxService extends Service {
         wmParams.width = WindowManager.LayoutParams.WRAP_CONTENT;
         wmParams.height = WindowManager.LayoutParams.WRAP_CONTENT;
         LayoutInflater inflater = LayoutInflater.from(getApplication());
-        mFloatLayout = (LinearLayout) inflater.inflate(R.layout.float_linearlayout, null);
+        mFloatLayout = (LinearLayout) inflater.inflate(R.layout.float_layout, null);
         mWindowManager.addView(mFloatLayout, wmParams);
-        mFloatView = (Button) mFloatLayout.findViewById(R.id.floating_btn);
+        mFloatView = (Button) mFloatLayout.findViewById(R.id.float_id);
         mFloatLayout.measure(View.MeasureSpec.makeMeasureSpec(0,
                 View.MeasureSpec.UNSPECIFIED), View.MeasureSpec
                 .makeMeasureSpec(0, View.MeasureSpec.UNSPECIFIED));

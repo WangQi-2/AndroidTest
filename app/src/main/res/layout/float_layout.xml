@@ -5,7 +5,7 @@
     android:orientation="vertical">
 
     <Button
-        android:id="@+id/floating_btn"
+        android:id="@+id/float_id"
         style="@style/AppTheme.WWButton"
         android:background="@color/red2"
         android:padding="20dp"
