@@ -39,7 +39,7 @@ public class AppUtil {
     }
 
     public static boolean isServiceRuning(Context context, String className) {
-        ActivityManager activityManager = (ActivityManager) context.getSystemService(Context.ACCOUNT_SERVICE);
+        ActivityManager activityManager = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
         List<RunningServiceInfo> serviceInfos = activityManager.getRunningServices(Integer.MAX_VALUE);
         for (RunningServiceInfo runningServiceInfo : serviceInfos) {
             if (className.equals(runningServiceInfo.service.getClassName())) {
@@ -48,6 +48,19 @@ public class AppUtil {
         }
         return false;
     }
+
+    public static void getm(Context context){
+        ActivityManager am = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
+        ActivityManager.MemoryInfo memoryInfo = new ActivityManager.MemoryInfo();
+        am.getMemoryInfo(memoryInfo);
+        System.out.print("a");
+    }
+
+   public static List<ActivityManager.RunningAppProcessInfo> getAllApps(Context context){
+       ActivityManager am = (ActivityManager) context.getSystemService(Context.ACTIVITY_SERVICE);
+       List<ActivityManager.RunningAppProcessInfo> runningAppProcesses = am.getRunningAppProcesses();
+       return runningAppProcesses;
+   }
 
     public static boolean stopRunningService(Context context, String className) {
         boolean ret = false;

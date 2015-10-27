@@ -32,6 +32,7 @@ public class NetWorkUtil {
 
     /**
      * gprs
+     *
      * @return
      */
     public static String getLocalIp2() {
@@ -56,5 +57,14 @@ public class NetWorkUtil {
         WifiManager wifiManager = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
         WifiInfo wifiInfo = wifiManager.getConnectionInfo();
         return wifiInfo.getBSSID();
+    }
+
+    public static long getWifiSpeed(Context context) {
+        WifiManager wifiManager = (WifiManager) context.getSystemService(Context.WIFI_SERVICE);
+        WifiInfo wifiInfo = wifiManager.getConnectionInfo();
+        if (wifiInfo != null) {
+            return wifiInfo.getLinkSpeed();
+        }
+        return -1;
     }
 }

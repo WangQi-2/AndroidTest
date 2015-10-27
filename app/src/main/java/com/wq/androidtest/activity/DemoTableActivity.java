@@ -147,5 +147,6 @@ public class DemoTableActivity extends BaseActivity {
         demoEntryModels.add(new DemoEntryModel("cube ainm",CubeAnimActivity.class));
         demoEntryModels.add(new DemoEntryModel("bezier",BezierActivity.class));
         demoEntryModels.add(new DemoEntryModel("floatingview",FloatingWindowActivity.class));
+        demoEntryModels.add(new DemoEntryModel("test speed",ShowNetWorkSpeedActivity.class));
     }
 }

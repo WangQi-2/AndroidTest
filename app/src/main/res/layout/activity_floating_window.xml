@@ -5,14 +5,19 @@
     android:orientation="vertical">
 
     <Button
+        android:id="@+id/show_monitor"
+        style="@style/AppTheme.WWButton"
+        android:text="show monitor" />
+
+    <Button
         android:id="@+id/show_fw"
         style="@style/AppTheme.WWButton"
-        android:text="show fw" />
+        android:text="show test fw" />
 
     <Button
         android:id="@+id/remove_fw"
         style="@style/AppTheme.WWButton"
         android:layout_marginTop="20dp"
-        android:text="remove fw" />
+        android:text="remove test fw" />
 
 </LinearLayout>
