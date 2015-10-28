@@ -91,6 +91,7 @@
         <activity android:name=".activity.customview.BezierActivity" />
         <activity android:name=".activity.FloatingWindowActivity" />
         <activity android:name=".activity.ShowNetWorkSpeedActivity" />
+        <activity android:name=".activity.system.VolumeActivity" />
 
         <service android:name=".service.FxService"/>
         <service android:name=".service.MonitorService"/>

@@ -19,6 +19,7 @@ import com.wq.androidtest.activity.customview.ProgressButtonActivity;
 import com.wq.androidtest.activity.customview.RatingActivity;
 import com.wq.androidtest.activity.customview.RiseTextViewActivity;
 import com.wq.androidtest.activity.customviewgroup.FlowLayoutActivity;
+import com.wq.androidtest.activity.system.VolumeActivity;
 import com.wq.androidtest.activity.v7.CardViewActivity;
 import com.wq.androidtest.activity.v7.RecycleViewGridActivity;
 import com.wq.androidtest.activity.v7.RecycleViewListViewActivity;
@@ -148,5 +149,6 @@ public class DemoTableActivity extends BaseActivity {
         demoEntryModels.add(new DemoEntryModel("bezier",BezierActivity.class));
         demoEntryModels.add(new DemoEntryModel("floatingview",FloatingWindowActivity.class));
         demoEntryModels.add(new DemoEntryModel("test speed",ShowNetWorkSpeedActivity.class));
+        demoEntryModels.add(new DemoEntryModel("test volume",VolumeActivity.class));
     }
 }
