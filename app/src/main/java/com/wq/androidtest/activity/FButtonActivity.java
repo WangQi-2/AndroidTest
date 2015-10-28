@@ -13,5 +13,10 @@ public class FButtonActivity extends BaseActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fbutton);
     }
+
+    @Override
+    protected void findView() {
+
+    }
 }
 

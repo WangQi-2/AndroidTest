@@ -39,4 +39,9 @@ public class CircleProgressActivity extends BaseActivity {
         timer.start();
 
     }
+
+    @Override
+    protected void findView() {
+
+    }
 }

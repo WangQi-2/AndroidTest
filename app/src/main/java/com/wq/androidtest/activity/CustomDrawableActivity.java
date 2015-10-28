@@ -19,4 +19,9 @@ public class CustomDrawableActivity extends BaseActivity{
         text.setBackgroundDrawable(customDrawable);
         customDrawable.startAnimation();
     }
+
+    @Override
+    protected void findView() {
+
+    }
 }

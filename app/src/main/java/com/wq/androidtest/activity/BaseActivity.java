@@ -18,7 +18,7 @@ import com.wq.androidlibrary.util.ActivityUtil;
  * Created by qiwang on 2015/8/27.
  * 继承次activity
  */
-public class BaseActivity extends Activity {
+public abstract class BaseActivity extends Activity {
     protected String TAG = this.getClass().getSimpleName();
     public static final String FUNC_MODELS = "func_models";
     public static final String TITLE = "title";
@@ -47,7 +47,10 @@ public class BaseActivity extends Activity {
         mCtx = this;
         mRes = getResources();
         ActivityUtil.getInstance().addActivity(this);
+        findView();
     }
+
+    abstract protected void findView();
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

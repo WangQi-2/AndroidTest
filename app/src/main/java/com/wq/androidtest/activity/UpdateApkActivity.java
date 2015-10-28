@@ -38,4 +38,9 @@ public class UpdateApkActivity extends BaseActivity {
             }
         });
     }
+
+    @Override
+    protected void findView() {
+
+    }
 }

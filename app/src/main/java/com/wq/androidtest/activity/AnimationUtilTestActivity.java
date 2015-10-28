@@ -33,6 +33,11 @@ public class AnimationUtilTestActivity extends BaseActivity implements View.OnCl
     }
 
     @Override
+    protected void findView() {
+
+    }
+
+    @Override
     public void onClick(View v) {
        switch (v.getId())
        {

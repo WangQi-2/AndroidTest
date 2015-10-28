@@ -14,4 +14,9 @@ public class TextActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_text);
     }
+
+    @Override
+    protected void findView() {
+
+    }
 }

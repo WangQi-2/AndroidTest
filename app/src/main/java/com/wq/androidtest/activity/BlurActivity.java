@@ -14,4 +14,9 @@ public class BlurActivity extends BaseActivity {
         Button btn = new Button(this);
 
     }
+
+    @Override
+    protected void findView() {
+
+    }
 }

@@ -37,6 +37,11 @@ public class ViewTransActivity extends BaseActivity implements View.OnClickListe
     }
 
     @Override
+    protected void findView() {
+
+    }
+
+    @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn1:

@@ -14,4 +14,9 @@ public class HorizontalScrollExActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_horizontalscrollex);
     }
+
+    @Override
+    protected void findView() {
+
+    }
 }

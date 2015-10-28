@@ -33,4 +33,9 @@ public class RatingActivity extends BaseActivity {
         };
         timer.start();
     }
+
+    @Override
+    protected void findView() {
+
+    }
 }

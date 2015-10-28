@@ -15,6 +15,11 @@ public class FakeExitActivity extends BaseActivity {
         setContentView(R.layout.activity_fake_exit);
     }
 
+    @Override
+    protected void findView() {
+
+    }
+
     public void click(View view) {
         moveTaskToBack(true);
     }

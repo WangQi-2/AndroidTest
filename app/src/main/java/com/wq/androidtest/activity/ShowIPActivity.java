@@ -17,4 +17,9 @@ public class ShowIPActivity extends BaseActivity {
         setContentView(textView);
         textView.setText(NetWorkUtil.getLocalIp(this));
     }
+
+    @Override
+    protected void findView() {
+
+    }
 }

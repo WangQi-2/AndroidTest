@@ -29,4 +29,9 @@ public class RecycleViewPuBuActivity extends BaseActivity{
         controller.setOrder(LayoutAnimationController.ORDER_NORMAL);
         recyclerView.setLayoutAnimation(controller);
     }
+
+    @Override
+    protected void findView() {
+
+    }
 }

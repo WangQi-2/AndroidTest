@@ -22,4 +22,9 @@ public class DeviceInfoActivity extends BaseActivity {
                         "\nserial :" + DeviceUtil.getAndroidId(this)
         );
     }
+
+    @Override
+    protected void findView() {
+
+    }
 }

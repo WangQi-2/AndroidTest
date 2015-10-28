@@ -14,4 +14,9 @@ public class EmsTestActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ems_test);
     }
+
+    @Override
+    protected void findView() {
+
+    }
 }

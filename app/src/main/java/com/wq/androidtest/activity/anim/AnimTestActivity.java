@@ -31,6 +31,11 @@ public class AnimTestActivity extends BaseActivity {
 
     }
 
+    @Override
+    protected void findView() {
+
+    }
+
 
     public void click(View view) {
     }

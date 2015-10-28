@@ -31,4 +31,9 @@ public class RecycleViewListViewActivity extends BaseActivity {
         controller.setOrder(LayoutAnimationController.ORDER_RANDOM);
         recyclerView.setLayoutAnimation(controller);
     }
+
+    @Override
+    protected void findView() {
+
+    }
 }

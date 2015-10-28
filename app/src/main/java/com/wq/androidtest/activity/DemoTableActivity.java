@@ -73,6 +73,11 @@ public class DemoTableActivity extends BaseActivity {
 
     }
 
+    @Override
+    protected void findView() {
+
+    }
+
     private void initData() {
         demoEntryModels = new ArrayList<>();
 

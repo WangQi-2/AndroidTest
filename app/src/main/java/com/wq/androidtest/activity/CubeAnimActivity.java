@@ -31,6 +31,11 @@ public class CubeAnimActivity extends BaseActivity {
         initAnims();
     }
 
+    @Override
+    protected void findView() {
+
+    }
+
     private void initAnims() {
         cubeInAnim = new CubeRightInAnimation();
         cubeOutAnim = new CubeLeftOutAnimation();

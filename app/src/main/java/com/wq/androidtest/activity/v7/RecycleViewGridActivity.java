@@ -21,4 +21,9 @@ public class RecycleViewGridActivity extends BaseActivity{
         recyclerView.setLayoutManager(new GridLayoutManager(this,3));
         recyclerView.setAdapter(new RecycleAdapter());
     }
+
+    @Override
+    protected void findView() {
+
+    }
 }
