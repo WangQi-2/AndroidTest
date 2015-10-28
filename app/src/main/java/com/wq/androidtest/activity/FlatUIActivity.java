@@ -20,11 +20,6 @@ public class FlatUIActivity extends BaseActivity {
         FlatUI.addFlatView((FlatButton) findViewById(R.id.red));
     }
 
-    @Override
-    protected void findView() {
-
-    }
-
     public void click(View view) {
         switch (view.getId()) {
             case R.id.blue:

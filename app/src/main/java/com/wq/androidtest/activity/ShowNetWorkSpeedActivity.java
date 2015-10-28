@@ -50,11 +50,6 @@ public class ShowNetWorkSpeedActivity extends BaseActivity {
         timer.start();
     }
 
-    @Override
-    protected void findView() {
-
-    }
-
     private void initView() {
         textView1 = (TextView) findViewById(R.id.text1);
         textView2 = (TextView) findViewById(R.id.text2);

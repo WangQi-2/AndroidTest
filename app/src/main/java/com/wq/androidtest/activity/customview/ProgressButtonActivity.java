@@ -33,9 +33,4 @@ public class ProgressButtonActivity extends BaseActivity {
         };
         timer.start();
     }
-
-    @Override
-    protected void findView() {
-
-    }
 }

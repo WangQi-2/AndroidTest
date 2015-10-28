@@ -14,9 +14,4 @@ public class CircleViewActivity extends BaseActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_circle_view);
     }
-
-    @Override
-    protected void findView() {
-
-    }
 }

@@ -14,9 +14,4 @@ public class SwitchActivity extends BaseActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_switch);
     }
-
-    @Override
-    protected void findView() {
-
-    }
 }

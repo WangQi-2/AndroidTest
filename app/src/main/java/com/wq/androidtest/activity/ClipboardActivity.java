@@ -30,11 +30,6 @@ public class ClipboardActivity extends BaseActivity {
         pasteField = (EditText) findViewById(R.id.edittext2);
     }
 
-    @Override
-    protected void findView() {
-
-    }
-
     public void copy(View view) {
         ToastUtil.showToast(this, "copy");
         String text = copyField.getText().toString();

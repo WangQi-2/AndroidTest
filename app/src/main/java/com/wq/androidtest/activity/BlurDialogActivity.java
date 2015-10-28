@@ -35,11 +35,6 @@ public class BlurDialogActivity extends BaseActivity implements View.OnClickList
     }
 
     @Override
-    protected void findView() {
-
-    }
-
-    @Override
     public void onClick(View v) {
 
 

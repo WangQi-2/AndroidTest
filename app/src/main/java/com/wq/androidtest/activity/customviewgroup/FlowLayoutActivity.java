@@ -14,9 +14,4 @@ public class FlowLayoutActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_flowlayout);
     }
-
-    @Override
-    protected void findView() {
-
-    }
 }

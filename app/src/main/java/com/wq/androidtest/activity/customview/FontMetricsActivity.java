@@ -14,9 +14,4 @@ public class FontMetricsActivity extends BaseActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_number_clock);
     }
-
-    @Override
-    protected void findView() {
-
-    }
 }

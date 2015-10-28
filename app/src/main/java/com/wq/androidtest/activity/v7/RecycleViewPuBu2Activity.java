@@ -21,9 +21,4 @@ public class RecycleViewPuBu2Activity extends BaseActivity{
         recyclerView.setLayoutManager(new StaggeredGridLayoutManager(8, StaggeredGridLayoutManager.HORIZONTAL));
         recyclerView.setAdapter(new RecycleAdapter());
     }
-
-    @Override
-    protected void findView() {
-
-    }
 }

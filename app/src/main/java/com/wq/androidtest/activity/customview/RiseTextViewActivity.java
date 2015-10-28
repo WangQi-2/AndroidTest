@@ -44,9 +44,4 @@ public class RiseTextViewActivity extends BaseActivity {
         textView1.start();
 
     }
-
-    @Override
-    protected void findView() {
-
-    }
 }

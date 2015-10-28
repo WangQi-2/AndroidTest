@@ -14,9 +14,4 @@ public class CardViewActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cardview);
     }
-
-    @Override
-    protected void findView() {
-
-    }
 }

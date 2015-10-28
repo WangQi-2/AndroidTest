@@ -31,11 +31,6 @@ public class FloatingWindowActivity extends BaseActivity implements View.OnClick
     }
 
     @Override
-    protected void findView() {
-
-    }
-
-    @Override
     public void onClick(View v) {
         Intent i;
         switch (v.getId()) {

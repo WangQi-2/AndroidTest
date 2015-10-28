@@ -31,11 +31,6 @@ public class AnimActivity extends BaseActivity {
         showLayoutBtn = (Button) findViewById(R.id.showLayoutBtn);
     }
 
-    @Override
-    protected void findView() {
-
-    }
-
     public void showActivity(View view) {
         Intent intent = new Intent(this, DemoTableActivity.class);
         startActivity(intent);
