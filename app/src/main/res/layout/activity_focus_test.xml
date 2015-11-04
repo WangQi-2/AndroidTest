@@ -4,7 +4,22 @@
     android:layout_height="match_parent"
     tools:context=".DemoTableActivity">
 
-    <Button
+    <com.wq.androidtest.view.customview.FocusLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@drawable/seletor_focus_test">
+
+        <View
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:background="@color/yellow"
+            android:clickable="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true" />
+    </com.wq.androidtest.view.customview.FocusLayout>
+
+    <com.wq.androidtest.view.customview.HoverTextView
         android:id="@+id/button0"
         android:layout_width="50dp"
         android:layout_height="50dp"
@@ -13,7 +28,7 @@
         android:layout_marginTop="67dp"
         android:text="0" />
 
-    <Button
+    <com.wq.androidtest.view.customview.HoverTextView
         android:id="@+id/button1"
         android:layout_width="50dp"
         android:layout_height="50dp"
@@ -25,7 +40,8 @@
         android:layout_toStartOf="@+id/button0"
         android:text="1" />
 
-    <Button
+
+    <com.wq.androidtest.view.customview.HoverTextView
         android:id="@+id/button2"
         android:layout_width="50dp"
         android:layout_height="50dp"
@@ -36,7 +52,8 @@
         android:layout_toRightOf="@+id/button5"
         android:text="2" />
 
-    <Button
+
+    <com.wq.androidtest.view.customview.HoverTextView
         android:id="@+id/button3"
         android:layout_width="50dp"
         android:layout_height="50dp"
@@ -45,7 +62,8 @@
         android:layout_alignTop="@+id/button0"
         android:text="3" />
 
-    <Button
+
+    <com.wq.androidtest.view.customview.HoverTextView
         android:id="@+id/button4"
         android:layout_width="50dp"
         android:layout_height="50dp"
@@ -54,7 +72,7 @@
         android:layout_alignTop="@+id/button3"
         android:text="4" />
 
-    <Button
+    <com.wq.androidtest.view.customview.HoverTextView
         android:id="@+id/button5"
         android:layout_width="50dp"
         android:layout_height="50dp"
@@ -63,7 +81,7 @@
         android:layout_toRightOf="@+id/button0"
         android:text="5" />
 
-    <Button
+    <com.wq.androidtest.view.customview.HoverTextView
         android:id="@+id/button6"
         android:layout_width="50dp"
         android:layout_height="50dp"
@@ -72,25 +90,43 @@
         android:layout_toStartOf="@+id/button0"
         android:text="6" />
 
-    <Button
-        android:id="@+id/button7"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+    <com.wq.androidtest.view.customview.FocusLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_alignLeft="@+id/button1"
+        android:descendantFocusability="beforeDescendants"
         android:layout_alignStart="@+id/button1"
         android:layout_below="@+id/button5"
-        android:layout_marginTop="52dp"
-        android:text="7" />
+        android:background="@drawable/seletor_btn_bg"
+        android:foregroundGravity="center">
 
-    <Button
-        android:id="@+id/button8"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        <com.wq.androidtest.view.customview.HoverTextView
+            android:id="@+id/button7"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="52dp"
+            android:text="7" />
+    </com.wq.androidtest.view.customview.FocusLayout>
+
+    <FrameLayout
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_alignParentBottom="true"
+        android:clickable="false"
+        android:focusableInTouchMode="false"
+        android:focusable="false"
         android:layout_marginBottom="42dp"
         android:layout_toLeftOf="@+id/button3"
-        android:layout_toStartOf="@+id/button3"
-        android:text="8" />
+        android:layout_toStartOf="@+id/button3">
+
+        <com.wq.androidtest.view.customview.HoverTextView
+            android:id="@+id/button8"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:text="8" />
+
+    </FrameLayout>
 
 
 </com.wq.androidtest.view.focus.ChangeFocusRelativLayout>

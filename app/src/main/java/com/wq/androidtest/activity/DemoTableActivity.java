@@ -78,7 +78,7 @@ public class DemoTableActivity extends BaseActivity {
         demoEntryModels = new ArrayList<>();
 
         //quick access
-        demoEntryModels.add(new DemoEntryModel("快速入口", ScreenInfoActivity.class));
+        demoEntryModels.add(new DemoEntryModel("快速入口", FocusTesetActivity.class));
         //
         ArrayList<DemoEntryModel> groupsList;
         DemoEntryModel groupsModel;

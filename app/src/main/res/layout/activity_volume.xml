@@ -4,17 +4,54 @@
     android:gravity="center_horizontal"
     android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/text"
+    <RadioGroup
+        android:id="@+id/radiogroup"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp" />
+        android:layout_height="wrap_content">
 
-    <CheckBox
-        android:id="@+id/checkbox"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:checked="true" />
+        <RadioButton
+            android:id="@+id/music"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="music" />
+
+        <RadioButton
+            android:id="@+id/ring"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ring" />
+
+        <RadioButton
+            android:id="@+id/alarm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="alarm" />
+
+        <RadioButton
+            android:id="@+id/notification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="notification" />
+
+        <RadioButton
+            android:id="@+id/system"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="system" />
+
+        <RadioButton
+            android:id="@+id/voicecall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="voicecall" />
+
+        <RadioButton
+            android:id="@+id/dtmf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="dtmf" />
+
+
+    </RadioGroup>
 
 </LinearLayout>

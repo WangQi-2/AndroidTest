@@ -1,10 +1,7 @@
 package com.wq.androidtest.activity.system;
 
-import android.media.AudioManager;
 import android.os.Bundle;
-import android.widget.CheckBox;
-import android.widget.CompoundButton;
-import android.widget.TextView;
+import android.widget.RadioGroup;
 
 import com.wq.androidtest.R;
 import com.wq.androidtest.activity.BaseActivity;
@@ -14,10 +11,9 @@ import com.wq.androidtest.activity.BaseActivity;
  */
 public class VolumeActivity extends BaseActivity {
 
-    TextView textView;
-    CheckBox checkBox;
     String RING = "ring";
     String MUSIC = "music";
+    RadioGroup radioGroup;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,36 +21,22 @@ public class VolumeActivity extends BaseActivity {
         setContentView(R.layout.activity_volume);
         initViews();
         setListeners();
-        monitorRing();
-    }
-
-    private void setListeners() {
-        checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-                    monitorRing();
-                } else {
-                    monitorMedia();
-                }
-            }
-        });
-    }
-
-    private void monitorMedia() {
-        textView.setText(MUSIC);
-        // TODO: 15/10/28 test all
-        setVolumeControlStream(AudioManager.STREAM_MUSIC);
-    }
-
-    private void monitorRing() {
-        textView.setText(RING);
-        setVolumeControlStream(AudioManager.STREAM_RING);
     }
 
     private void initViews() {
-        textView = (TextView) findViewById(R.id.text);
-        checkBox = (CheckBox) findViewById(R.id.checkbox);
+        radioGroup = (RadioGroup) findViewById(R.id.radiogroup);
+    }
+
+    private void setListeners() {
+        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                switch (group.getCheckedRadioButtonId()) {
+
+                }
+
+            }
+        });
     }
 
 
