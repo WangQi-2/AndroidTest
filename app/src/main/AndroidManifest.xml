@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.wq.androidtest">
 
 
@@ -25,6 +26,8 @@
     <uses-permission android:name="android.permission.READ_LOGS" />
     <uses-permission android:name="com.pptv.launcher.permission.provider.READ" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <uses-sdk tools:overrideLibrary="android.support.v17.leanback" />
 
     <!-- 有些主题是不显示actionbar的-->
     <application
@@ -92,9 +95,12 @@
         <activity android:name=".activity.FloatingWindowActivity" />
         <activity android:name=".activity.ShowNetWorkSpeedActivity" />
         <activity android:name=".activity.system.VolumeActivity" />
+        <activity
+            android:name=".activity.system.HorizontalGridViewActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
 
-        <service android:name=".service.FxService"/>
-        <service android:name=".service.MonitorService"/>
+        <service android:name=".service.FxService" />
+        <service android:name=".service.MonitorService" />
         <!-- 桌面小控件-->
         <receiver android:name=".widget.OnePicAppWidgetProvider">
             <meta-data

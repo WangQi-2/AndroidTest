@@ -1,7 +1,16 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/root_view"
     android:gravity="center_horizontal"
     android:orientation="vertical">
 
-</LinearLayout>
+    <android.support.v17.leanback.widget.HorizontalGridView
+        android:id="@+id/gridview"
+        android:background="@color/red"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </android.support.v17.leanback.widget.HorizontalGridView>
+
+</FrameLayout>

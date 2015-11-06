@@ -19,6 +19,7 @@ import com.wq.androidtest.activity.customview.ProgressButtonActivity;
 import com.wq.androidtest.activity.customview.RatingActivity;
 import com.wq.androidtest.activity.customview.RiseTextViewActivity;
 import com.wq.androidtest.activity.customviewgroup.FlowLayoutActivity;
+import com.wq.androidtest.activity.system.HorizontalGridViewActivity;
 import com.wq.androidtest.activity.system.VolumeActivity;
 import com.wq.androidtest.activity.v7.CardViewActivity;
 import com.wq.androidtest.activity.v7.RecycleViewGridActivity;
@@ -78,7 +79,7 @@ public class DemoTableActivity extends BaseActivity {
         demoEntryModels = new ArrayList<>();
 
         //quick access
-        demoEntryModels.add(new DemoEntryModel("快速入口", FocusTesetActivity.class));
+        demoEntryModels.add(new DemoEntryModel("快速入口", HorizontalGridViewActivity.class));
         //
         ArrayList<DemoEntryModel> groupsList;
         DemoEntryModel groupsModel;
