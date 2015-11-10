@@ -151,5 +151,7 @@ public class DemoTableActivity extends BaseActivity {
         demoEntryModels.add(new DemoEntryModel("floatingview",FloatingWindowActivity.class));
         demoEntryModels.add(new DemoEntryModel("test speed",ShowNetWorkSpeedActivity.class));
         demoEntryModels.add(new DemoEntryModel("test volume",VolumeActivity.class));
+        demoEntryModels.add(new DemoEntryModel("horizontalgridview",HorizontalGridViewActivity.class));
+        demoEntryModels.add(new DemoEntryModel("test scrollview",ScrollViewActivity.class));
     }
 }

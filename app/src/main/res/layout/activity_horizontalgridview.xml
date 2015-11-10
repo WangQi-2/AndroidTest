@@ -5,12 +5,14 @@
     android:gravity="center_horizontal"
     android:orientation="vertical">
 
-    <android.support.v17.leanback.widget.HorizontalGridView
+    <com.wq.androidtest.view.customview.TVHorizontalGridView
         android:id="@+id/gridview"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
         android:background="@color/red"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"/>
 
-    </android.support.v17.leanback.widget.HorizontalGridView>
 
 </FrameLayout>

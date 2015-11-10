@@ -19,9 +19,9 @@ public final class Logger {
     //起始执行时间
     public static long startLogTimeInMillis = 0;
     //标记日志是否允许（打开）
-    private static boolean logEnabled_i = false;
-    private static boolean logEnabled_d = false;
-    private static boolean logEnabled_e = false;
+    private static boolean logEnabled_i = true;
+    private static boolean logEnabled_d = true;
+    private static boolean logEnabled_e = true;
 
     /**
      * 描述：记录当前时间毫秒.

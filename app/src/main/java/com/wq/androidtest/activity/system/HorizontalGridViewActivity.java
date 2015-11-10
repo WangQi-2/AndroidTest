@@ -17,6 +17,7 @@ import com.nineoldandroids.animation.AnimatorSet;
 import com.nineoldandroids.animation.ObjectAnimator;
 import com.wq.androidtest.R;
 import com.wq.androidtest.activity.BaseActivity;
+import com.wq.androidtest.util.Logger;
 
 /**
  * Created by wangqi on 15/11/4.
@@ -94,24 +95,46 @@ public class HorizontalGridViewActivity extends BaseActivity {
         set.setDuration(1000).start();
     }
 
+
     class MyAdapter extends RecyclerView.Adapter {
 
         @Override
         public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-            View root = inflater.inflate(R.layout.item_horizontalgridview_item, null);
-            View text1 = root.findViewById(R.id.text1);
+            final View root = inflater.inflate(R.layout.item_horizontalgridview_item, null);
             root.setOnHoverListener(new View.OnHoverListener() {
                 @Override
                 public boolean onHover(View v, MotionEvent event) {
                     if (event.getAction() == MotionEvent.ACTION_HOVER_ENTER) {
                         v.requestFocus();
                     }
+                    int offset = 20;
+                    float eventX = v.getLeft() + event.getX();
+                    int width = mGridView.getWidth();
+                    if (lastX != 0) {
+                        float delta = lastX - eventX;
+                        Logger.e("x504", "deltaX : " + (lastX - eventX));
+                        if (delta > 5 || delta < -5) {
+                            if (eventX + offset > width) {
+                                mGridView.scrollBy(1, 0);
+                            }
+                            if (eventX - offset < 0) {
+                                mGridView.scrollBy(-1, 0);
+                            }
+                        }
+                    }
+                    Logger.e("x504", "eventX : " + eventX);
+                    Logger.e("x504", "width : " + width);
+
+
+                    lastX = eventX;
                     return false;
                 }
             });
             return new ViewHolder(root);
         }
+
+        float lastX;
 
         @Override
         public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
@@ -128,7 +151,7 @@ public class HorizontalGridViewActivity extends BaseActivity {
 
         @Override
         public int getItemCount() {
-            return 40;
+            return 20;
         }
     }
 

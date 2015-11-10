@@ -6,6 +6,8 @@ import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.widget.ScrollView;
 
+import com.wq.androidtest.util.Logger;
+
 
 /**
  * Created by wangqi on 15/9/16.
@@ -30,6 +32,31 @@ public class OutScrollView extends ScrollView {
                 return false;
             }
         });
+    }
+
+    @Override
+    public boolean onHoverEvent(MotionEvent event) {
+
+        float eventX = event.getX();
+        float eventY = event.getY();
+        int childW = getChildAt(0).getWidth();
+        int childH = getChildAt(0).getHeight();
+        int width = getWidth();
+        int height = getHeight();
+        int scrollX = getScrollX();
+        int scrollY = getScrollY();
+        Logger.e("x504", "eventX : " + eventX + ", eventY : " + eventY);
+        Logger.e("x504", "width : " + width + ", height : " + height);
+        Logger.e("x504", "scrollX : " + scrollX + ", scrollY : " + scrollY);
+        if(eventY + 20 > height)
+        {
+           scrollBy(0,20);
+        }
+        if(eventY -20 < 0)
+        {
+            scrollBy(0,-20);
+        }
+        return super.onHoverEvent(event);
     }
 
     @Override

@@ -95,9 +95,12 @@
         <activity android:name=".activity.FloatingWindowActivity" />
         <activity android:name=".activity.ShowNetWorkSpeedActivity" />
         <activity android:name=".activity.system.VolumeActivity" />
+        <activity android:name=".activity.ScrollViewActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            />
         <activity
             android:name=".activity.system.HorizontalGridViewActivity"
-            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+            />
 
         <service android:name=".service.FxService" />
         <service android:name=".service.MonitorService" />
