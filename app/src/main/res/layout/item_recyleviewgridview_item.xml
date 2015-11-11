@@ -1,0 +1,23 @@
+<com.wq.androidtest.view.customview.FocusLearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="230px"
+    android:layout_height="310px"
+    android:clickable="true"
+    android:background="@drawable/seletor_focus_test"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <com.wq.androidtest.view.customview.RoundCornerImageView
+        android:id="@+id/icon"
+        android:layout_width="230px"
+        android:layout_height="220px"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="230px"
+        android:gravity="center"
+        android:layout_height="90px"
+        android:textSize="@dimen/title_big" />
+
+</com.wq.androidtest.view.customview.FocusLearLayout>

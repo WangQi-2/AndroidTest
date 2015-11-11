@@ -17,7 +17,6 @@ import com.nineoldandroids.animation.AnimatorSet;
 import com.nineoldandroids.animation.ObjectAnimator;
 import com.wq.androidtest.R;
 import com.wq.androidtest.activity.BaseActivity;
-import com.wq.androidtest.util.Logger;
 
 /**
  * Created by wangqi on 15/11/4.
@@ -44,7 +43,7 @@ public class HorizontalGridViewActivity extends BaseActivity {
         mGridView.setClickable(false);
         mGridView.setFocusableInTouchMode(false);
         mGridView.setFocusable(false);
-        mGridView.setWindowAlignmentOffset(35);
+        mGridView.setWindowAlignmentOffset(350);
         mGridView.setLayoutManager(new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.HORIZONTAL));
         mGridView.setAdapter(mAdapter);
         mGridView.setOnFocusChangeListener(new View.OnFocusChangeListener() {
@@ -81,10 +80,6 @@ public class HorizontalGridViewActivity extends BaseActivity {
             return;
         }
 
-//        float preX = preFocusView.getTranslationX();
-//        float preY = preFocusView.getTranslationY();
-//        float curX = curFocusView.getTranslationX();
-//        float curY = curFocusView.getTranslationY();
         float preX = preFocusView.getLeft();
         float preY = preFocusView.getTop();
         float curX = curFocusView.getLeft();
@@ -113,7 +108,6 @@ public class HorizontalGridViewActivity extends BaseActivity {
                     int width = mGridView.getWidth();
                     if (lastX != 0) {
                         float delta = lastX - eventX;
-                        Logger.e("x504", "deltaX : " + (lastX - eventX));
                         if (delta > 5 || delta < -5) {
                             if (eventX + offset > width) {
                                 mGridView.smoothScrollBy(100, 0);
@@ -123,9 +117,6 @@ public class HorizontalGridViewActivity extends BaseActivity {
                             }
                         }
                     }
-                    Logger.e("x504", "eventX : " + eventX);
-                    Logger.e("x504", "width : " + width);
-
 
                     lastX = eventX;
                     return false;

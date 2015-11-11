@@ -19,10 +19,20 @@ import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.toolbox.NetworkImageView;
 import com.nineoldandroids.animation.AnimatorSet;
 import com.nineoldandroids.animation.ObjectAnimator;
 import com.wq.androidtest.R;
 import com.wq.androidtest.activity.BaseActivity;
+import com.wq.androidtest.base.TestApplication;
+import com.wq.androidtest.gson.HotDownloadGson;
+import com.wq.androidtest.gson.TopApplistItemGson;
+import com.wq.androidtest.request.GsonRequest;
+import com.wq.androidtest.temp.LruImageCache;
+
+import java.util.List;
 
 /**
  * Created by wangqi on 15/11/4.
@@ -38,6 +48,8 @@ public class RecyleViewGridViewActivity extends BaseActivity {
     FrameLayout rootView;
     AnimatorSet set;
     ViewTreeObserver treeObserver;
+    String url = "http://172.16.10.137/api/v1/hotdownload?platform=market&ver=2.5.0&cno=200&&days=30";
+    List<TopApplistItemGson> list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,6 +72,27 @@ public class RecyleViewGridViewActivity extends BaseActivity {
                 moveFocusView();
             }
         });
+
+
+        GsonRequest<HotDownloadGson> hotDLRequest = new GsonRequest<HotDownloadGson>(url,
+                HotDownloadGson.class, new Response.Listener<HotDownloadGson>() {
+
+            @Override
+            public void onResponse(HotDownloadGson response) {
+                list = response.getTopapplist();
+                mAdapter.notifyDataSetChanged();
+            }
+
+        }, new Response.ErrorListener() {
+
+            @Override
+            public void onErrorResponse(VolleyError error) {
+
+            }
+
+        });
+        TestApplication.getsInstance().requestQueue.add(hotDLRequest);
+
     }
 
     private void initViews() {
@@ -74,10 +107,6 @@ public class RecyleViewGridViewActivity extends BaseActivity {
             return;
         }
 
-//        float preX = preFocusView.getTranslationX();
-//        float preY = preFocusView.getTranslationY();
-//        float curX = curFocusView.getTranslationX();
-//        float curY = curFocusView.getTranslationY();
         float preX = preFocusView.getLeft();
         float preY = preFocusView.getTop();
         float curX = curFocusView.getLeft();
@@ -85,7 +114,9 @@ public class RecyleViewGridViewActivity extends BaseActivity {
         set = new AnimatorSet();
         set.playTogether(ObjectAnimator.ofFloat(borderView, "translationX", preX, curX));
         set.playTogether(ObjectAnimator.ofFloat(borderView, "translationY", preY, curY));
-        set.setDuration(1000).start();
+        set.playTogether(ObjectAnimator.ofFloat(borderView, "width", preFocusView.getWidth(), curFocusView.getWidth()));
+        set.playTogether(ObjectAnimator.ofFloat(borderView, "height", preFocusView.getHeight(), curFocusView.getHeight()));
+        set.setDuration(500).start();
     }
 
 
@@ -94,7 +125,7 @@ public class RecyleViewGridViewActivity extends BaseActivity {
         @Override
         public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-            final View root = inflater.inflate(R.layout.item_horizontalgridview_item, null);
+            final View root = inflater.inflate(R.layout.item_recyleviewgridview_item, null);
             root.setOnHoverListener(new View.OnHoverListener() {
                 @Override
                 public boolean onHover(View v, MotionEvent event) {
@@ -127,20 +158,25 @@ public class RecyleViewGridViewActivity extends BaseActivity {
 
         @Override
         public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
-            TextView textView = (TextView) holder.itemView.findViewById(R.id.text1);
-            textView.setText("position" + position);
-//            if (position == 0 && curFocusView == null) {
-//                textView.requestFocus();
-//                FrameLayout.LayoutParams p = new FrameLayout.LayoutParams(textView.getWidth(),textView.getHeight());
-//                borderView.setLayoutParams(p);
-//                borderView.setTranslationX(textView.getTranslationX());
-//                borderView.setTranslationY(textView.getTranslationX());
-//            }
+            TextView textView = (TextView) holder.itemView.findViewById(R.id.name);
+            NetworkImageView icon = (NetworkImageView) holder.itemView.findViewById(R.id.icon);
+            if (list == null) {
+                textView.setText("position" + position);
+            } else {
+                textView.setText(list.get(position).getTitle());
+                LruImageCache lruImageCache = LruImageCache.instance();
+                com.android.volley.toolbox.ImageLoader imageLoader = new com.android.volley.toolbox.ImageLoader(TestApplication.getsInstance().requestQueue, lruImageCache);
+                icon.setImageUrl(list.get(position).getLogo(), imageLoader);
+            }
         }
 
         @Override
         public int getItemCount() {
-            return 50;
+            if (list == null) {
+                return 50;
+            } else {
+                return list.size();
+            }
         }
     }
 
@@ -194,7 +230,7 @@ public class RecyleViewGridViewActivity extends BaseActivity {
                 final int right = child.getRight() + params.rightMargin
                         + mDivider.getIntrinsicWidth();
                 final int top = child.getBottom() + params.bottomMargin;
-                final int bottom = top + mDivider.getIntrinsicHeight();
+                final int bottom = top + mDivider.getIntrinsicHeight() + 20;
                 mDivider.setBounds(left, top, right, bottom);
                 mDivider.draw(c);
             }
@@ -210,7 +246,7 @@ public class RecyleViewGridViewActivity extends BaseActivity {
                 final int top = child.getTop() - params.topMargin;
                 final int bottom = child.getBottom() + params.bottomMargin;
                 final int left = child.getRight() + params.rightMargin;
-                final int right = left + mDivider.getIntrinsicWidth();
+                final int right = left + mDivider.getIntrinsicWidth() + 20;
 
                 mDivider.setBounds(left, top, right, bottom);
                 mDivider.draw(c);
