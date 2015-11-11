@@ -11,22 +11,45 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:background="@color/green"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btn"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="change 300dp"
+                android:textColor="@color/red" />
 
-        <Button
-            android:id="@+id/btn1"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:text="change wrapcontent"
-            android:textColor="@color/red" />
+            <Button
+                android:id="@+id/btn1"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="change wrapcontent"
+                android:textColor="@color/red" />
+        </LinearLayout>
 
-        <Button
-            android:id="@+id/btn"
-            android:layout_width="wrap_content"
-            android:layout_height="50dp"
-            android:text="change 300dp"
-            android:textColor="@color/red" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btn3"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="scroll"
+                android:textColor="@color/red" />
+            <Button
+                android:id="@+id/btn4"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="resume"
+                android:textColor="@color/red" />
+        </LinearLayout>
+
     </LinearLayout>
 
     <ListView

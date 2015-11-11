@@ -20,27 +20,36 @@ import java.util.List;
  */
 public class ListViewHeightAcitvity extends BaseActivity implements View.OnClickListener {
     ListView mListView;
+    ArrayAdapter<String> adapter;
     Button mBtn;
     Button mBtn1;
+    Button mBtn3;
+    Button mBtn4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listview_height);
         List<String> list = new ArrayList<String>();
-        list.add("item1");
-        list.add("item1");
-        list.add("item1");
-        list.add("item1");
-        list.add("item1");
+
+        for (int i = 0; i < 100; i++) {
+            list.add("item " + i);
+        }
+
         mListView = (ListView) findViewById(R.id.list);
-        mListView.setAdapter(new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, list));
+        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, list);
+        mListView.setAdapter(adapter);
         mBtn = (Button) findViewById(R.id.btn);
         mBtn.setOnClickListener(this);
         mBtn1 = (Button) findViewById(R.id.btn1);
-        mBtn1.setOnClickListener(this);
+        mBtn3 = (Button) findViewById(R.id.btn3);
+        mBtn4 = (Button) findViewById(R.id.btn4);
 
-        Animation animation = AnimationUtils.loadAnimation(this,R.anim.anim_slide_in);
+        mBtn1.setOnClickListener(this);
+        mBtn3.setOnClickListener(this);
+        mBtn4.setOnClickListener(this);
+
+        Animation animation = AnimationUtils.loadAnimation(this, R.anim.anim_slide_in);
         LayoutAnimationController controller = new LayoutAnimationController(animation);
         controller.setDelay(0.5f);
         controller.setOrder(LayoutAnimationController.ORDER_NORMAL);
@@ -55,6 +64,12 @@ public class ListViewHeightAcitvity extends BaseActivity implements View.OnClick
                 break;
             case R.id.btn1:
                 ViewUtil.setListViewHeight(mListView);
+                break;
+            case R.id.btn3:
+                mListView.smoothScrollByOffset(10);
+                break;
+            case R.id.btn4:
+                mListView.smoothScrollToPosition(0);
                 break;
 
         }

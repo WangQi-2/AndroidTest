@@ -116,10 +116,10 @@ public class HorizontalGridViewActivity extends BaseActivity {
                         Logger.e("x504", "deltaX : " + (lastX - eventX));
                         if (delta > 5 || delta < -5) {
                             if (eventX + offset > width) {
-                                mGridView.scrollBy(1, 0);
+                                mGridView.smoothScrollBy(100, 0);
                             }
                             if (eventX - offset < 0) {
-                                mGridView.scrollBy(-1, 0);
+                                mGridView.smoothScrollBy(-100, 0);
                             }
                         }
                     }
@@ -151,7 +151,7 @@ public class HorizontalGridViewActivity extends BaseActivity {
 
         @Override
         public int getItemCount() {
-            return 20;
+            return 50;
         }
     }
 
