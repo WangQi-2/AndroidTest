@@ -23,9 +23,9 @@ public class BaseActivity extends Activity {
     public static final String FUNC_MODELS = "func_models";
     public static final String TITLE = "title";
     //全局对象
-    Application mApp;
-    Context mCtx;
-    Resources mRes;
+    protected Application mApp;
+    protected Context mCtx;
+    protected Resources mRes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

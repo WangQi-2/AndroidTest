@@ -6,6 +6,7 @@
     android:focusable="true"
     android:focusableInTouchMode="true"
     android:orientation="vertical">
+    <!--android:background="@drawable/seletor_focus_test"-->
 
     <com.wq.androidtest.view.customview.RoundCornerImageView
         android:id="@+id/icon"
