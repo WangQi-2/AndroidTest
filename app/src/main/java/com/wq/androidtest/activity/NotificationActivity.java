@@ -24,16 +24,12 @@ public class NotificationActivity extends BaseActivity implements View.OnClickLi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_notification);
-
         manager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         defaultBtn = (Button) findViewById(R.id.defaultBtn);
         customBtn = (Button) findViewById(R.id.customBtn);
         defaultBtn.setOnClickListener(this);
         customBtn.setOnClickListener(this);
-
-
     }
 
     @Override
@@ -50,6 +46,15 @@ public class NotificationActivity extends BaseActivity implements View.OnClickLi
                 PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, PendingIntent.FLAG_UPDATE_CURRENT);
                 defaultNotif.setLatestEventInfo(this, "hellowrold", "this is a notification", pendingIntent);
                 manager.notify(1, defaultNotif);
+
+
+//                Notification noti = new Notification.Builder(mCtx)
+//                        .setContentTitle("New mail from")
+//                        .setContentText("test")
+//                        .setSmallIcon(R.drawable.icon1)
+//                        .setLargeIcon(BitmapFactory.decodeResource(mCtx.getResources(), R.drawable.icon1)).getNotification();
+//                manager.notify(1, noti);
+
                 break;
             case R.id.customBtn:
 
@@ -66,8 +71,6 @@ public class NotificationActivity extends BaseActivity implements View.OnClickLi
                 remoteViews.setImageViewResource(R.id.icon, R.drawable.icon1);
                 PendingIntent clickPendingIntent = PendingIntent.getActivity(this, 0, new Intent(this, DemoTableActivity.class), PendingIntent.FLAG_UPDATE_CURRENT);
                 remoteViews.setOnClickPendingIntent(R.id.open, clickPendingIntent);
-
-
                 customNotif.contentView = remoteViews;
                 customNotif.contentIntent = customPendingIntent;
                 manager.notify(2, customNotif);

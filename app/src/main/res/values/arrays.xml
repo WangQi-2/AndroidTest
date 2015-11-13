@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="poet1">
+        <item>To see a world in a grain of sand</item>
+        <item>And a heaven in a wild flower</item>
+        <item>Hold infinity in the palm of your hand</item>
+        <item>And eternity in an hour</item>
+    </string-array>
+    <string-array name="poet2">
+        <item>If you were a teardrop;In my eye,</item>
+        <item>For fear of losing you,I would never cry.</item>
+        <item>And if the golden sun,Should cease to shine its light,</item>
+        <item>Just one smile from you,Would make my whole world bright.</item>
+    </string-array>
+
+    <integer-array name="colors">
+        <item>@color/red</item>
+        <item>@color/blue</item>
+        <item>@color/yellow</item>
+        <item>@color/green</item>
+        <item>@color/red1</item>
+        <item>@color/blue1</item>
+        <item>@color/yellow1</item>
+        <item>@color/green1</item>
+        <item>@color/red2</item>
+        <item>@color/blue2</item>
+        <item>@color/yellow2</item>
+        <item>@color/green2</item>
+        <item>@color/red3</item>
+        <item>@color/blue3</item>
+        <item>@color/green3</item>
+    </integer-array>
+
+</resources>

@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.View;
 
 import com.wq.androidlibrary.R;
 import com.wq.androidlibrary.util.ActivityUtil;
@@ -26,6 +27,7 @@ public class BaseActivity extends Activity {
     protected Application mApp;
     protected Context mCtx;
     protected Resources mRes;
+    protected View decorView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +49,7 @@ public class BaseActivity extends Activity {
         mCtx = this;
         mRes = getResources();
         ActivityUtil.getInstance().addActivity(this);
+        decorView = getWindow().getDecorView();
     }
 
     @Override

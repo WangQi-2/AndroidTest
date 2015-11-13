@@ -6,10 +6,10 @@
     <TextView
         android:id="@+id/text1"
         android:layout_width="match_parent"
-        android:padding="@dimen/textview_pading"
-        android:textSize="@dimen/title_big"
-        android:layout_margin="@dimen/textview_margin"
         android:layout_height="wrap_content"
-        android:background="@drawable/bg_border" />
+        android:layout_margin="@dimen/textview_margin"
+        android:background="@drawable/bg_border"
+        android:padding="@dimen/textview_pading"
+        android:textSize="@dimen/title_big" />
 
 </LinearLayout>

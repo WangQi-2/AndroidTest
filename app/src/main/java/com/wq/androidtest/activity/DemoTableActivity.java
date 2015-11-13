@@ -21,6 +21,7 @@ import com.wq.androidtest.activity.customview.RiseTextViewActivity;
 import com.wq.androidtest.activity.customviewgroup.FlowLayoutActivity;
 import com.wq.androidtest.activity.system.HorizontalGridViewActivity;
 import com.wq.androidtest.activity.system.RecyleViewGridViewActivity;
+import com.wq.androidtest.activity.system.ViewPagerActivity;
 import com.wq.androidtest.activity.system.VolumeActivity;
 import com.wq.androidtest.activity.v7.CardViewActivity;
 import com.wq.androidtest.activity.v7.RecycleViewGridActivity;
@@ -80,7 +81,7 @@ public class DemoTableActivity extends BaseActivity {
         demoEntryModels = new ArrayList<>();
 
         //quick access
-        demoEntryModels.add(new DemoEntryModel("快速入口", HorizontalGridViewActivity.class));
+        demoEntryModels.add(new DemoEntryModel("快速入口", ViewPagerActivity.class));
         //
         ArrayList<DemoEntryModel> groupsList;
         DemoEntryModel groupsModel;
@@ -155,5 +156,6 @@ public class DemoTableActivity extends BaseActivity {
         demoEntryModels.add(new DemoEntryModel("horizontalgridview",HorizontalGridViewActivity.class));
         demoEntryModels.add(new DemoEntryModel("recyleViewGridview",RecyleViewGridViewActivity.class));
         demoEntryModels.add(new DemoEntryModel("test scrollview",ScrollViewActivity.class));
+        demoEntryModels.add(new DemoEntryModel("viewpager",ViewPagerActivity.class));
     }
 }
