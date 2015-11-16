@@ -7,6 +7,7 @@ import android.view.View;
 
 import com.wq.androidtest.R;
 import com.wq.androidtest.adapter.FragmentAdapter;
+import com.wq.androidtest.adapter.PagerAdapter1;
 import com.wq.androidtest.util.ViewFinder;
 
 /**
@@ -36,7 +37,7 @@ public class ViewPagerActivity extends FragmentActivity {
         viewPager1.setAdapter(new FragmentAdapter(getSupportFragmentManager()));
         viewPager2.setAdapter(new FragmentAdapter(getSupportFragmentManager()));
         viewPager3.setAdapter(new FragmentAdapter(getSupportFragmentManager()));
-        viewPager4.setAdapter(new FragmentAdapter(getSupportFragmentManager()));
-        viewPager5.setAdapter(new FragmentAdapter(getSupportFragmentManager()));
+        viewPager4.setAdapter(new PagerAdapter1());
+        viewPager5.setAdapter(new PagerAdapter1());
     }
 }

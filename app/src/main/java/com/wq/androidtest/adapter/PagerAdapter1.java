@@ -1,29 +1,23 @@
 package com.wq.androidtest.adapter;
 
+import android.graphics.Color;
 import android.support.v4.view.PagerAdapter;
+import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.wq.androidtest.util.Constant;
 
-import java.util.HashMap;
-
 /**
  * Created by wangqi on 15/11/13.
  */
 public class PagerAdapter1 extends PagerAdapter {
 
-    HashMap<Integer,View> viewMap;
-
-
-    public PagerAdapter1() {
-        viewMap = new HashMap<>();
-    }
 
     @Override
     public int getCount() {
-        return 10;
+        return 4;
     }
 
     @Override
@@ -31,25 +25,23 @@ public class PagerAdapter1 extends PagerAdapter {
 
         TextView textView = new TextView(container.getContext());
         textView.setText("pos : " + position);
+        textView.setTextColor(Color.WHITE);
+        textView.setGravity(Gravity.CENTER);
         textView.setBackgroundColor(Constant.COLORS[position % Constant.COLORS.length]);
 
         container.addView(textView);
-        viewMap.put(position,textView);
         return textView;
     }
 
     @Override
     public void destroyItem(ViewGroup container, int position, Object object) {
-        container.removeView(viewMap.get(position));
-        viewMap.remove(position);
-        super.destroyItem(container, position, object);
+        container.removeView((View) object);
     }
 
-//    @Override
-//    public void destroyItem(View container, int position, Object object) {
-//        ((ViewGroup)container).removeView(viewMap.get(position));
-//        super.destroyItem(container, position, object);
-//    }
+    @Override
+    public void destroyItem(View container, int position, Object object) {
+        ((ViewGroup)container).removeView((View) object);
+    }
 
     @Override
     public boolean isViewFromObject(View view, Object object) {

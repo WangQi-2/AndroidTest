@@ -10,10 +10,10 @@
         android:id="@+id/viewpager1"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:clipChildren="false"
         android:layout_marginRight="50dp"
         android:layout_marginTop="2px"
-        android:layout_weight="1"></android.support.v4.view.ViewPager>
+        android:layout_weight="1"
+        android:clipChildren="false"></android.support.v4.view.ViewPager>
 
     <android.support.v4.view.ViewPager
         android:id="@+id/viewpager2"
@@ -36,10 +36,12 @@
         android:layout_marginTop="2px"
         android:layout_weight="1"></android.support.v4.view.ViewPager>
 
-    <android.support.v4.view.ViewPager
+    <com.wq.androidtest.view.viewpager.LoopViewPager
         android:id="@+id/viewpager5"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:clipChildren="false"
+        android:layout_marginRight="40dp"
         android:layout_marginTop="2px"
-        android:layout_weight="1"></android.support.v4.view.ViewPager>
+        android:layout_weight="1"></com.wq.androidtest.view.viewpager.LoopViewPager>
 </LinearLayout>
