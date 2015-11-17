@@ -7,12 +7,19 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.wq.androidtest.R;
 import com.wq.androidtest.util.Constant;
 
 /**
  * Created by wangqi on 15/11/13.
  */
 public class PagerAdapter1 extends PagerAdapter {
+
+    String desc;
+
+    public PagerAdapter1(String desc) {
+        this.desc = desc;
+    }
 
 
     @Override
@@ -24,9 +31,10 @@ public class PagerAdapter1 extends PagerAdapter {
     public Object instantiateItem(ViewGroup container, int position) {
 
         TextView textView = new TextView(container.getContext());
-        textView.setText("pos : " + position);
+        textView.setText(desc + " : " + position);
         textView.setTextColor(Color.WHITE);
         textView.setGravity(Gravity.CENTER);
+        textView.setTextSize(textView.getContext().getResources().getDimensionPixelSize(R.dimen.text_normal));
         textView.setBackgroundColor(Constant.COLORS[position % Constant.COLORS.length]);
 
         container.addView(textView);
@@ -40,7 +48,7 @@ public class PagerAdapter1 extends PagerAdapter {
 
     @Override
     public void destroyItem(View container, int position, Object object) {
-        ((ViewGroup)container).removeView((View) object);
+        ((ViewGroup) container).removeView((View) object);
     }
 
     @Override

@@ -97,6 +97,7 @@
         <activity android:name=".activity.system.VolumeActivity" />
         <activity android:name=".activity.system.RecyleViewGridViewActivity" />
         <activity android:name=".activity.system.ViewPagerActivity" />
+        <activity android:name=".activity.anim.AnimationSetActivity"/>
         <activity
             android:name=".activity.ScrollViewActivity"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />

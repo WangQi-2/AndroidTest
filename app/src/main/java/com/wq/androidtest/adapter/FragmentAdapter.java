@@ -13,14 +13,23 @@ import com.wq.androidtest.util.Constant;
  */
 public class FragmentAdapter extends FragmentPagerAdapter {
 
+    String desc;
+
     public FragmentAdapter(FragmentManager fm) {
         super(fm);
     }
+
+    public FragmentAdapter(FragmentManager fm,String desc) {
+        this(fm);
+        this.desc = desc;
+    }
+
 
     @Override
     public Fragment getItem(int position) {
         Bundle bundle = new Bundle();
         bundle.putInt(Constant.POSITION,position);
+        bundle.putString(Constant.DESCRIPTION,desc);
         PlaceHolderFragment fragment = new PlaceHolderFragment();
         fragment.setArguments(bundle);
         return fragment;

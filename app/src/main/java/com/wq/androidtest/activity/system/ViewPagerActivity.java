@@ -34,10 +34,10 @@ public class ViewPagerActivity extends FragmentActivity {
 
         viewPager1.setOffscreenPageLimit(2);
         viewPager1.setPageMargin(10);
-        viewPager1.setAdapter(new FragmentAdapter(getSupportFragmentManager()));
-        viewPager2.setAdapter(new FragmentAdapter(getSupportFragmentManager()));
-        viewPager3.setAdapter(new FragmentAdapter(getSupportFragmentManager()));
-        viewPager4.setAdapter(new PagerAdapter1());
-        viewPager5.setAdapter(new PagerAdapter1());
+        viewPager1.setAdapter(new FragmentAdapter(getSupportFragmentManager(),"fragment"));
+        viewPager2.setAdapter(new FragmentAdapter(getSupportFragmentManager(),"fragment"));
+        viewPager3.setAdapter(new FragmentAdapter(getSupportFragmentManager(),"fragment"));
+        viewPager4.setAdapter(new PagerAdapter1("pageradapter"));
+        viewPager5.setAdapter(new PagerAdapter1("loop viewpager"));
     }
 }
