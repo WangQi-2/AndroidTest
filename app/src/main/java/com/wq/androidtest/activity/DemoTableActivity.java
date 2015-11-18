@@ -104,6 +104,9 @@ public class DemoTableActivity extends BaseActivity {
         //anim
         groupsList = new ArrayList<>();
         groupsList.add(new DemoEntryModel("layoutanim", LayoutAnimationActivity.class));
+        groupsList.add(new DemoEntryModel("anim", AnimActivity.class));
+        groupsList.add(new DemoEntryModel("animtest", AnimTestActivity.class));
+        groupsList.add(new DemoEntryModel("animUtilTest", AnimationUtilTestActivity.class));
         groupsList.add(new DemoEntryModel("animationset", AnimationSetActivity.class));
         groupsModel = new DemoEntryModel("*anim", null, groupsList);
         demoEntryModels.add(groupsModel);
@@ -136,12 +139,10 @@ public class DemoTableActivity extends BaseActivity {
         demoEntryModels.add(new DemoEntryModel("eventbus", EventBusDemoActivity.class));
         demoEntryModels.add(new DemoEntryModel("update", UpdateApkActivity.class));
         demoEntryModels.add(new DemoEntryModel("mListView height", ListViewHeightAcitvity.class));
-        demoEntryModels.add(new DemoEntryModel("animUtilTest", AnimationUtilTestActivity.class));
         demoEntryModels.add(new DemoEntryModel("risetextview", RiseTextViewActivity.class));
         demoEntryModels.add(new DemoEntryModel("enabletest", ViewEnableTestActivity.class));
         demoEntryModels.add(new DemoEntryModel("view trans", ViewTransActivity.class));
         demoEntryModels.add(new DemoEntryModel("notification", NotificationActivity.class));
-        demoEntryModels.add(new DemoEntryModel("anim", AnimActivity.class));
         demoEntryModels.add(new DemoEntryModel("number clock", FontMetricsActivity.class));
         demoEntryModels.add(new DemoEntryModel("imagesize", ImageSizeActivity.class));
         demoEntryModels.add(new DemoEntryModel("customDrawable", CustomDrawableActivity.class));
@@ -149,7 +150,6 @@ public class DemoTableActivity extends BaseActivity {
         demoEntryModels.add(new DemoEntryModel("back", FakeExitActivity.class));
         demoEntryModels.add(new DemoEntryModel("fbutton", FButtonActivity.class));
         demoEntryModels.add(new DemoEntryModel("flatUI", FlatUIActivity.class));
-        demoEntryModels.add(new DemoEntryModel("animtest", AnimTestActivity.class));
         demoEntryModels.add(new DemoEntryModel("cube ainm",CubeAnimActivity.class));
         demoEntryModels.add(new DemoEntryModel("bezier",BezierActivity.class));
         demoEntryModels.add(new DemoEntryModel("floatingview",FloatingWindowActivity.class));

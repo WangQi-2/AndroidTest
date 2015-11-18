@@ -90,7 +90,5 @@ public class AnimationSetActivity extends BaseActivity implements View.OnClickLi
                 .with(anim6)
                 .with(anim7);
         animatorSet.start();
-
-
     }
 }
