@@ -4,4 +4,9 @@
     android:gravity="center"
     android:orientation="vertical">
 
+    <com.wq.androidtest.activity.customview.TickView
+        android:id="@+id/tick"
+        android:layout_width="1dp"
+        android:layout_height="1dp" />
+
 </LinearLayout>

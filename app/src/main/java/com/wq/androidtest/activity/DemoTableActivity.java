@@ -21,6 +21,7 @@ import com.wq.androidtest.activity.customview.ProgressButtonActivity;
 import com.wq.androidtest.activity.customview.RatingActivity;
 import com.wq.androidtest.activity.customview.RiseTextViewActivity;
 import com.wq.androidtest.activity.customview.SunAndMoonActivity;
+import com.wq.androidtest.activity.customview.TickViewActivity;
 import com.wq.androidtest.activity.customviewgroup.FlowLayoutActivity;
 import com.wq.androidtest.activity.system.HorizontalGridViewActivity;
 import com.wq.androidtest.activity.system.RecyleViewGridViewActivity;
@@ -163,5 +164,6 @@ public class DemoTableActivity extends BaseActivity {
         demoEntryModels.add(new DemoEntryModel("recyleViewGridview", RecyleViewGridViewActivity.class));
         demoEntryModels.add(new DemoEntryModel("test scrollview", ScrollViewActivity.class));
         demoEntryModels.add(new DemoEntryModel("viewpager", ViewPagerActivity.class));
+        demoEntryModels.add(new DemoEntryModel("tick", TickViewActivity.class));
     }
 }
