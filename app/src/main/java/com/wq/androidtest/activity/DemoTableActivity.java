@@ -16,9 +16,11 @@ import com.wq.androidtest.activity.customview.CircleProgressActivity;
 import com.wq.androidtest.activity.customview.CircleViewActivity;
 import com.wq.androidtest.activity.customview.FontMetricsActivity;
 import com.wq.androidtest.activity.customview.HorizontalScrollExActivity;
+import com.wq.androidtest.activity.customview.IndicatorActivity;
 import com.wq.androidtest.activity.customview.ProgressButtonActivity;
 import com.wq.androidtest.activity.customview.RatingActivity;
 import com.wq.androidtest.activity.customview.RiseTextViewActivity;
+import com.wq.androidtest.activity.customview.SunAndMoonActivity;
 import com.wq.androidtest.activity.customviewgroup.FlowLayoutActivity;
 import com.wq.androidtest.activity.system.HorizontalGridViewActivity;
 import com.wq.androidtest.activity.system.RecyleViewGridViewActivity;
@@ -63,7 +65,7 @@ public class DemoTableActivity extends BaseActivity {
         mDemoEntrys.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                ToastUtil.showToast(mCtx,"item clicked");
+                ToastUtil.showToast(mCtx, "item clicked");
                 Intent i = null;
                 if (demoEntryModels.get(position).getChilds() != null) {
                     i = new Intent(DemoTableActivity.this, DemoTableActivity.class);
@@ -71,7 +73,7 @@ public class DemoTableActivity extends BaseActivity {
                 } else {
                     i = new Intent(DemoTableActivity.this, demoEntryModels.get(position).getClazz());
                 }
-                i.putExtra(TITLE,demoEntryModels.get(position).getDes());
+                i.putExtra(TITLE, demoEntryModels.get(position).getDes());
                 startActivity(i);
             }
         });
@@ -92,6 +94,8 @@ public class DemoTableActivity extends BaseActivity {
         groupsList.add(new DemoEntryModel("circleview", CircleViewActivity.class));
         groupsList.add(new DemoEntryModel("progressbutton", ProgressButtonActivity.class));
         groupsList.add(new DemoEntryModel("circleprogress", CircleProgressActivity.class));
+        groupsList.add(new DemoEntryModel("indicator", IndicatorActivity.class));
+        groupsList.add(new DemoEntryModel("sun moon", SunAndMoonActivity.class));
         groupsModel = new DemoEntryModel("*views", null, groupsList);
         demoEntryModels.add(groupsModel);
         //custom view group
@@ -150,14 +154,14 @@ public class DemoTableActivity extends BaseActivity {
         demoEntryModels.add(new DemoEntryModel("back", FakeExitActivity.class));
         demoEntryModels.add(new DemoEntryModel("fbutton", FButtonActivity.class));
         demoEntryModels.add(new DemoEntryModel("flatUI", FlatUIActivity.class));
-        demoEntryModels.add(new DemoEntryModel("cube ainm",CubeAnimActivity.class));
-        demoEntryModels.add(new DemoEntryModel("bezier",BezierActivity.class));
-        demoEntryModels.add(new DemoEntryModel("floatingview",FloatingWindowActivity.class));
-        demoEntryModels.add(new DemoEntryModel("test speed",ShowNetWorkSpeedActivity.class));
-        demoEntryModels.add(new DemoEntryModel("test volume",VolumeActivity.class));
-        demoEntryModels.add(new DemoEntryModel("horizontalgridview",HorizontalGridViewActivity.class));
-        demoEntryModels.add(new DemoEntryModel("recyleViewGridview",RecyleViewGridViewActivity.class));
-        demoEntryModels.add(new DemoEntryModel("test scrollview",ScrollViewActivity.class));
-        demoEntryModels.add(new DemoEntryModel("viewpager",ViewPagerActivity.class));
+        demoEntryModels.add(new DemoEntryModel("cube ainm", CubeAnimActivity.class));
+        demoEntryModels.add(new DemoEntryModel("bezier", BezierActivity.class));
+        demoEntryModels.add(new DemoEntryModel("floatingview", FloatingWindowActivity.class));
+        demoEntryModels.add(new DemoEntryModel("test speed", ShowNetWorkSpeedActivity.class));
+        demoEntryModels.add(new DemoEntryModel("test volume", VolumeActivity.class));
+        demoEntryModels.add(new DemoEntryModel("horizontalgridview", HorizontalGridViewActivity.class));
+        demoEntryModels.add(new DemoEntryModel("recyleViewGridview", RecyleViewGridViewActivity.class));
+        demoEntryModels.add(new DemoEntryModel("test scrollview", ScrollViewActivity.class));
+        demoEntryModels.add(new DemoEntryModel("viewpager", ViewPagerActivity.class));
     }
 }

@@ -149,13 +149,12 @@ public class BitmapUtil {
     }
 
     public static Bitmap getScaleBitmap(Bitmap bitmap, int desiredWidth, int desiredHeight) {
-        Bitmap resizedBitmap = null;
         int srcWidth = bitmap.getWidth();
         int srcHeight = bitmap.getHeight();
         float scale = getScale(srcWidth, srcHeight, desiredWidth, desiredHeight);
 
 
-        return resizedBitmap;
+        return scaleBitmap(bitmap,scale);
     }
 
     public static Bitmap scaleBitmap(Bitmap bitmap, float scale) {

@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <com.wq.androidtest.view.customview.IndicatorView
+        android:id="@+id/indicator"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:background="@color/green3" />
+
+    <Button
+        android:id="@+id/next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="50dp"
+        android:onClick="click"
+        android:text="next" />
+
+    <Button
+        android:id="@+id/pre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="50dp"
+        android:onClick="click"
+        android:text="pre" />
+
+</LinearLayout>

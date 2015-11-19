@@ -1,0 +1,22 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <SeekBar
+        android:id="@+id/seek"
+        android:layout_width="match_parent"
+        android:background="@color/blue"
+        android:layout_marginBottom="30dp"
+        android:thumb="@drawable/sun"
+        android:max="360"
+        android:layout_height="20dp" />
+
+    <com.wq.androidtest.view.customview.SunAndMoonView
+        android:id="@+id/sun"
+        android:layout_width="100dp"
+        android:background="@color/white"
+        android:layout_height="100dp" />
+
+</LinearLayout>
