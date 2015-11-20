@@ -1,13 +1,96 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center_horizontal"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/anim"
-        android:onClick="click"
-        style="@style/AppTheme.MMButton" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
 
+        <TextView
+            style="@style/AppTheme.WWTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="tween" />
 
-</LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/tween_alpha"
+                style="@style/AppTheme.WWButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="click"
+                android:text="alpha" />
+
+            <Button
+                android:id="@+id/tween_scale"
+                style="@style/AppTheme.WWButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="click"
+                android:text="scale" />
+
+            <Button
+                android:id="@+id/tween_rotate"
+                style="@style/AppTheme.WWButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="click"
+                android:text="rotate" />
+
+            <Button
+                android:id="@+id/tween_translate"
+                style="@style/AppTheme.WWButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="click"
+                android:text="translate" />
+
+            <Button
+                android:id="@+id/tween_set"
+                style="@style/AppTheme.WWButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="click"
+                android:text="anim set" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/tween_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:scaleType="center"
+            android:src="@drawable/icon1" />
+
+        <include layout="@layout/view_line" />
+
+        <CheckBox
+            android:id="@+id/fill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="fill after" />
+
+        <CheckBox
+            android:id="@+id/reverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="reverse" />
+
+        <SeekBar
+            android:id="@+id/aa"
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+    </LinearLayout>
+</ScrollView>

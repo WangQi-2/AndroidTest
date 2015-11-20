@@ -49,7 +49,7 @@ public class ListViewHeightAcitvity extends BaseActivity implements View.OnClick
         mBtn3.setOnClickListener(this);
         mBtn4.setOnClickListener(this);
 
-        Animation animation = AnimationUtils.loadAnimation(this, R.anim.anim_slide_in);
+        Animation animation = AnimationUtils.loadAnimation(this, R.anim.slide_in);
         LayoutAnimationController controller = new LayoutAnimationController(animation);
         controller.setDelay(0.5f);
         controller.setOrder(LayoutAnimationController.ORDER_NORMAL);

@@ -9,7 +9,7 @@ import android.widget.GridView;
 import com.wq.androidlibrary.util.ToastUtil;
 import com.wq.androidtest.R;
 import com.wq.androidtest.activity.anim.AnimActivity;
-import com.wq.androidtest.activity.anim.AnimTestActivity;
+import com.wq.androidtest.activity.anim.AnimTweenActivity;
 import com.wq.androidtest.activity.anim.AnimationSetActivity;
 import com.wq.androidtest.activity.customview.BezierActivity;
 import com.wq.androidtest.activity.customview.CircleProgressActivity;
@@ -110,7 +110,7 @@ public class DemoTableActivity extends BaseActivity {
         groupsList = new ArrayList<>();
         groupsList.add(new DemoEntryModel("layoutanim", LayoutAnimationActivity.class));
         groupsList.add(new DemoEntryModel("anim", AnimActivity.class));
-        groupsList.add(new DemoEntryModel("animtest", AnimTestActivity.class));
+        groupsList.add(new DemoEntryModel("tween anim", AnimTweenActivity.class));
         groupsList.add(new DemoEntryModel("animUtilTest", AnimationUtilTestActivity.class));
         groupsList.add(new DemoEntryModel("animationset", AnimationSetActivity.class));
         groupsModel = new DemoEntryModel("*anim", null, groupsList);

@@ -22,42 +22,42 @@ public class LayoutAnimationActivity extends BaseActivity {
         setContentView(R.layout.activity_layout_animation);
         //
         LinearLayout linearLayout = (LinearLayout) findViewById(R.id.verticalLL);
-        Animation animation = AnimationUtils.loadAnimation(this, R.anim.anim_slide_top_in);
+        Animation animation = AnimationUtils.loadAnimation(this, R.anim.slide_top_in);
         LayoutAnimationController controller = new LayoutAnimationController(animation);
         controller.setDelay(DURATION1);
         controller.setOrder(LayoutAnimationController.ORDER_NORMAL);
         linearLayout.setLayoutAnimation(controller);
         //
         linearLayout = (LinearLayout) findViewById(R.id.horizontalLL1);
-        animation = AnimationUtils.loadAnimation(this, R.anim.anim_slide_left_in);
+        animation = AnimationUtils.loadAnimation(this, R.anim.slide_left_in);
         controller = new LayoutAnimationController(animation);
         controller.setDelay(DURATION2);
         controller.setOrder(LayoutAnimationController.ORDER_NORMAL);
         linearLayout.setLayoutAnimation(controller);
         //
         linearLayout = (LinearLayout) findViewById(R.id.horizontalLL2);
-        animation = AnimationUtils.loadAnimation(this, R.anim.anim_slide_left_in);
+        animation = AnimationUtils.loadAnimation(this, R.anim.slide_left_in);
         controller = new LayoutAnimationController(animation);
         controller.setDelay(DURATION2 * 2);
         controller.setOrder(LayoutAnimationController.ORDER_NORMAL);
         linearLayout.setLayoutAnimation(controller);
         //
         linearLayout = (LinearLayout) findViewById(R.id.horizontalLL3);
-        animation = AnimationUtils.loadAnimation(this, R.anim.anim_slide_left_in);
+        animation = AnimationUtils.loadAnimation(this, R.anim.slide_left_in);
         controller = new LayoutAnimationController(animation);
         controller.setDelay(DURATION2 * 3);
         controller.setOrder(LayoutAnimationController.ORDER_NORMAL);
         linearLayout.setLayoutAnimation(controller);
         //
         linearLayout = (LinearLayout) findViewById(R.id.horizontalLL4);
-        animation = AnimationUtils.loadAnimation(this, R.anim.anim_slide_left_in);
+        animation = AnimationUtils.loadAnimation(this, R.anim.slide_left_in);
         controller = new LayoutAnimationController(animation);
         controller.setDelay(DURATION2 * 4);
         controller.setOrder(LayoutAnimationController.ORDER_NORMAL);
         linearLayout.setLayoutAnimation(controller);
         //
         linearLayout = (LinearLayout) findViewById(R.id.horizontalLL5);
-        animation = AnimationUtils.loadAnimation(this, R.anim.anim_slide_left_in);
+        animation = AnimationUtils.loadAnimation(this, R.anim.slide_left_in);
         controller = new LayoutAnimationController(animation);
         controller.setDelay(DURATION2 * 5);
         controller.setOrder(LayoutAnimationController.ORDER_NORMAL);

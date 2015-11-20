@@ -23,7 +23,7 @@ public class RecycleViewPuBuActivity extends BaseActivity{
         recyclerView = (RecyclerView) findViewById(R.id.recycleview);
         recyclerView.setLayoutManager(new StaggeredGridLayoutManager(4, StaggeredGridLayoutManager.VERTICAL));
         recyclerView.setAdapter(new RecycleAdapter());
-        Animation animation = AnimationUtils.loadAnimation(this,R.anim.anim_slide_in);
+        Animation animation = AnimationUtils.loadAnimation(this,R.anim.slide_in);
         LayoutAnimationController controller = new LayoutAnimationController(animation);
         controller.setDelay(0.1f);
         controller.setOrder(LayoutAnimationController.ORDER_NORMAL);
