@@ -25,6 +25,7 @@ import com.wq.androidtest.activity.customview.TickViewActivity;
 import com.wq.androidtest.activity.customviewgroup.FlowLayoutActivity;
 import com.wq.androidtest.activity.system.HorizontalGridViewActivity;
 import com.wq.androidtest.activity.system.RecyleViewGridViewActivity;
+import com.wq.androidtest.activity.system.SeekBarActivity;
 import com.wq.androidtest.activity.system.ViewPagerActivity;
 import com.wq.androidtest.activity.system.VolumeActivity;
 import com.wq.androidtest.activity.v7.CardViewActivity;
@@ -165,5 +166,6 @@ public class DemoTableActivity extends BaseActivity {
         demoEntryModels.add(new DemoEntryModel("test scrollview", ScrollViewActivity.class));
         demoEntryModels.add(new DemoEntryModel("viewpager", ViewPagerActivity.class));
         demoEntryModels.add(new DemoEntryModel("tick", TickViewActivity.class));
+        demoEntryModels.add(new DemoEntryModel("seekbar", SeekBarActivity.class));
     }
 }

@@ -5,7 +5,10 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.util.AttributeSet;
+import android.view.KeyEvent;
 import android.view.View;
+
+import com.wq.androidtest.util.Logger;
 
 /**
  * Created by wangqi on 15/9/20.
@@ -33,6 +36,9 @@ public class CircleView extends View {
 
     private void init() {
         mPaint.setColor(mColor);
+        setFocusable(true);
+        setClickable(true);
+        setFocusableInTouchMode(true);
     }
 
     //主要处理一下wrap_content,因为没有content
@@ -69,5 +75,17 @@ public class CircleView extends View {
         int height = getHeight() - paddingTop - paddingBottom;
         int radius = Math.min(width, height) / 2;
         canvas.drawCircle(paddingLeft + width / 2, paddingTop + height / 2, radius, mPaint);
+    }
+
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        Logger.e("onKeyDown");
+        return super.onKeyDown(keyCode, event);
+    }
+
+    @Override
+    public boolean onKeyUp(int keyCode, KeyEvent event) {
+        Logger.e("onKeyUp");
+        return super.onKeyUp(keyCode, event);
     }
 }
