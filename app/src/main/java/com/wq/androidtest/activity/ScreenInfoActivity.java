@@ -6,6 +6,7 @@ import android.widget.TextView;
 
 import com.wq.androidtest.R;
 import com.wq.androidlibrary.util.ScreenUtil;
+import com.wq.androidtest.activity.base.BaseActivity;
 
 /**
  * Created by wangqi on 15/9/11.

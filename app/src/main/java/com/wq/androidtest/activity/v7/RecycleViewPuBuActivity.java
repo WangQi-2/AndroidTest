@@ -8,7 +8,7 @@ import android.view.animation.AnimationUtils;
 import android.view.animation.LayoutAnimationController;
 
 import com.wq.androidtest.R;
-import com.wq.androidtest.activity.BaseActivity;
+import com.wq.androidtest.activity.base.BaseActivity;
 import com.wq.androidtest.adapter.RecycleAdapter;
 
 /**

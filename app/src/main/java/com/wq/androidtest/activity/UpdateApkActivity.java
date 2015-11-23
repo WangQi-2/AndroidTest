@@ -6,6 +6,7 @@ import android.widget.Button;
 
 import com.wq.androidlibrary.util.AppUtil;
 import com.wq.androidlibrary.util.FileUtil;
+import com.wq.androidtest.activity.base.BaseActivity;
 
 import java.io.File;
 

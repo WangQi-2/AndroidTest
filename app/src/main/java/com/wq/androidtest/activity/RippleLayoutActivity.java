@@ -5,11 +5,12 @@ import android.view.View;
 
 import com.wq.androidtest.R;
 import com.wq.androidlibrary.util.ToastUtil;
+import com.wq.androidtest.activity.base.BaseActivity;
 
 /**
  * Created by wangqi on 15/9/22.
  */
-public class RippleLayoutActivity extends BaseActivity{
+public class RippleLayoutActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

@@ -3,7 +3,7 @@ package com.wq.androidtest.activity.customview;
 import android.os.Bundle;
 
 import com.wq.androidtest.R;
-import com.wq.androidtest.activity.BaseActivity;
+import com.wq.androidtest.activity.base.BaseActivity;
 import com.wq.androidtest.util.ViewFinder;
 
 /**

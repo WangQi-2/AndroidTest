@@ -7,6 +7,7 @@ import android.view.animation.LayoutAnimationController;
 import android.widget.LinearLayout;
 
 import com.wq.androidtest.R;
+import com.wq.androidtest.activity.base.BaseActivity;
 
 /**
  * Created by wangqi on 15/9/28.

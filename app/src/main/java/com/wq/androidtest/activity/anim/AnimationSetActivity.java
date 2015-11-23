@@ -8,7 +8,7 @@ import android.widget.ImageView;
 import com.nineoldandroids.animation.AnimatorSet;
 import com.nineoldandroids.animation.ObjectAnimator;
 import com.wq.androidtest.R;
-import com.wq.androidtest.activity.BaseActivity;
+import com.wq.androidtest.activity.base.BaseActivity;
 import com.wq.androidtest.util.Constant;
 import com.wq.androidtest.util.ViewFinder;
 

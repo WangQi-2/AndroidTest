@@ -5,7 +5,7 @@ import android.widget.SeekBar;
 
 import com.wq.androidlibrary.util.ToastUtil;
 import com.wq.androidtest.R;
-import com.wq.androidtest.activity.BaseActivity;
+import com.wq.androidtest.activity.base.BaseActivity;
 
 /**
  * Created by wangqi on 15/11/21.

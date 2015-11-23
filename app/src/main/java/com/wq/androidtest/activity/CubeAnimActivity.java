@@ -6,6 +6,7 @@ import android.view.animation.Animation;
 
 import com.wq.androidlibrary.util.ToastUtil;
 import com.wq.androidtest.R;
+import com.wq.androidtest.activity.base.BaseActivity;
 import com.wq.androidtest.anim.CubeLeftOutAnimation;
 import com.wq.androidtest.anim.CubeRightInAnimation;
 

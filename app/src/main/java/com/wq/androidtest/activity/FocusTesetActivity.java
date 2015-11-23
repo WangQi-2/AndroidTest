@@ -8,6 +8,7 @@ import android.widget.Button;
 
 import com.wq.androidlibrary.util.ToastUtil;
 import com.wq.androidtest.R;
+import com.wq.androidtest.activity.base.BaseActivity;
 
 /**
  * Created by qiwang on 2015/8/29.

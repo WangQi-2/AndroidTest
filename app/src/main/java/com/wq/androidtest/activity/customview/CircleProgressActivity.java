@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 
 import com.wq.androidtest.R;
-import com.wq.androidtest.activity.BaseActivity;
+import com.wq.androidtest.activity.base.BaseActivity;
 import com.wq.androidtest.view.customview.CircleProgressBar;
 
 /**

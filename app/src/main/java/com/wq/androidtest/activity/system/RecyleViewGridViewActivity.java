@@ -28,7 +28,7 @@ import com.nineoldandroids.animation.AnimatorSet;
 import com.nineoldandroids.animation.ObjectAnimator;
 import com.wq.androidlibrary.util.ToastUtil;
 import com.wq.androidtest.R;
-import com.wq.androidtest.activity.BaseActivity;
+import com.wq.androidtest.activity.base.BaseActivity;
 import com.wq.androidtest.base.TestApplication;
 import com.wq.androidtest.gson.HotDownloadGson;
 import com.wq.androidtest.gson.TopApplistItemGson;

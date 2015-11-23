@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.wq.androidtest.R;
 import com.wq.androidlibrary.util.BitmapUtil;
+import com.wq.androidtest.activity.base.BaseActivity;
 import com.wq.androidtest.util.Logger;
 
 import java.io.IOException;

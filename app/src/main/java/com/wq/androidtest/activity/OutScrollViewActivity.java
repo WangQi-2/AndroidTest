@@ -3,11 +3,12 @@ package com.wq.androidtest.activity;
 import android.os.Bundle;
 
 import com.wq.androidtest.R;
+import com.wq.androidtest.activity.base.BaseActivity;
 
 /**
  * Created by wangqi on 15/9/16.
  */
-public class OutScrollViewActivity extends BaseActivity{
+public class OutScrollViewActivity extends BaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

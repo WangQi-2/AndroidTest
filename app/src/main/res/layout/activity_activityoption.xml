@@ -1,0 +1,42 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <ImageView
+        android:id="@+id/sharedimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/icon1"
+        android:transitionName="sharedimage" />
+
+    <Button
+        android:id="@+id/btn1"
+        style="@style/AppTheme.WWButton"
+        android:text="makeCustomAnimation" />
+
+    <Button
+        android:id="@+id/btn2"
+        style="@style/AppTheme.WWButton"
+        android:text="makeScaleUpAnimation" />
+
+    <Button
+        android:id="@+id/btn3"
+        style="@style/AppTheme.WWButton"
+        android:text="btn3" />
+
+    <Button
+        android:id="@+id/btn4"
+        style="@style/AppTheme.WWButton"
+        android:text="btn4" />
+
+    <Button
+        android:id="@+id/btn5"
+        style="@style/AppTheme.WWButton"
+        android:text="btn5" />
+
+</LinearLayout>

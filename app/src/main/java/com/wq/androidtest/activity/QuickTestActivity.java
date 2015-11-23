@@ -7,6 +7,7 @@ import android.support.v4.view.ViewCompat;
 import android.widget.Toast;
 
 import com.wq.androidlibrary.util.AppUtil;
+import com.wq.androidtest.activity.base.BaseActivity;
 
 public class QuickTestActivity extends BaseActivity {
 

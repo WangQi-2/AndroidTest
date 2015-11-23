@@ -3,6 +3,8 @@ package com.wq.androidtest.activity;
 import android.os.Bundle;
 import android.widget.Button;
 
+import com.wq.androidtest.activity.base.BaseActivity;
+
 /**
  * Created by qiwang on 2015/9/6.
  * TODO try two kind blur method:fastblur and renderscript

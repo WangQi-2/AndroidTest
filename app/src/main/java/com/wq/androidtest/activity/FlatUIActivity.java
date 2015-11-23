@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.wq.androidtest.R;
+import com.wq.androidtest.activity.base.BaseActivity;
 import com.wq.androidtest.view.flatui.FlatButton;
 import com.wq.androidtest.view.flatui.FlatUI;
 

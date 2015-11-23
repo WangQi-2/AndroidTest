@@ -15,7 +15,7 @@ import android.widget.CompoundButton;
 import android.widget.ImageView;
 
 import com.wq.androidtest.R;
-import com.wq.androidtest.activity.BaseActivity;
+import com.wq.androidtest.activity.base.BaseActivity;
 import com.wq.androidtest.util.ViewFinder;
 
 import java.util.ArrayList;

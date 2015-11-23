@@ -1,0 +1,17 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/red"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/sharedimage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/icon1"
+        android:transitionName="sharedimage" />
+
+</LinearLayout>

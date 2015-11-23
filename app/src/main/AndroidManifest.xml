@@ -79,6 +79,7 @@
         <activity android:name=".activity.customview.HorizontalScrollExActivity" />
         <activity android:name=".activity.customview.FontMetricsActivity" />
         <activity android:name=".activity.anim.AnimActivity" />
+        <activity android:name=".activity.anim.ViewPropertyAnimatorActivity" />
         <activity android:name=".activity.ImageSizeActivity" />
         <activity android:name=".activity.RippleLayoutActivity" />
         <activity android:name=".activity.CustomDrawableActivity" />
@@ -90,10 +91,11 @@
         <activity android:name=".activity.FlatUIActivity" />
         <activity android:name=".activity.CubeAnimActivity" />
         <activity android:name=".activity.system.SeekBarActivity" />
+        <activity android:name=".activity.anim.LayoutTransactionActivity" />
         <activity android:name=".activity.anim.AnimTweenActivity">
             <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--<action android:name="android.intent.action.MAIN" />-->
+            <!--<category android:name="android.intent.category.LAUNCHER" />-->
             <!--</intent-filter>-->
         </activity>
         <activity android:name=".activity.customview.BezierActivity" />
@@ -103,6 +105,8 @@
         <activity android:name=".activity.system.RecyleViewGridViewActivity" />
         <activity android:name=".activity.system.ViewPagerActivity" />
         <activity android:name=".activity.anim.AnimationSetActivity" />
+        <activity android:name=".activity.anim.ActivityOptionActivity" />
+        <activity android:name=".activity.anim.ActivityOption2Activity" />
         <activity android:name=".activity.customview.IndicatorActivity" />
         <activity android:name=".activity.customview.SunAndMoonActivity" />
         <activity android:name=".activity.customview.TickViewActivity" />

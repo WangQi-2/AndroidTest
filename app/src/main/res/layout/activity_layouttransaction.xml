@@ -1,0 +1,20 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/remove"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:text="click to anim" />
+
+    <GridView
+        android:id="@+id/grid"
+        android:numColumns="3"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"></GridView>
+
+</LinearLayout>

@@ -7,6 +7,7 @@ import android.widget.TextView;
 
 import com.wq.androidlibrary.util.NetWorkUtil;
 import com.wq.androidtest.R;
+import com.wq.androidtest.activity.base.BaseActivity;
 
 /**
  * Created by wangqi on 15/10/26.

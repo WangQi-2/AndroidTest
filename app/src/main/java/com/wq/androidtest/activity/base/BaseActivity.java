@@ -1,4 +1,4 @@
-package com.wq.androidtest.activity;
+package com.wq.androidtest.activity.base;
 
 import android.app.ActionBar;
 import android.app.Activity;

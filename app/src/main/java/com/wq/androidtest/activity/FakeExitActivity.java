@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.wq.androidtest.R;
+import com.wq.androidtest.activity.base.BaseActivity;
 
 /**
  * Created by wangqi on 15/9/23.

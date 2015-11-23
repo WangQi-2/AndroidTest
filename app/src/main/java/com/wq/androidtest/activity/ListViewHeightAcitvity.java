@@ -11,6 +11,7 @@ import android.widget.ListView;
 
 import com.wq.androidlibrary.util.ViewUtil;
 import com.wq.androidtest.R;
+import com.wq.androidtest.activity.base.BaseActivity;
 
 import java.util.ArrayList;
 import java.util.List;
