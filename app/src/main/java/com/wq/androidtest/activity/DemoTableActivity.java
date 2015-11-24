@@ -12,6 +12,9 @@ import com.wq.androidtest.activity.anim.ActivityOptionActivity;
 import com.wq.androidtest.activity.anim.AnimActivity;
 import com.wq.androidtest.activity.anim.AnimTweenActivity;
 import com.wq.androidtest.activity.anim.AnimationSetActivity;
+import com.wq.androidtest.activity.anim.CardFlipFragmentAcitivity;
+import com.wq.androidtest.activity.anim.CardFlipViewActivity;
+import com.wq.androidtest.activity.anim.CrossFadeActivity;
 import com.wq.androidtest.activity.anim.LayoutTransactionActivity;
 import com.wq.androidtest.activity.anim.ViewPropertyAnimatorActivity;
 import com.wq.androidtest.activity.base.BaseActivity;
@@ -120,6 +123,9 @@ public class DemoTableActivity extends BaseActivity {
         groupsList.add(new DemoEntryModel("animationset", AnimationSetActivity.class));
         groupsList.add(new DemoEntryModel("layouttransition", LayoutTransactionActivity.class));
         groupsList.add(new DemoEntryModel("viewPropertyAnimator", ViewPropertyAnimatorActivity.class));
+        groupsList.add(new DemoEntryModel("crossfade", CrossFadeActivity.class));
+        groupsList.add(new DemoEntryModel("flipview", CardFlipViewActivity.class));
+        groupsList.add(new DemoEntryModel("flipFragment", CardFlipFragmentAcitivity.class));
         groupsModel = new DemoEntryModel("*anim", null, groupsList);
         demoEntryModels.add(groupsModel);
         //orignal
