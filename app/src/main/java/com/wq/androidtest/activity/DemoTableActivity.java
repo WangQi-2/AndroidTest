@@ -17,6 +17,7 @@ import com.wq.androidtest.activity.anim.CardFlipViewActivity;
 import com.wq.androidtest.activity.anim.CrossFadeActivity;
 import com.wq.androidtest.activity.anim.LayoutTransactionActivity;
 import com.wq.androidtest.activity.anim.ViewPropertyAnimatorActivity;
+import com.wq.androidtest.activity.anim.ZoomActivity;
 import com.wq.androidtest.activity.base.BaseActivity;
 import com.wq.androidtest.activity.customview.BezierActivity;
 import com.wq.androidtest.activity.customview.CircleProgressActivity;
@@ -125,6 +126,7 @@ public class DemoTableActivity extends BaseActivity {
         groupsList.add(new DemoEntryModel("viewPropertyAnimator", ViewPropertyAnimatorActivity.class));
         groupsList.add(new DemoEntryModel("crossfade", CrossFadeActivity.class));
         groupsList.add(new DemoEntryModel("flipview", CardFlipViewActivity.class));
+        groupsList.add(new DemoEntryModel("zoom", ZoomActivity.class));
         groupsList.add(new DemoEntryModel("flipFragment", CardFlipFragmentAcitivity.class));
         groupsModel = new DemoEntryModel("*anim", null, groupsList);
         demoEntryModels.add(groupsModel);

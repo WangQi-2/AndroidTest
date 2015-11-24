@@ -108,6 +108,7 @@
         <activity android:name=".activity.anim.ActivityOptionActivity" />
         <activity android:name=".activity.anim.ActivityOption2Activity" />
         <activity android:name=".activity.anim.CrossFadeActivity" />
+        <activity android:name=".activity.anim.ZoomActivity" />
         <activity android:name=".activity.anim.CardFlipViewActivity" />
         <activity android:name=".activity.anim.CardFlipFragmentAcitivity" />
         <activity android:name=".activity.customview.IndicatorActivity" />
