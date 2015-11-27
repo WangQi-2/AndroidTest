@@ -1,6 +1,7 @@
 package com.wq.androidtest.activity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
 import com.wq.androidtest.activity.base.BaseActivity;
@@ -14,6 +15,6 @@ public class BlurActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         Button btn = new Button(this);
-
+        View view;
     }
 }

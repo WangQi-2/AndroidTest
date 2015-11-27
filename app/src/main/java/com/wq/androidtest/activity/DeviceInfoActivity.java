@@ -1,5 +1,7 @@
 package com.wq.androidtest.activity;
 
+import android.graphics.PixelFormat;
+import android.graphics.PixelXorXfermode;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -16,11 +18,30 @@ public class DeviceInfoActivity extends BaseActivity {
         TextView textView = new TextView(this);
         textView.setTextSize(25);
         setContentView(textView);
-        textView.setText(
+
+        StringBuffer sb = new StringBuffer();
+        sb.append(
                 "deviceId :" + DeviceUtil.getDeviceId(this) +
                         "\nmac :" + DeviceUtil.getMacAddress(this) +
                         "\nandroidid :" + DeviceUtil.getAndroidId(this) +
                         "\nserial :" + DeviceUtil.getAndroidId(this)
+        );
+        sb.append("\n");
+
+        PixelFormat pixelFormat = new PixelFormat();
+        PixelFormat.getPixelFormatInfo(PixelFormat.RGBA_8888, pixelFormat);
+        sb.append("\nRGBA_8888 bytesPerPixel:" + pixelFormat.bytesPerPixel);
+        PixelFormat.getPixelFormatInfo(PixelFormat.RGBX_8888, pixelFormat);
+        sb.append("\nRGBX_8888 bytesPerPixel:" + pixelFormat.bytesPerPixel);
+        PixelFormat.getPixelFormatInfo(PixelFormat.RGB_888, pixelFormat);
+        sb.append("\nRGB_888 bytesPerPixel:" + pixelFormat.bytesPerPixel);
+        PixelFormat.getPixelFormatInfo(PixelFormat.RGB_565, pixelFormat);
+        sb.append("\nRGB_565 bytesPerPixel:" + pixelFormat.bytesPerPixel);
+
+
+        PixelXorXfermode pixelXorXfermode;
+        textView.setText(
+                sb.toString()
         );
     }
 }
