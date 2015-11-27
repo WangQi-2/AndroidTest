@@ -102,6 +102,7 @@
         <activity android:name=".activity.FloatingWindowActivity" />
         <activity android:name=".activity.ShowNetWorkSpeedActivity" />
         <activity android:name=".activity.system.VolumeActivity" />
+        <activity android:name=".activity.system.BitmapDrawableActivity" />
         <activity android:name=".activity.system.RecyleViewGridViewActivity" />
         <activity android:name=".activity.system.ViewPagerActivity" />
         <activity android:name=".activity.anim.AnimationSetActivity" />

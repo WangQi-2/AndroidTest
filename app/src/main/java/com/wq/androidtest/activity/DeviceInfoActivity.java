@@ -1,7 +1,6 @@
 package com.wq.androidtest.activity;
 
 import android.graphics.PixelFormat;
-import android.graphics.PixelXorXfermode;
 import android.os.Bundle;
 import android.widget.TextView;
 
@@ -38,8 +37,6 @@ public class DeviceInfoActivity extends BaseActivity {
         PixelFormat.getPixelFormatInfo(PixelFormat.RGB_565, pixelFormat);
         sb.append("\nRGB_565 bytesPerPixel:" + pixelFormat.bytesPerPixel);
 
-
-        PixelXorXfermode pixelXorXfermode;
         textView.setText(
                 sb.toString()
         );

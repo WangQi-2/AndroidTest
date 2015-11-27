@@ -31,6 +31,7 @@ import com.wq.androidtest.activity.customview.RiseTextViewActivity;
 import com.wq.androidtest.activity.customview.SunAndMoonActivity;
 import com.wq.androidtest.activity.customview.TickViewActivity;
 import com.wq.androidtest.activity.customviewgroup.FlowLayoutActivity;
+import com.wq.androidtest.activity.system.BitmapDrawableActivity;
 import com.wq.androidtest.activity.system.HorizontalGridViewActivity;
 import com.wq.androidtest.activity.system.RecyleViewGridViewActivity;
 import com.wq.androidtest.activity.system.SeekBarActivity;
@@ -145,6 +146,7 @@ public class DemoTableActivity extends BaseActivity {
         groupsList.add(new DemoEntryModel("ems test", EmsTestActivity.class));
         groupsList.add(new DemoEntryModel("deviceInfo", DeviceInfoActivity.class));
         groupsList.add(new DemoEntryModel("test volume", VolumeActivity.class));
+        groupsList.add(new DemoEntryModel("bitmap drawable", BitmapDrawableActivity.class));
         groupsModel = new DemoEntryModel("*orignal", null, groupsList);
         demoEntryModels.add(groupsModel);
 
