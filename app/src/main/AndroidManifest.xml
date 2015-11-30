@@ -115,6 +115,7 @@
         <activity android:name=".activity.customview.IndicatorActivity" />
         <activity android:name=".activity.customview.SunAndMoonActivity" />
         <activity android:name=".activity.customview.TickViewActivity" />
+        <activity android:name=".activity.system.IntentActivity" />
         <activity
             android:name=".activity.ScrollViewActivity"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />

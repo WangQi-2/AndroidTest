@@ -33,6 +33,7 @@ import com.wq.androidtest.activity.customview.TickViewActivity;
 import com.wq.androidtest.activity.customviewgroup.FlowLayoutActivity;
 import com.wq.androidtest.activity.system.BitmapDrawableActivity;
 import com.wq.androidtest.activity.system.HorizontalGridViewActivity;
+import com.wq.androidtest.activity.system.IntentActivity;
 import com.wq.androidtest.activity.system.RecyleViewGridViewActivity;
 import com.wq.androidtest.activity.system.SeekBarActivity;
 import com.wq.androidtest.activity.system.ViewPagerActivity;
@@ -87,7 +88,6 @@ public class DemoTableActivity extends BaseActivity {
                 startActivity(i, optionsCompat.toBundle());
             }
         });
-
     }
 
     private void initData() {
@@ -131,9 +131,10 @@ public class DemoTableActivity extends BaseActivity {
         groupsList.add(new DemoEntryModel("flipFragment", CardFlipFragmentAcitivity.class));
         groupsModel = new DemoEntryModel("*anim", null, groupsList);
         demoEntryModels.add(groupsModel);
-        //orignal
+        //system
         groupsList = new ArrayList<>();
         groupsList.add(new DemoEntryModel("cardview", CardViewActivity.class));
+        groupsList.add(new DemoEntryModel("intent", IntentActivity.class));
         groupsList.add(new DemoEntryModel("recyclelist", RecycleViewListViewActivity.class));
         groupsList.add(new DemoEntryModel("recyclegrid", RecycleViewGridActivity.class));
         groupsList.add(new DemoEntryModel("recyclepubu", RecycleViewPuBuActivity.class));
@@ -147,7 +148,7 @@ public class DemoTableActivity extends BaseActivity {
         groupsList.add(new DemoEntryModel("deviceInfo", DeviceInfoActivity.class));
         groupsList.add(new DemoEntryModel("test volume", VolumeActivity.class));
         groupsList.add(new DemoEntryModel("bitmap drawable", BitmapDrawableActivity.class));
-        groupsModel = new DemoEntryModel("*orignal", null, groupsList);
+        groupsModel = new DemoEntryModel("*system", null, groupsList);
         demoEntryModels.add(groupsModel);
 
         //scroll
