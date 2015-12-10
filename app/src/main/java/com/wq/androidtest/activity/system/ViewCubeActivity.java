@@ -77,8 +77,8 @@ public class ViewCubeActivity extends BaseActivity {
         v.setPivotX(VIEW_WIDTH);
         ObjectAnimator translationX = ObjectAnimator.ofFloat(v, View.TRANSLATION_X, -VIEW_WIDTH, -(VIEW_WIDTH / 2 + VIEW_WIDTH));
         ObjectAnimator routationY = ObjectAnimator.ofFloat(v, View.ROTATION_Y, -DEGREE_SMALL, 0);
-        ObjectAnimator scaleX = ObjectAnimator.ofFloat(v,View.SCALE_X,1,0.635f);
-        ObjectAnimator scaleY = ObjectAnimator.ofFloat(v,View.SCALE_Y,1,0.635f);
+        ObjectAnimator scaleX = ObjectAnimator.ofFloat(v, View.SCALE_X, 1, 0.635f);
+        ObjectAnimator scaleY = ObjectAnimator.ofFloat(v, View.SCALE_Y, 1, 0.635f);
         animators.add(translationX);
         animators.add(routationY);
         animators.add(scaleX);
@@ -89,8 +89,8 @@ public class ViewCubeActivity extends BaseActivity {
     private Collection<Animator> makeCenter2LeftAnimator(View v) {
         List<Animator> animators = new ArrayList<>();
         v.setPivotX(VIEW_WIDTH);
-        ObjectAnimator translationX = ObjectAnimator.ofFloat(v, View.TRANSLATION_X, -VIEW_WIDTH);
-        ObjectAnimator routationY = ObjectAnimator.ofFloat(v, View.ROTATION_Y, -DEGREE_SMALL);
+        ObjectAnimator translationX = ObjectAnimator.ofFloat(v, View.TRANSLATION_X, 0, -VIEW_WIDTH);
+        ObjectAnimator routationY = ObjectAnimator.ofFloat(v, View.ROTATION_Y, 0, -DEGREE_SMALL);
         animators.add(translationX);
         animators.add(routationY);
         return animators;
@@ -99,8 +99,8 @@ public class ViewCubeActivity extends BaseActivity {
     private Collection<Animator> makeRightOne2CenterAnimator(View v) {
         List<Animator> animators = new ArrayList<>();
         v.setPivotX(0);
-        ObjectAnimator translationX = ObjectAnimator.ofFloat(v, View.TRANSLATION_X, VIEW_WIDTH,0);
-        ObjectAnimator routationY = ObjectAnimator.ofFloat(v, View.ROTATION_Y, DEGREE_BIG,0);
+        ObjectAnimator translationX = ObjectAnimator.ofFloat(v, View.TRANSLATION_X, VIEW_WIDTH, 0);
+        ObjectAnimator routationY = ObjectAnimator.ofFloat(v, View.ROTATION_Y, DEGREE_BIG, 0);
         animators.add(translationX);
         animators.add(routationY);
         return animators;
@@ -109,10 +109,10 @@ public class ViewCubeActivity extends BaseActivity {
     private Collection<Animator> makeRightTwo2RightAnimator(View v) {
         List<Animator> animators = new ArrayList<>();
         v.setPivotX(VIEW_WIDTH);
-        ObjectAnimator translationX = ObjectAnimator.ofFloat(v, View.TRANSLATION_X, VIEW_WIDTH/2, VIEW_WIDTH * 0.86f);
-        ObjectAnimator routationY = ObjectAnimator.ofFloat(v, View.ROTATION_Y, -DEGREE_BIG,DEGREE_SMALL);
-        ObjectAnimator scaleX = ObjectAnimator.ofFloat(v,View.SCALE_X,1,0.68f);
-        ObjectAnimator scaleY = ObjectAnimator.ofFloat(v,View.SCALE_Y,1,0.68f);
+        ObjectAnimator translationX = ObjectAnimator.ofFloat(v, View.TRANSLATION_X, VIEW_WIDTH / 2, VIEW_WIDTH * 0.86f);
+        ObjectAnimator routationY = ObjectAnimator.ofFloat(v, View.ROTATION_Y, -DEGREE_BIG, DEGREE_SMALL);
+        ObjectAnimator scaleX = ObjectAnimator.ofFloat(v, View.SCALE_X, 1, 0.68f);
+        ObjectAnimator scaleY = ObjectAnimator.ofFloat(v, View.SCALE_Y, 1, 0.68f);
         animators.add(translationX);
         animators.add(routationY);
         animators.add(scaleX);

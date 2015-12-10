@@ -30,7 +30,7 @@ public class Attributes {
 
 
     public interface AttributesChangeListener {
-        public void onThemeChange();
+        void onThemeChange();
     }
 
 
