@@ -13,6 +13,7 @@
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <!-- 以下是系统权限-->
     <uses-permission android:name="android.permission.INSTALL_PACKAGES" />
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
@@ -24,7 +25,6 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.READ_LOGS" />
-    <uses-permission android:name="com.pptv.launcher.permission.provider.READ" />
     <uses-permission android:name="android.permission.WRITE_SETTINGS" />
 
     <uses-sdk tools:overrideLibrary="android.support.v17.leanback" />
@@ -116,6 +116,9 @@
         <activity android:name=".activity.customview.SunAndMoonActivity" />
         <activity android:name=".activity.customview.TickViewActivity" />
         <activity android:name=".activity.system.IntentActivity" />
+        <activity android:name=".activity.customview.GifViewActivity" />
+        <activity
+            android:name=".activity.system.ViewCubeActivity" />
         <activity
             android:name=".activity.ScrollViewActivity"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />

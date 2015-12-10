@@ -23,6 +23,7 @@ import com.wq.androidtest.activity.customview.BezierActivity;
 import com.wq.androidtest.activity.customview.CircleProgressActivity;
 import com.wq.androidtest.activity.customview.CircleViewActivity;
 import com.wq.androidtest.activity.customview.FontMetricsActivity;
+import com.wq.androidtest.activity.customview.GifViewActivity;
 import com.wq.androidtest.activity.customview.HorizontalScrollExActivity;
 import com.wq.androidtest.activity.customview.IndicatorActivity;
 import com.wq.androidtest.activity.customview.ProgressButtonActivity;
@@ -34,6 +35,7 @@ import com.wq.androidtest.activity.customviewgroup.FlowLayoutActivity;
 import com.wq.androidtest.activity.system.BitmapDrawableActivity;
 import com.wq.androidtest.activity.system.HorizontalGridViewActivity;
 import com.wq.androidtest.activity.system.IntentActivity;
+import com.wq.androidtest.activity.system.ViewCubeActivity;
 import com.wq.androidtest.activity.system.RecyleViewGridViewActivity;
 import com.wq.androidtest.activity.system.SeekBarActivity;
 import com.wq.androidtest.activity.system.ViewPagerActivity;
@@ -94,7 +96,7 @@ public class DemoTableActivity extends BaseActivity {
         demoEntryModels = new ArrayList<>();
 
         //quick access
-        demoEntryModels.add(new DemoEntryModel("快速入口", LayoutTransactionActivity.class));
+        demoEntryModels.add(new DemoEntryModel("快速入口", ViewCubeActivity.class));
         //
         ArrayList<DemoEntryModel> groupsList;
         DemoEntryModel groupsModel;
@@ -106,6 +108,7 @@ public class DemoTableActivity extends BaseActivity {
         groupsList.add(new DemoEntryModel("circleprogress", CircleProgressActivity.class));
         groupsList.add(new DemoEntryModel("indicator", IndicatorActivity.class));
         groupsList.add(new DemoEntryModel("sun moon", SunAndMoonActivity.class));
+        groupsList.add(new DemoEntryModel("gif view", GifViewActivity.class));
         groupsModel = new DemoEntryModel("*views", null, groupsList);
         demoEntryModels.add(groupsModel);
         //custom view group
@@ -119,6 +122,8 @@ public class DemoTableActivity extends BaseActivity {
         groupsList = new ArrayList<>();
         groupsList.add(new DemoEntryModel("layoutanim", LayoutAnimationActivity.class));
         groupsList.add(new DemoEntryModel("anim", AnimActivity.class));
+        groupsList.add(new DemoEntryModel("view cube", ViewCubeActivity.class));
+        groupsList.add(new DemoEntryModel("cube ainm", CubeAnimActivity.class));
         groupsList.add(new DemoEntryModel("ActivityOption", ActivityOptionActivity.class));
         groupsList.add(new DemoEntryModel("tween anim", AnimTweenActivity.class));
         groupsList.add(new DemoEntryModel("animUtilTest", AnimationUtilTestActivity.class));
@@ -174,7 +179,6 @@ public class DemoTableActivity extends BaseActivity {
         demoEntryModels.add(new DemoEntryModel("back", FakeExitActivity.class));
         demoEntryModels.add(new DemoEntryModel("fbutton", FButtonActivity.class));
         demoEntryModels.add(new DemoEntryModel("flatUI", FlatUIActivity.class));
-        demoEntryModels.add(new DemoEntryModel("cube ainm", CubeAnimActivity.class));
         demoEntryModels.add(new DemoEntryModel("bezier", BezierActivity.class));
         demoEntryModels.add(new DemoEntryModel("floatingview", FloatingWindowActivity.class));
         demoEntryModels.add(new DemoEntryModel("test speed", ShowNetWorkSpeedActivity.class));

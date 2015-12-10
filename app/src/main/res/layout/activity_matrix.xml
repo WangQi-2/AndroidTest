@@ -1,0 +1,40 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/anim"
+        style="@style/AppTheme.WWButton"
+        android:onClick="click"
+        android:text="anim" />
+
+    <View
+        android:id="@+id/image1"
+        android:layout_width="540px"
+        android:layout_height="540px"
+        android:layout_gravity="center"
+        android:background="@color/red" />
+
+    <View
+        android:id="@+id/image2"
+        android:layout_width="540px"
+        android:layout_height="540px"
+        android:layout_gravity="center"
+        android:background="@color/blue" />
+
+    <View
+        android:id="@+id/image3"
+        android:layout_width="540px"
+        android:layout_height="540px"
+        android:layout_gravity="center"
+        android:background="@color/red" />
+
+    <View
+        android:id="@+id/image4"
+        android:layout_width="540px"
+        android:layout_height="540px"
+        android:layout_gravity="center"
+        android:background="@color/blue" />
+</FrameLayout>

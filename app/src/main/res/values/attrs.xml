@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <declare-styleable name="GifView">
+        <attr name="src2" format="reference" />
+    </declare-styleable>
+
     <declare-styleable name="CircleProgressBar">
         <attr name="circle_radius" format="dimension|reference" />
         <attr name="circle_border_width" format="dimension|reference" />
