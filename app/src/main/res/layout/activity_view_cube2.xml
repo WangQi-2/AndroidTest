@@ -1,0 +1,176 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/viewgroup1"
+        android:layout_width="@dimen/half_screen_width"
+        android:layout_height="@dimen/quarter_screen_width"
+        android:layout_gravity="center"
+        android:background="#00ffff"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|top"
+            android:text="1" />
+
+        <Button
+            android:id="@+id/nextbtn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|bottom"
+            android:text="next" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/viewgroup2"
+        android:layout_width="@dimen/half_screen_width"
+        android:layout_height="@dimen/quarter_screen_width"
+        android:layout_gravity="center"
+        android:background="#00ffff"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|top"
+            android:text="2" />
+
+
+        <Button
+            android:id="@+id/backbtn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|bottom"
+            android:text="back" />
+
+        <Button
+            android:id="@+id/nextbtn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:text="next" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/viewgroup3"
+        android:layout_width="@dimen/half_screen_width"
+        android:layout_height="@dimen/quarter_screen_width"
+        android:layout_gravity="center"
+        android:background="#00ffff"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|top"
+            android:text="3" />
+
+
+        <Button
+            android:id="@+id/backbtn3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|bottom"
+            android:text="back" />
+
+        <Button
+            android:id="@+id/nextbtn3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:text="next" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/viewgroup4"
+        android:layout_width="@dimen/half_screen_width"
+        android:layout_height="@dimen/quarter_screen_width"
+        android:layout_gravity="center"
+        android:background="#00ffff"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|top"
+            android:text="4" />
+
+        <Button
+            android:id="@+id/backbtn4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|bottom"
+            android:text="back" />
+
+        <Button
+            android:id="@+id/nextbtn4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:text="next" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/viewgroup5"
+        android:layout_width="@dimen/half_screen_width"
+        android:layout_height="@dimen/quarter_screen_width"
+        android:layout_gravity="center"
+        android:background="#00ffff"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|top"
+            android:text="5" />
+
+        <Button
+            android:id="@+id/backbtn5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|bottom"
+            android:text="back" />
+
+        <Button
+            android:id="@+id/nextbtn5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|bottom"
+            android:text="next" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/viewgroup6"
+        android:layout_width="@dimen/half_screen_width"
+        android:layout_height="@dimen/quarter_screen_width"
+        android:layout_gravity="center"
+        android:background="#00ffff"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|top"
+            android:text="6" />
+
+        <Button
+            android:id="@+id/backbtn6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|bottom"
+            android:text="back" />
+
+    </LinearLayout>
+
+</FrameLayout>

@@ -89,9 +89,10 @@
         <activity android:name=".activity.LayoutAnimationActivity" />
         <activity android:name=".activity.FButtonActivity" />
         <activity android:name=".activity.FlatUIActivity" />
-        <activity android:name=".activity.CubeAnimActivity" />
+        <activity android:name=".activity.anim.CubeAnimActivity" />
         <activity android:name=".activity.system.SeekBarActivity" />
         <activity android:name=".activity.anim.LayoutTransactionActivity" />
+        <activity android:name=".activity.anim.ViewCube2Activity"/>
         <activity android:name=".activity.anim.AnimTweenActivity">
             <!--<intent-filter>-->
             <!--<action android:name="android.intent.action.MAIN" />-->
@@ -118,7 +119,7 @@
         <activity android:name=".activity.system.IntentActivity" />
         <activity android:name=".activity.customview.GifViewActivity" />
         <activity
-            android:name=".activity.system.ViewCubeActivity" />
+            android:name=".activity.anim.ViewCubeActivity" />
         <activity
             android:name=".activity.ScrollViewActivity"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />

@@ -1,4 +1,4 @@
-package com.wq.androidtest.activity.system;
+package com.wq.androidtest.activity.anim;
 
 import android.animation.Animator;
 import android.animation.AnimatorSet;
@@ -31,7 +31,7 @@ public class ViewCubeActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_matrix);
+        setContentView(R.layout.activity_view_cube);
         setUpViews();
     }
 

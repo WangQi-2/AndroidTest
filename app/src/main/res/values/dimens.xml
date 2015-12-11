@@ -6,6 +6,12 @@
     <!-- 数值 -->
     <dimen name="zero">0dp</dimen>
 
+    <dimen name="screen_width">1080px</dimen>
+    <dimen name="half_screen_width">540px</dimen>
+    <dimen name="quarter_screen_width">270px</dimen>
+    <dimen name="screen_height">1920px</dimen>
+    <dimen name="half_screen_height">960px</dimen>
+    <dimen name="quarter_screen_height">480px</dimen>
 
     <!-- font -->
     <dimen name="title_big">25sp</dimen>

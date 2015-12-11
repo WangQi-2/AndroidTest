@@ -1,4 +1,4 @@
-package com.wq.androidtest.activity;
+package com.wq.androidtest.activity.anim;
 
 import android.os.Bundle;
 import android.view.View;

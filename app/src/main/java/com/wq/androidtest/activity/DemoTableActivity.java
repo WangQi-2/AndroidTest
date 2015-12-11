@@ -15,7 +15,10 @@ import com.wq.androidtest.activity.anim.AnimationSetActivity;
 import com.wq.androidtest.activity.anim.CardFlipFragmentAcitivity;
 import com.wq.androidtest.activity.anim.CardFlipViewActivity;
 import com.wq.androidtest.activity.anim.CrossFadeActivity;
+import com.wq.androidtest.activity.anim.CubeAnimActivity;
 import com.wq.androidtest.activity.anim.LayoutTransactionActivity;
+import com.wq.androidtest.activity.anim.ViewCube2Activity;
+import com.wq.androidtest.activity.anim.ViewCubeActivity;
 import com.wq.androidtest.activity.anim.ViewPropertyAnimatorActivity;
 import com.wq.androidtest.activity.anim.ZoomActivity;
 import com.wq.androidtest.activity.base.BaseActivity;
@@ -35,7 +38,6 @@ import com.wq.androidtest.activity.customviewgroup.FlowLayoutActivity;
 import com.wq.androidtest.activity.system.BitmapDrawableActivity;
 import com.wq.androidtest.activity.system.HorizontalGridViewActivity;
 import com.wq.androidtest.activity.system.IntentActivity;
-import com.wq.androidtest.activity.system.ViewCubeActivity;
 import com.wq.androidtest.activity.system.RecyleViewGridViewActivity;
 import com.wq.androidtest.activity.system.SeekBarActivity;
 import com.wq.androidtest.activity.system.ViewPagerActivity;
@@ -96,7 +98,7 @@ public class DemoTableActivity extends BaseActivity {
         demoEntryModels = new ArrayList<>();
 
         //quick access
-        demoEntryModels.add(new DemoEntryModel("快速入口", ViewCubeActivity.class));
+        demoEntryModels.add(new DemoEntryModel("快速入口", ViewCube2Activity.class));
         //
         ArrayList<DemoEntryModel> groupsList;
         DemoEntryModel groupsModel;
