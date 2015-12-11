@@ -20,12 +20,12 @@ import java.util.List;
  */
 public class ViewCube2Activity extends Activity implements View.OnClickListener {
 
-    private static final float VIEW_WIDTH = 540;
-    private static final float VIEW_HEIGHT = 270;
+    private static final float VIEW_WIDTH = 960;
+    private static final float VIEW_HEIGHT = 500;
     private static final int DURATION = 200;
-    private static final float DEGREE_SMALL = 30;
-    private static final float DEGREE_BIG = 75;
-    private static final float DISPEAR_RIGHT_SCALE_RATE = 0.55f;
+    private static final float DEGREE_SMALL = 27;
+    private static final float DEGREE_BIG = 70;
+    private static final float DISPEAR_RIGHT_SCALE_RATE = 0.40f;
 
     private LinearLayout viewGroup1;
     private LinearLayout viewGroup2;
@@ -62,6 +62,13 @@ public class ViewCube2Activity extends Activity implements View.OnClickListener 
         viewGroup4 = (LinearLayout) findViewById(R.id.viewgroup4);
         viewGroup5 = (LinearLayout) findViewById(R.id.viewgroup5);
         viewGroup6 = (LinearLayout) findViewById(R.id.viewgroup6);
+
+        viewGroup1.setBackgroundColor(0xffff0000);
+        viewGroup2.setBackgroundColor(0xff0000ff);
+        viewGroup3.setBackgroundColor(0xffff00ff);
+        viewGroup4.setBackgroundColor(0xffffff00);
+        viewGroup5.setBackgroundColor(0xff00ff00);
+        viewGroup6.setBackgroundColor(0xff00ffff);
 
         next1 = (Button) findViewById(R.id.nextbtn1);
         next2 = (Button) findViewById(R.id.nextbtn2);
@@ -479,7 +486,7 @@ public class ViewCube2Activity extends Activity implements View.OnClickListener 
     private Collection<Animator> generateDispear2LeftFourAnimator(View v) {
         List<Animator> animators = new ArrayList<>();
         v.setPivotX(0);
-        ObjectAnimator translationX = ObjectAnimator.ofFloat(v, View.TRANSLATION_X, -VIEW_WIDTH * 1.5f, -VIEW_WIDTH * 0.55f);
+        ObjectAnimator translationX = ObjectAnimator.ofFloat(v, View.TRANSLATION_X, -VIEW_WIDTH * 1.5f, -VIEW_WIDTH * 0.5f);
         ObjectAnimator scaleX = ObjectAnimator.ofFloat(v, View.SCALE_X, 1, DISPEAR_RIGHT_SCALE_RATE);
         ObjectAnimator scaleY = ObjectAnimator.ofFloat(v, View.SCALE_Y, 1, DISPEAR_RIGHT_SCALE_RATE);
         animators.add(translationX);
