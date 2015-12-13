@@ -3,6 +3,7 @@ package com.wq.androidtest.activity.anim;
 import android.animation.Animator;
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
+import android.animation.TimeInterpolator;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
@@ -20,12 +21,16 @@ import java.util.List;
  */
 public class ViewCube2Activity extends Activity implements View.OnClickListener {
 
-    private static final float VIEW_WIDTH = 960;
-    private static final float VIEW_HEIGHT = 500;
+
+    private static final float SCREEN_WIDTH = 1920;
+    private static final float VIEW_WIDTH = 1392;
+    private static final float SIDE_WIDTH = (SCREEN_WIDTH - VIEW_WIDTH) / 2;
+    private static final float VIEW_HEIGHT = 700;
     private static final int DURATION = 200;
-    private static final float DEGREE_SMALL = 27;
+    private static final float DEGREE_SMALL = 20;
     private static final float DEGREE_BIG = 70;
-    private static final float DISPEAR_RIGHT_SCALE_RATE = 0.40f;
+    private static final float DISPEAR_SCALE_RATE = 0.305f;
+    private static final float VIEW4_MOVING_RATE = 1.105f;
 
     private LinearLayout viewGroup1;
     private LinearLayout viewGroup2;
@@ -106,10 +111,10 @@ public class ViewCube2Activity extends Activity implements View.OnClickListener 
         viewGroup2.setPivotX(0);
         viewGroup2.setTranslationX(VIEW_WIDTH);
         viewGroup2.setRotationY(DEGREE_SMALL);
-        viewGroup3.setTranslationX(VIEW_WIDTH * 1.5f);
-        viewGroup4.setTranslationX(VIEW_WIDTH * 1.5f);
-        viewGroup5.setTranslationX(VIEW_WIDTH * 1.5f);
-        viewGroup6.setTranslationX(VIEW_WIDTH * 1.5f);
+        viewGroup3.setTranslationX(VIEW_WIDTH + SIDE_WIDTH);
+        viewGroup4.setTranslationX(VIEW_WIDTH + SIDE_WIDTH);
+        viewGroup5.setTranslationX(VIEW_WIDTH + SIDE_WIDTH);
+        viewGroup6.setTranslationX(VIEW_WIDTH + SIDE_WIDTH);
 
         chooseGroup1();
     }
@@ -300,8 +305,8 @@ public class ViewCube2Activity extends Activity implements View.OnClickListener 
         v.setPivotX(0);
         ObjectAnimator translationX = ObjectAnimator.ofFloat(v, View.TRANSLATION_X, VIEW_WIDTH * 1.5f, VIEW_WIDTH);
         ObjectAnimator rotationY = ObjectAnimator.ofFloat(v, View.ROTATION_Y, 0, -DEGREE_SMALL);
-        ObjectAnimator scaleX = ObjectAnimator.ofFloat(v, View.SCALE_X, DISPEAR_RIGHT_SCALE_RATE, 1);
-        ObjectAnimator scaleY = ObjectAnimator.ofFloat(v, View.SCALE_Y, DISPEAR_RIGHT_SCALE_RATE, 1);
+        ObjectAnimator scaleX = ObjectAnimator.ofFloat(v, View.SCALE_X, DISPEAR_SCALE_RATE, 1);
+        ObjectAnimator scaleY = ObjectAnimator.ofFloat(v, View.SCALE_Y, DISPEAR_SCALE_RATE, 1);
         animators.add(translationX);
         animators.add(rotationY);
         animators.add(scaleX);
@@ -314,8 +319,8 @@ public class ViewCube2Activity extends Activity implements View.OnClickListener 
         v.setPivotX(0);
         ObjectAnimator translationX = ObjectAnimator.ofFloat(v, View.TRANSLATION_X, VIEW_WIDTH, VIEW_WIDTH * 1.5f);
         ObjectAnimator rotationY = ObjectAnimator.ofFloat(v, View.ROTATION_Y, -DEGREE_SMALL, 0);
-        ObjectAnimator scaleX = ObjectAnimator.ofFloat(v, View.SCALE_X, 1, DISPEAR_RIGHT_SCALE_RATE);
-        ObjectAnimator scaleY = ObjectAnimator.ofFloat(v, View.SCALE_Y, 1, DISPEAR_RIGHT_SCALE_RATE);
+        ObjectAnimator scaleX = ObjectAnimator.ofFloat(v, View.SCALE_X, 1, DISPEAR_SCALE_RATE);
+        ObjectAnimator scaleY = ObjectAnimator.ofFloat(v, View.SCALE_Y, 1, DISPEAR_SCALE_RATE);
         animators.add(scaleX);
         animators.add(scaleY);
         animators.add(translationX);
@@ -328,8 +333,8 @@ public class ViewCube2Activity extends Activity implements View.OnClickListener 
         v.setPivotX(VIEW_WIDTH);
         ObjectAnimator translationX = ObjectAnimator.ofFloat(v, View.TRANSLATION_X, -VIEW_WIDTH, -VIEW_WIDTH * 1.5f);
         ObjectAnimator rotationY = ObjectAnimator.ofFloat(v, View.ROTATION_Y, -DEGREE_SMALL, 0);
-        ObjectAnimator scaleX = ObjectAnimator.ofFloat(v, View.SCALE_X, 1, DISPEAR_RIGHT_SCALE_RATE);
-        ObjectAnimator scaleY = ObjectAnimator.ofFloat(v, View.SCALE_Y, 1, DISPEAR_RIGHT_SCALE_RATE);
+        ObjectAnimator scaleX = ObjectAnimator.ofFloat(v, View.SCALE_X, 1, DISPEAR_SCALE_RATE);
+        ObjectAnimator scaleY = ObjectAnimator.ofFloat(v, View.SCALE_Y, 1, DISPEAR_SCALE_RATE);
         animators.add(scaleX);
         animators.add(scaleY);
         animators.add(translationX);
@@ -382,8 +387,8 @@ public class ViewCube2Activity extends Activity implements View.OnClickListener 
         v.setPivotX(VIEW_WIDTH);
         ObjectAnimator translationX = ObjectAnimator.ofFloat(v, View.TRANSLATION_X, -VIEW_WIDTH * 1.5f, -VIEW_WIDTH);
         ObjectAnimator rotationY = ObjectAnimator.ofFloat(v, View.ROTATION_Y, 0, DEGREE_SMALL);
-        ObjectAnimator scaleX = ObjectAnimator.ofFloat(v, View.SCALE_X, DISPEAR_RIGHT_SCALE_RATE, 1);
-        ObjectAnimator scaleY = ObjectAnimator.ofFloat(v, View.SCALE_Y, DISPEAR_RIGHT_SCALE_RATE, 1);
+        ObjectAnimator scaleX = ObjectAnimator.ofFloat(v, View.SCALE_X, DISPEAR_SCALE_RATE, 1);
+        ObjectAnimator scaleY = ObjectAnimator.ofFloat(v, View.SCALE_Y, DISPEAR_SCALE_RATE, 1);
         animators.add(translationX);
         animators.add(rotationY);
         animators.add(scaleX);
@@ -474,9 +479,9 @@ public class ViewCube2Activity extends Activity implements View.OnClickListener 
     private Collection<Animator> generateDispear2RightFourAnimator(View v) {
         List<Animator> animators = new ArrayList<>();
         v.setPivotX(0);
-        ObjectAnimator translationX = ObjectAnimator.ofFloat(v, View.TRANSLATION_X, VIEW_WIDTH * 1.5f, VIEW_WIDTH * 1.13f);
-        ObjectAnimator scaleX = ObjectAnimator.ofFloat(v, View.SCALE_X, 1, DISPEAR_RIGHT_SCALE_RATE);
-        ObjectAnimator scaleY = ObjectAnimator.ofFloat(v, View.SCALE_Y, 1, DISPEAR_RIGHT_SCALE_RATE);
+        ObjectAnimator translationX = ObjectAnimator.ofFloat(v, View.TRANSLATION_X, VIEW_WIDTH * 1.5f, VIEW_WIDTH * VIEW4_MOVING_RATE);
+        ObjectAnimator scaleX = ObjectAnimator.ofFloat(v, View.SCALE_X, 1, DISPEAR_SCALE_RATE);
+        ObjectAnimator scaleY = ObjectAnimator.ofFloat(v, View.SCALE_Y, 1, DISPEAR_SCALE_RATE);
         animators.add(translationX);
         animators.add(scaleX);
         animators.add(scaleY);
@@ -486,9 +491,9 @@ public class ViewCube2Activity extends Activity implements View.OnClickListener 
     private Collection<Animator> generateDispear2LeftFourAnimator(View v) {
         List<Animator> animators = new ArrayList<>();
         v.setPivotX(0);
-        ObjectAnimator translationX = ObjectAnimator.ofFloat(v, View.TRANSLATION_X, -VIEW_WIDTH * 1.5f, -VIEW_WIDTH * 0.5f);
-        ObjectAnimator scaleX = ObjectAnimator.ofFloat(v, View.SCALE_X, 1, DISPEAR_RIGHT_SCALE_RATE);
-        ObjectAnimator scaleY = ObjectAnimator.ofFloat(v, View.SCALE_Y, 1, DISPEAR_RIGHT_SCALE_RATE);
+        ObjectAnimator translationX = ObjectAnimator.ofFloat(v, View.TRANSLATION_X, -VIEW_WIDTH * 1.5f, -VIEW_WIDTH * 0.4f);
+        ObjectAnimator scaleX = ObjectAnimator.ofFloat(v, View.SCALE_X, 1, DISPEAR_SCALE_RATE);
+        ObjectAnimator scaleY = ObjectAnimator.ofFloat(v, View.SCALE_Y, 1, DISPEAR_SCALE_RATE);
         animators.add(translationX);
         animators.add(scaleX);
         animators.add(scaleY);
@@ -500,8 +505,8 @@ public class ViewCube2Activity extends Activity implements View.OnClickListener 
         v.setPivotX(0);
         ObjectAnimator translationX = ObjectAnimator.ofFloat(v, View.TRANSLATION_X, VIEW_WIDTH * 1.13f, VIEW_WIDTH);
         ObjectAnimator rotationY = ObjectAnimator.ofFloat(v, View.ROTATION_Y, 0, -DEGREE_SMALL);
-        ObjectAnimator scaleX = ObjectAnimator.ofFloat(v, View.SCALE_X, DISPEAR_RIGHT_SCALE_RATE, 1);
-        ObjectAnimator scaleY = ObjectAnimator.ofFloat(v, View.SCALE_Y, DISPEAR_RIGHT_SCALE_RATE, 1);
+        ObjectAnimator scaleX = ObjectAnimator.ofFloat(v, View.SCALE_X, DISPEAR_SCALE_RATE, 1);
+        ObjectAnimator scaleY = ObjectAnimator.ofFloat(v, View.SCALE_Y, DISPEAR_SCALE_RATE, 1);
         animators.add(translationX);
         animators.add(rotationY);
         animators.add(scaleX);
@@ -512,10 +517,10 @@ public class ViewCube2Activity extends Activity implements View.OnClickListener 
     private Collection<Animator> generateRightTwo2RightFourAnimator(View v) {
         List<Animator> animators = new ArrayList<>();
         v.setPivotX(0);
-        ObjectAnimator translationX = ObjectAnimator.ofFloat(v, View.TRANSLATION_X, VIEW_WIDTH, VIEW_WIDTH * 1.13f);
+        ObjectAnimator translationX = ObjectAnimator.ofFloat(v, View.TRANSLATION_X, VIEW_WIDTH, VIEW_WIDTH * VIEW4_MOVING_RATE);
         ObjectAnimator rotationY = ObjectAnimator.ofFloat(v, View.ROTATION_Y, -DEGREE_SMALL, 0);
-        ObjectAnimator scaleX = ObjectAnimator.ofFloat(v, View.SCALE_X, 1, DISPEAR_RIGHT_SCALE_RATE);
-        ObjectAnimator scaleY = ObjectAnimator.ofFloat(v, View.SCALE_Y, 1, DISPEAR_RIGHT_SCALE_RATE);
+        ObjectAnimator scaleX = ObjectAnimator.ofFloat(v, View.SCALE_X, 1, DISPEAR_SCALE_RATE);
+        ObjectAnimator scaleY = ObjectAnimator.ofFloat(v, View.SCALE_Y, 1, DISPEAR_SCALE_RATE);
         animators.add(translationX);
         animators.add(rotationY);
         animators.add(scaleX);
@@ -527,8 +532,8 @@ public class ViewCube2Activity extends Activity implements View.OnClickListener 
         List<Animator> animators = new ArrayList<>();
         v.setPivotX(0);
         ObjectAnimator translationX = ObjectAnimator.ofFloat(v, View.TRANSLATION_X, VIEW_WIDTH * 1.13f, VIEW_WIDTH * 1.5f);
-        ObjectAnimator scaleX = ObjectAnimator.ofFloat(v, View.SCALE_X, DISPEAR_RIGHT_SCALE_RATE, 1);
-        ObjectAnimator scaleY = ObjectAnimator.ofFloat(v, View.SCALE_Y, DISPEAR_RIGHT_SCALE_RATE, 1);
+        ObjectAnimator scaleX = ObjectAnimator.ofFloat(v, View.SCALE_X, DISPEAR_SCALE_RATE, 1);
+        ObjectAnimator scaleY = ObjectAnimator.ofFloat(v, View.SCALE_Y, DISPEAR_SCALE_RATE, 1);
         animators.add(translationX);
         animators.add(scaleX);
         animators.add(scaleY);
@@ -539,8 +544,8 @@ public class ViewCube2Activity extends Activity implements View.OnClickListener 
         List<Animator> animators = new ArrayList<>();
         v.setPivotX(0);
         ObjectAnimator translationX = ObjectAnimator.ofFloat(v, View.TRANSLATION_X, -VIEW_WIDTH * 1.13f, -VIEW_WIDTH * 1.5f);
-        ObjectAnimator scaleX = ObjectAnimator.ofFloat(v, View.SCALE_X, DISPEAR_RIGHT_SCALE_RATE, 1);
-        ObjectAnimator scaleY = ObjectAnimator.ofFloat(v, View.SCALE_Y, DISPEAR_RIGHT_SCALE_RATE, 1);
+        ObjectAnimator scaleX = ObjectAnimator.ofFloat(v, View.SCALE_X, DISPEAR_SCALE_RATE, 1);
+        ObjectAnimator scaleY = ObjectAnimator.ofFloat(v, View.SCALE_Y, DISPEAR_SCALE_RATE, 1);
         animators.add(translationX);
         animators.add(scaleX);
         animators.add(scaleY);
@@ -550,10 +555,10 @@ public class ViewCube2Activity extends Activity implements View.OnClickListener 
     private Collection<Animator> generateLeftTwo2LeftFourAnimator(View v) {
         v.setPivotX(VIEW_WIDTH);
         List<Animator> animators = new ArrayList<>();
-        ObjectAnimator translationX = ObjectAnimator.ofFloat(v, View.TRANSLATION_X, -VIEW_WIDTH, -VIEW_WIDTH * 1.13f);
+        ObjectAnimator translationX = ObjectAnimator.ofFloat(v, View.TRANSLATION_X, -VIEW_WIDTH, -VIEW_WIDTH * VIEW4_MOVING_RATE);
         ObjectAnimator rotationY = ObjectAnimator.ofFloat(v, View.ROTATION_Y, DEGREE_SMALL, 0);
-        ObjectAnimator scaleX = ObjectAnimator.ofFloat(v, View.SCALE_X, 1, DISPEAR_RIGHT_SCALE_RATE);
-        ObjectAnimator scaleY = ObjectAnimator.ofFloat(v, View.SCALE_Y, 1, DISPEAR_RIGHT_SCALE_RATE);
+        ObjectAnimator scaleX = ObjectAnimator.ofFloat(v, View.SCALE_X, 1, DISPEAR_SCALE_RATE);
+        ObjectAnimator scaleY = ObjectAnimator.ofFloat(v, View.SCALE_Y, 1, DISPEAR_SCALE_RATE);
         animators.add(translationX);
         animators.add(rotationY);
         animators.add(scaleX);
@@ -566,8 +571,8 @@ public class ViewCube2Activity extends Activity implements View.OnClickListener 
         List<Animator> animators = new ArrayList<>();
         ObjectAnimator translationX = ObjectAnimator.ofFloat(v, View.TRANSLATION_X, -VIEW_WIDTH * 1.13f, -VIEW_WIDTH);
         ObjectAnimator rotationY = ObjectAnimator.ofFloat(v, View.ROTATION_Y, 0, DEGREE_SMALL);
-        ObjectAnimator scaleX = ObjectAnimator.ofFloat(v, View.SCALE_X, DISPEAR_RIGHT_SCALE_RATE, 1);
-        ObjectAnimator scaleY = ObjectAnimator.ofFloat(v, View.SCALE_Y, DISPEAR_RIGHT_SCALE_RATE, 1);
+        ObjectAnimator scaleX = ObjectAnimator.ofFloat(v, View.SCALE_X, DISPEAR_SCALE_RATE, 1);
+        ObjectAnimator scaleY = ObjectAnimator.ofFloat(v, View.SCALE_Y, DISPEAR_SCALE_RATE, 1);
         animators.add(translationX);
         animators.add(rotationY);
         animators.add(scaleX);
@@ -580,8 +585,11 @@ public class ViewCube2Activity extends Activity implements View.OnClickListener 
         List<Animator> animators = new ArrayList<>();
         ObjectAnimator translationX = ObjectAnimator.ofFloat(v, View.TRANSLATION_X, 0, -VIEW_WIDTH);
         ObjectAnimator rotationY = ObjectAnimator.ofFloat(v, View.ROTATION_Y, 0, -DEGREE_BIG);
+//        translationX.setInterpolator(new Center2ViewThreeInterpolator());
+//        rotationY.setInterpolator(new Center2ViewThreeInterpolator());
         animators.add(translationX);
         animators.add(rotationY);
+
         return animators;
     }
 
@@ -761,6 +769,21 @@ public class ViewCube2Activity extends Activity implements View.OnClickListener 
                 break;
             default:
                 break;
+        }
+    }
+
+    private static class Center2ViewThreeInterpolator implements TimeInterpolator {
+
+        @Override
+        public float getInterpolation(float input) {
+
+            float ret = input * (1f / 0.7f);
+
+            if (ret > 1) {
+                ret = 1;
+            }
+
+            return ret;
         }
     }
 }
