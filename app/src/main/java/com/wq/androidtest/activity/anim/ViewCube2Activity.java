@@ -399,7 +399,7 @@ public class ViewCube2Activity extends Activity implements View.OnClickListener 
         List<Animator> animators = new ArrayList<>();
         v.setPivotX(0);
         ObjectAnimator translationX = ObjectAnimator.ofFloat(v, View.TRANSLATION_X, VIEW_WIDTH, 0);
-        ObjectAnimator rotationY = ObjectAnimator.ofFloat(v, View.ROTATION_Y, DEGREE_SMALL, 0);
+        ObjectAnimator rotationY = ObjectAnimator.ofFloat(v, View.ROTATION_Y, DEGREE_SMALL, 8,4,0);
         animators.add(translationX);
         animators.add(rotationY);
         return animators;
@@ -409,7 +409,7 @@ public class ViewCube2Activity extends Activity implements View.OnClickListener 
         List<Animator> animators = new ArrayList<>();
         v.setPivotX(0);
         ObjectAnimator translationX = ObjectAnimator.ofFloat(v, View.TRANSLATION_X, 0, VIEW_WIDTH);
-        ObjectAnimator rotationY = ObjectAnimator.ofFloat(v, View.ROTATION_Y, 0, DEGREE_SMALL);
+        ObjectAnimator rotationY = ObjectAnimator.ofFloat(v, View.ROTATION_Y, 0, 4,8,DEGREE_SMALL);
         animators.add(translationX);
         animators.add(rotationY);
         return animators;
