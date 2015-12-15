@@ -206,7 +206,7 @@ public class ViewCube2Activity extends Activity implements View.OnClickListener 
         set.setDuration(DURATION);
         List<Animator> animators = new ArrayList<>();
         animators.addAll(generateDispear2LeftOneAnimator(viewGroup1));
-        animators.addAll(generateLeftOne2CenterAnimator(viewGroup2));
+        animators.addAll(generateLeftTwo2CenterAnimator(viewGroup2));
         animators.addAll(generateCenter2RightTwoAnimator(viewGroup3));
         animators.addAll(generateRightThree2DispearAnimator(viewGroup4));
         animators.addAll(generateRightFour2DispearAnimator(viewGroup5));
@@ -283,7 +283,7 @@ public class ViewCube2Activity extends Activity implements View.OnClickListener 
         List<Animator> animators = new ArrayList<>();
         v.setPivotX(VIEW_WIDTH);
         ObjectAnimator translationX = ObjectAnimator.ofFloat(v, View.TRANSLATION_X, -VIEW_WIDTH, 0);
-        ObjectAnimator rotationY = ObjectAnimator.ofFloat(v, View.ROTATION_Y, DEGREE_SMALL, 15,0);
+        ObjectAnimator rotationY = ObjectAnimator.ofFloat(v, View.ROTATION_Y, DEGREE_SMALL,0);
         animators.add(translationX);
         animators.add(rotationY);
         return animators;
