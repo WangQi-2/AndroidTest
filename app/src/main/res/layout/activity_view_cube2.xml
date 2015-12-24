@@ -6,7 +6,7 @@
     android:orientation="vertical">
 
 
-    <LinearLayout
+    <com.wq.androidtest.view.group.AntiAliasLinearLayout
         android:id="@+id/viewgroup1"
         android:layout_width="@dimen/half_screen_width"
         android:layout_height="@dimen/quarter_screen_width"
@@ -44,9 +44,9 @@
             android:layout_gravity="left|bottom"
             android:text="next" />
 
-    </LinearLayout>
+    </com.wq.androidtest.view.group.AntiAliasLinearLayout>
 
-    <LinearLayout
+    <com.wq.androidtest.view.group.AntiAliasLinearLayout
         android:id="@+id/viewgroup2"
         android:layout_width="@dimen/half_screen_width"
         android:layout_height="@dimen/quarter_screen_width"
@@ -96,9 +96,9 @@
                 android:text="next" />
         </LinearLayout>
 
-    </LinearLayout>
+    </com.wq.androidtest.view.group.AntiAliasLinearLayout>
 
-    <LinearLayout
+    <com.wq.androidtest.view.group.AntiAliasLinearLayout
         android:id="@+id/viewgroup3"
         android:layout_width="@dimen/half_screen_width"
         android:layout_height="@dimen/quarter_screen_width"
@@ -149,9 +149,9 @@
                 android:text="next" />
         </LinearLayout>
 
-    </LinearLayout>
+    </com.wq.androidtest.view.group.AntiAliasLinearLayout>
 
-    <LinearLayout
+    <com.wq.androidtest.view.group.AntiAliasLinearLayout
         android:id="@+id/viewgroup4"
         android:layout_width="@dimen/half_screen_width"
         android:layout_height="@dimen/quarter_screen_width"
@@ -201,9 +201,9 @@
                 android:text="next" />
         </LinearLayout>
 
-    </LinearLayout>
+    </com.wq.androidtest.view.group.AntiAliasLinearLayout>
 
-    <LinearLayout
+    <com.wq.androidtest.view.group.AntiAliasLinearLayout
         android:id="@+id/viewgroup5"
         android:layout_width="@dimen/half_screen_width"
         android:layout_height="@dimen/quarter_screen_width"
@@ -253,9 +253,9 @@
                 android:text="next" />
         </LinearLayout>
 
-    </LinearLayout>
+    </com.wq.androidtest.view.group.AntiAliasLinearLayout>
 
-    <LinearLayout
+    <com.wq.androidtest.view.group.AntiAliasLinearLayout
         android:id="@+id/viewgroup6"
         android:layout_width="@dimen/half_screen_width"
         android:layout_height="@dimen/quarter_screen_width"
@@ -293,6 +293,6 @@
             android:layout_gravity="left|bottom"
             android:text="back" />
 
-    </LinearLayout>
+    </com.wq.androidtest.view.group.AntiAliasLinearLayout>
 
 </FrameLayout>

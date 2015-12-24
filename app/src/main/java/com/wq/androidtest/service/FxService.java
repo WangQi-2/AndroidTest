@@ -42,8 +42,7 @@ public class FxService extends Service {
         wmParams.type = WindowManager.LayoutParams.TYPE_PHONE;
         wmParams.format = PixelFormat.RGBA_8888;
         wmParams.flags =
-                WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE
-        ;
+                WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE;
 
         wmParams.gravity = Gravity.LEFT | Gravity.TOP;
 

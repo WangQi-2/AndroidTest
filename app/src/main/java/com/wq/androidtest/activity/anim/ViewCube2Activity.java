@@ -67,6 +67,7 @@ public class ViewCube2Activity extends Activity implements View.OnClickListener 
         viewGroup5 = (LinearLayout) findViewById(R.id.viewgroup5);
         viewGroup6 = (LinearLayout) findViewById(R.id.viewgroup6);
 
+
         viewGroup1.setBackgroundColor(0xffff0000);
         viewGroup2.setBackgroundColor(0xff0000ff);
         viewGroup3.setBackgroundColor(0xffff00ff);
@@ -733,6 +734,7 @@ public class ViewCube2Activity extends Activity implements View.OnClickListener 
 
     @Override
     public void onClick(View v) {
+
         switch (v.getId()) {
             case R.id.backbtn2:
                 back2Step1();
