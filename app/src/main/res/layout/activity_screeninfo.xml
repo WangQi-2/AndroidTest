@@ -7,6 +7,7 @@
         style="@style/AppTheme.WWTextView"
         android:textSize="@dimen/text_normal"
         android:textColor="@color/red"
+        android:singleLine="false"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

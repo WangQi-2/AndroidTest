@@ -17,6 +17,7 @@ import com.wq.androidtest.activity.anim.CardFlipViewActivity;
 import com.wq.androidtest.activity.anim.CrossFadeActivity;
 import com.wq.androidtest.activity.anim.CubeAnimActivity;
 import com.wq.androidtest.activity.anim.LayoutTransactionActivity;
+import com.wq.androidtest.activity.anim.RGBAnimActivity;
 import com.wq.androidtest.activity.anim.ViewCube2Activity;
 import com.wq.androidtest.activity.anim.ViewCubeActivity;
 import com.wq.androidtest.activity.anim.ViewPropertyAnimatorActivity;
@@ -190,5 +191,6 @@ public class DemoTableActivity extends BaseActivity {
         demoEntryModels.add(new DemoEntryModel("viewpager", ViewPagerActivity.class));
         demoEntryModels.add(new DemoEntryModel("tick", TickViewActivity.class));
         demoEntryModels.add(new DemoEntryModel("seekbar", SeekBarActivity.class));
+        demoEntryModels.add(new DemoEntryModel("RGBAnim", RGBAnimActivity.class));
     }
 }

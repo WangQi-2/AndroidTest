@@ -1,5 +1,6 @@
 package com.wq.androidtest.activity;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.widget.TextView;
@@ -34,7 +35,8 @@ public class ScreenInfoActivity extends BaseActivity {
                 "ydpi:" + ydpi + "\n" +
                 "width in inch:" + ScreenUtil.getScreenWidthInInch(this) + "\n" +
                 "height in inch:" + ScreenUtil.getScreenHeigthInInch(this) + "\n" +
-                "size in inch:" + ScreenUtil.getScreenSizeInInch(this) + "\n";
+                "size in inch:" + ScreenUtil.getScreenSizeInInch(this) + "\n"+
+                "version code:" + Build.VERSION.SDK_INT;
         info.setText(str);
     }
 }
