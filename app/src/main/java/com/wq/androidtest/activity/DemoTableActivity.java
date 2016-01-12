@@ -57,7 +57,6 @@ import java.util.ArrayList;
 
 public class DemoTableActivity extends BaseActivity {
 
-
     GridView mDemoEntrys;
     DemoEntryAdapter mAdapter;
     public static ArrayList<DemoEntryModel> demoEntryModels;
