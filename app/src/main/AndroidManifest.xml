@@ -126,6 +126,7 @@
         <activity android:name=".activity.anim.RGBAnimActivity" />
         <activity android:name=".activity.anim.CardFlipViewActivity" />
         <activity android:name=".activity.anim.CardFlipFragmentAcitivity" />
+        <activity android:name=".activity.anim.FlipActivity" />
         <activity android:name=".activity.customview.IndicatorActivity" />
         <activity android:name=".activity.customview.SunAndMoonActivity" />
         <activity android:name=".activity.customview.TickViewActivity" />

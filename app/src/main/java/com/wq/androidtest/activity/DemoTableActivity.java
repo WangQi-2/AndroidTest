@@ -16,6 +16,7 @@ import com.wq.androidtest.activity.anim.CardFlipFragmentAcitivity;
 import com.wq.androidtest.activity.anim.CardFlipViewActivity;
 import com.wq.androidtest.activity.anim.CrossFadeActivity;
 import com.wq.androidtest.activity.anim.CubeAnimActivity;
+import com.wq.androidtest.activity.anim.FlipActivity;
 import com.wq.androidtest.activity.anim.LayoutTransactionActivity;
 import com.wq.androidtest.activity.anim.RGBAnimActivity;
 import com.wq.androidtest.activity.anim.ViewCube2Activity;
@@ -137,6 +138,8 @@ public class DemoTableActivity extends BaseActivity {
         groupsList.add(new DemoEntryModel("flipview", CardFlipViewActivity.class));
         groupsList.add(new DemoEntryModel("zoom", ZoomActivity.class));
         groupsList.add(new DemoEntryModel("flipFragment", CardFlipFragmentAcitivity.class));
+        groupsList.add(new DemoEntryModel("RGBAnim", RGBAnimActivity.class));
+        groupsList.add(new DemoEntryModel("flipanim", FlipActivity.class));
         groupsModel = new DemoEntryModel("*anim", null, groupsList);
         demoEntryModels.add(groupsModel);
         //system
@@ -191,6 +194,5 @@ public class DemoTableActivity extends BaseActivity {
         demoEntryModels.add(new DemoEntryModel("viewpager", ViewPagerActivity.class));
         demoEntryModels.add(new DemoEntryModel("tick", TickViewActivity.class));
         demoEntryModels.add(new DemoEntryModel("seekbar", SeekBarActivity.class));
-        demoEntryModels.add(new DemoEntryModel("RGBAnim", RGBAnimActivity.class));
     }
 }
