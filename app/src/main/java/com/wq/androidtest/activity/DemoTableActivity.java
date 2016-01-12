@@ -57,6 +57,10 @@ import java.util.ArrayList;
 
 public class DemoTableActivity extends BaseActivity {
 
+    private void addSingleItems() {
+        demoEntryModels.add(new DemoEntryModel("test scrollview", ScrollViewActivity.class));
+    }
+
     GridView mDemoEntrys;
     DemoEntryAdapter mAdapter;
     public static ArrayList<DemoEntryModel> demoEntryModels;
@@ -104,24 +108,103 @@ public class DemoTableActivity extends BaseActivity {
         ArrayList<DemoEntryModel> groupsList;
         DemoEntryModel groupsModel;
         //custom view
-        groupsList = new ArrayList<>();
-        groupsList.add(new DemoEntryModel("ratingbar", RatingActivity.class));
-        groupsList.add(new DemoEntryModel("circleview", CircleViewActivity.class));
-        groupsList.add(new DemoEntryModel("progressbutton", ProgressButtonActivity.class));
-        groupsList.add(new DemoEntryModel("circleprogress", CircleProgressActivity.class));
-        groupsList.add(new DemoEntryModel("indicator", IndicatorActivity.class));
-        groupsList.add(new DemoEntryModel("sun moon", SunAndMoonActivity.class));
-        groupsList.add(new DemoEntryModel("gif view", GifViewActivity.class));
-        groupsModel = new DemoEntryModel("*views", null, groupsList);
-        demoEntryModels.add(groupsModel);
+        addCustomViewItems();
         //custom view group
-        groupsList = new ArrayList<>();
-        groupsList.add(new DemoEntryModel("horizontalscorllex", HorizontalScrollExActivity.class));
-        groupsList.add(new DemoEntryModel("flowlayout", FlowLayoutActivity.class));
-        groupsList.add(new DemoEntryModel("ripple", RippleLayoutActivity.class));
-        groupsModel = new DemoEntryModel("*viewgroups", null, groupsList);
-        demoEntryModels.add(groupsModel);
+        addCustomViewGroupItems();
         //anim
+        addAnimItems();
+        //system
+        addSystemItems();
+        //view
+        addViewItems();
+        //viewgroup
+        addViewGroupItems();
+        //framework
+        addFramework();
+        //functions
+        addFunctionItems();
+        //single
+        addSingleItems();
+    }
+
+    private void addViewItems() {
+        ArrayList<DemoEntryModel> groupsList;
+        DemoEntryModel groupsModel;
+        groupsList = new ArrayList<>();
+        groupsModel = new DemoEntryModel("*view", null, groupsList);
+        demoEntryModels.add(groupsModel);
+    }
+
+    private void addFunctionItems() {
+        ArrayList<DemoEntryModel> groupsList;
+        DemoEntryModel groupsModel;
+        groupsList = new ArrayList<>();
+        groupsList.add(new DemoEntryModel("back", FakeExitActivity.class));
+        groupsList.add(new DemoEntryModel("bezier", BezierActivity.class));
+        groupsList.add(new DemoEntryModel("update", UpdateApkActivity.class));
+        groupsList.add(new DemoEntryModel("blurDialog", BlurDialogActivity.class));
+        groupsList.add(new DemoEntryModel("notification", NotificationActivity.class));
+        groupsList.add(new DemoEntryModel("view trans", ViewTransActivity.class));
+        groupsList.add(new DemoEntryModel("test speed", ShowNetWorkSpeedActivity.class));
+        groupsList.add(new DemoEntryModel("floatingview", FloatingWindowActivity.class));
+        groupsList.add(new DemoEntryModel("imagesize", ImageSizeActivity.class));
+        groupsModel = new DemoEntryModel("*function", null, groupsList);
+        demoEntryModels.add(groupsModel);
+    }
+
+    private void addFramework() {
+        ArrayList<DemoEntryModel> groupsList;
+        DemoEntryModel groupsModel;
+        groupsList = new ArrayList<>();
+        groupsList.add(new DemoEntryModel("flatUI", FlatUIActivity.class));
+        groupsList.add(new DemoEntryModel("fbutton", FButtonActivity.class));
+        groupsList.add(new DemoEntryModel("eventbus", EventBusDemoActivity.class));
+        groupsModel = new DemoEntryModel("*framework", null, groupsList);
+        demoEntryModels.add(groupsModel);
+    }
+
+
+    private void addViewGroupItems() {
+        ArrayList<DemoEntryModel> groupsList;
+        DemoEntryModel groupsModel;
+        groupsList = new ArrayList<>();
+        groupsList.add(new DemoEntryModel("viewpager", ViewPagerActivity.class));
+        groupsList.add(new DemoEntryModel("seekbar", SeekBarActivity.class));
+        groupsList.add(new DemoEntryModel("mListView height", ListViewHeightAcitvity.class));
+        groupsList.add(new DemoEntryModel("outScroll", OutScrollViewActivity.class));
+        groupsList.add(new DemoEntryModel("scroll in scroll", ScrollInScrollActivity.class));
+        groupsModel = new DemoEntryModel("*scrollview", null, groupsList);
+        demoEntryModels.add(groupsModel);
+    }
+
+    private void addSystemItems() {
+        ArrayList<DemoEntryModel> groupsList;
+        DemoEntryModel groupsModel;
+        groupsList = new ArrayList<>();
+        groupsList.add(new DemoEntryModel("show ip", ShowIPActivity.class));
+        groupsList.add(new DemoEntryModel("cardview", CardViewActivity.class));
+        groupsList.add(new DemoEntryModel("intent", IntentActivity.class));
+        groupsList.add(new DemoEntryModel("recyclelist", RecycleViewListViewActivity.class));
+        groupsList.add(new DemoEntryModel("recyclegrid", RecycleViewGridActivity.class));
+        groupsList.add(new DemoEntryModel("recyclepubu", RecycleViewPuBuActivity.class));
+        groupsList.add(new DemoEntryModel("enabletest", ViewEnableTestActivity.class));
+        groupsList.add(new DemoEntryModel("recyclepubu2", RecycleViewPuBu2Activity.class));
+        groupsList.add(new DemoEntryModel("switch", SwitchActivity.class));
+        groupsList.add(new DemoEntryModel("textstyle", TextActivity.class));
+        groupsList.add(new DemoEntryModel("test focused", FocusTesetActivity.class));
+        groupsList.add(new DemoEntryModel("clipboard", ClipboardActivity.class));
+        groupsList.add(new DemoEntryModel("screeninfo", ScreenInfoActivity.class));
+        groupsList.add(new DemoEntryModel("ems test", EmsTestActivity.class));
+        groupsList.add(new DemoEntryModel("deviceInfo", DeviceInfoActivity.class));
+        groupsList.add(new DemoEntryModel("test volume", VolumeActivity.class));
+        groupsList.add(new DemoEntryModel("bitmap drawable", BitmapDrawableActivity.class));
+        groupsModel = new DemoEntryModel("*system", null, groupsList);
+        demoEntryModels.add(groupsModel);
+    }
+
+    private void addAnimItems() {
+        ArrayList<DemoEntryModel> groupsList;
+        DemoEntryModel groupsModel;
         groupsList = new ArrayList<>();
         groupsList.add(new DemoEntryModel("layoutanim", LayoutAnimationActivity.class));
         groupsList.add(new DemoEntryModel("anim", AnimActivity.class));
@@ -141,57 +224,37 @@ public class DemoTableActivity extends BaseActivity {
         groupsList.add(new DemoEntryModel("flipanim", FlipActivity.class));
         groupsModel = new DemoEntryModel("*anim", null, groupsList);
         demoEntryModels.add(groupsModel);
-        //system
-        groupsList = new ArrayList<>();
-        groupsList.add(new DemoEntryModel("cardview", CardViewActivity.class));
-        groupsList.add(new DemoEntryModel("intent", IntentActivity.class));
-        groupsList.add(new DemoEntryModel("recyclelist", RecycleViewListViewActivity.class));
-        groupsList.add(new DemoEntryModel("recyclegrid", RecycleViewGridActivity.class));
-        groupsList.add(new DemoEntryModel("recyclepubu", RecycleViewPuBuActivity.class));
-        groupsList.add(new DemoEntryModel("recyclepubu2", RecycleViewPuBu2Activity.class));
-        groupsList.add(new DemoEntryModel("switch", SwitchActivity.class));
-        groupsList.add(new DemoEntryModel("textstyle", TextActivity.class));
-        groupsList.add(new DemoEntryModel("test focused", FocusTesetActivity.class));
-        groupsList.add(new DemoEntryModel("clipboard", ClipboardActivity.class));
-        groupsList.add(new DemoEntryModel("screeninfo", ScreenInfoActivity.class));
-        groupsList.add(new DemoEntryModel("ems test", EmsTestActivity.class));
-        groupsList.add(new DemoEntryModel("deviceInfo", DeviceInfoActivity.class));
-        groupsList.add(new DemoEntryModel("test volume", VolumeActivity.class));
-        groupsList.add(new DemoEntryModel("bitmap drawable", BitmapDrawableActivity.class));
-        groupsModel = new DemoEntryModel("*system", null, groupsList);
-        demoEntryModels.add(groupsModel);
+    }
 
-        //scroll
+    private void addCustomViewGroupItems() {
+        ArrayList<DemoEntryModel> groupsList;
+        DemoEntryModel groupsModel;
         groupsList = new ArrayList<>();
-        groupsList.add(new DemoEntryModel("outScroll", OutScrollViewActivity.class));
-        groupsList.add(new DemoEntryModel("scroll in scroll", ScrollInScrollActivity.class));
-        groupsModel = new DemoEntryModel("*scrollview", null, groupsList);
+        groupsList.add(new DemoEntryModel("horizontalscorllex", HorizontalScrollExActivity.class));
+        groupsList.add(new DemoEntryModel("flowlayout", FlowLayoutActivity.class));
+        groupsList.add(new DemoEntryModel("tick", TickViewActivity.class));
+        groupsList.add(new DemoEntryModel("horizontalgridview", HorizontalGridViewActivity.class));
+        groupsList.add(new DemoEntryModel("recyleViewGridview", RecyleViewGridViewActivity.class));
+        groupsList.add(new DemoEntryModel("ripple", RippleLayoutActivity.class));
+        groupsModel = new DemoEntryModel("*viewgroups", null, groupsList);
         demoEntryModels.add(groupsModel);
+    }
 
-        //single func
-        demoEntryModels.add(new DemoEntryModel("show ip", ShowIPActivity.class));
-        demoEntryModels.add(new DemoEntryModel("eventbus", EventBusDemoActivity.class));
-        demoEntryModels.add(new DemoEntryModel("update", UpdateApkActivity.class));
-        demoEntryModels.add(new DemoEntryModel("mListView height", ListViewHeightAcitvity.class));
-        demoEntryModels.add(new DemoEntryModel("risetextview", RiseTextViewActivity.class));
-        demoEntryModels.add(new DemoEntryModel("enabletest", ViewEnableTestActivity.class));
-        demoEntryModels.add(new DemoEntryModel("view trans", ViewTransActivity.class));
-        demoEntryModels.add(new DemoEntryModel("notification", NotificationActivity.class));
-        demoEntryModels.add(new DemoEntryModel("number clock", FontMetricsActivity.class));
-        demoEntryModels.add(new DemoEntryModel("imagesize", ImageSizeActivity.class));
-        demoEntryModels.add(new DemoEntryModel("customDrawable", CustomDrawableActivity.class));
-        demoEntryModels.add(new DemoEntryModel("blurDialog", BlurDialogActivity.class));
-        demoEntryModels.add(new DemoEntryModel("back", FakeExitActivity.class));
-        demoEntryModels.add(new DemoEntryModel("fbutton", FButtonActivity.class));
-        demoEntryModels.add(new DemoEntryModel("flatUI", FlatUIActivity.class));
-        demoEntryModels.add(new DemoEntryModel("bezier", BezierActivity.class));
-        demoEntryModels.add(new DemoEntryModel("floatingview", FloatingWindowActivity.class));
-        demoEntryModels.add(new DemoEntryModel("test speed", ShowNetWorkSpeedActivity.class));
-        demoEntryModels.add(new DemoEntryModel("horizontalgridview", HorizontalGridViewActivity.class));
-        demoEntryModels.add(new DemoEntryModel("recyleViewGridview", RecyleViewGridViewActivity.class));
-        demoEntryModels.add(new DemoEntryModel("test scrollview", ScrollViewActivity.class));
-        demoEntryModels.add(new DemoEntryModel("viewpager", ViewPagerActivity.class));
-        demoEntryModels.add(new DemoEntryModel("tick", TickViewActivity.class));
-        demoEntryModels.add(new DemoEntryModel("seekbar", SeekBarActivity.class));
+    private void addCustomViewItems() {
+        ArrayList<DemoEntryModel> groupsList;
+        DemoEntryModel groupsModel;
+        groupsList = new ArrayList<>();
+        groupsList.add(new DemoEntryModel("ratingbar", RatingActivity.class));
+        groupsList.add(new DemoEntryModel("circleview", CircleViewActivity.class));
+        groupsList.add(new DemoEntryModel("progressbutton", ProgressButtonActivity.class));
+        groupsList.add(new DemoEntryModel("circleprogress", CircleProgressActivity.class));
+        groupsList.add(new DemoEntryModel("indicator", IndicatorActivity.class));
+        groupsList.add(new DemoEntryModel("number clock", FontMetricsActivity.class));
+        groupsList.add(new DemoEntryModel("sun moon", SunAndMoonActivity.class));
+        groupsList.add(new DemoEntryModel("risetextview", RiseTextViewActivity.class));
+        groupsList.add(new DemoEntryModel("gif view", GifViewActivity.class));
+        groupsList.add(new DemoEntryModel("customDrawable", CustomDrawableActivity.class));
+        groupsModel = new DemoEntryModel("*views", null, groupsList);
+        demoEntryModels.add(groupsModel);
     }
 }
