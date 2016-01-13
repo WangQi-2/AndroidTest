@@ -1,5 +1,6 @@
 package com.wq.androidtest.activity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.View;
@@ -22,6 +23,7 @@ public class DrawerLayoutActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_drawerlayout);
         drawerLayout = (android.support.v4.widget.DrawerLayout) findViewById(R.id.drawer_layout);
+        drawerLayout.setScrimColor(Color.RED);
         leftView = findViewById(R.id.left_drawer);
         leftView.setOnClickListener(new View.OnClickListener() {
             @Override

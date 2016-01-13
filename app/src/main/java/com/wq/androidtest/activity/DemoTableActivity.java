@@ -19,6 +19,7 @@ import com.wq.androidtest.activity.anim.CubeAnimActivity;
 import com.wq.androidtest.activity.anim.FlipActivity;
 import com.wq.androidtest.activity.anim.LayoutAnimationActivity;
 import com.wq.androidtest.activity.anim.LayoutTransactionActivity;
+import com.wq.androidtest.activity.anim.MoreFlipActivity;
 import com.wq.androidtest.activity.anim.RGBAnimActivity;
 import com.wq.androidtest.activity.anim.ViewCube2Activity;
 import com.wq.androidtest.activity.anim.ViewCubeActivity;
@@ -89,6 +90,7 @@ public class DemoTableActivity extends BaseActivity {
         demoEntryModels.add(new DemoEntryModel("test scrollview", ScrollViewActivity.class));
         demoEntryModels.add(new DemoEntryModel("mToolbar", ToolbarActivity.class));
         demoEntryModels.add(new DemoEntryModel("drawer", DrawerLayoutActivity.class));
+        demoEntryModels.add(new DemoEntryModel("moreflip", MoreFlipActivity.class));
     }
 
     GridView mDemoEntrys;
