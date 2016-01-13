@@ -7,6 +7,9 @@
     <!-- other -->
     <string name="default1">默认</string>
     <string name="custom">自定义</string>
+    <string name="drawer_open">open</string>
+    <string name="drawer_close">close</string>
+
 
 
     <!-- animation -->
