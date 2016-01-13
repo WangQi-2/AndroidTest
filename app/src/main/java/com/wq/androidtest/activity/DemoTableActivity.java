@@ -58,6 +58,7 @@ import com.wq.androidtest.activity.function.ShowNetWorkSpeedActivity;
 import com.wq.androidtest.activity.function.UpdateApkActivity;
 import com.wq.androidtest.activity.others.SwitchActivity;
 import com.wq.androidtest.activity.system.BitmapDrawableActivity;
+import com.wq.androidtest.activity.system.ColorStateListActivity;
 import com.wq.androidtest.activity.system.DeviceInfoActivity;
 import com.wq.androidtest.activity.system.EmsTestActivity;
 import com.wq.androidtest.activity.system.FocusTesetActivity;
@@ -91,6 +92,7 @@ public class DemoTableActivity extends BaseActivity {
         demoEntryModels.add(new DemoEntryModel("mToolbar", ToolbarActivity.class));
         demoEntryModels.add(new DemoEntryModel("drawer", DrawerLayoutActivity.class));
         demoEntryModels.add(new DemoEntryModel("moreflip", MoreFlipActivity.class));
+        demoEntryModels.add(new DemoEntryModel("colorstatelist", ColorStateListActivity.class));
     }
 
     GridView mDemoEntrys;

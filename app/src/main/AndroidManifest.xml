@@ -94,14 +94,14 @@
         <activity android:name=".activity.DrawerLayoutActivity" />
         <activity android:name=".activity.anim.ViewCube2Activity">
             <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--<action android:name="android.intent.action.MAIN" />-->
+            <!--<category android:name="android.intent.category.LAUNCHER" />-->
             <!--</intent-filter>-->
         </activity>
         <activity android:name=".activity.anim.ViewCube3Activity">
             <!--<intent-filter>-->
-                <!--<action android:name="android.intent.action.MAIN" />-->
-                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--<action android:name="android.intent.action.MAIN" />-->
+            <!--<category android:name="android.intent.category.LAUNCHER" />-->
             <!--</intent-filter>-->
         </activity>
         <activity android:name=".activity.anim.AnimTweenActivity">
@@ -112,6 +112,7 @@
         </activity>
         <activity android:name=".activity.customview.BezierActivity" />
         <activity android:name=".activity.anim.MoreFlipActivity" />
+        <activity android:name=".activity.system.ColorStateListActivity" />
         <activity android:name=".activity.function.FloatingWindowActivity" />
         <activity android:name=".activity.function.ShowNetWorkSpeedActivity" />
         <activity android:name=".activity.system.VolumeActivity" />
@@ -132,9 +133,9 @@
         <activity android:name=".activity.customview.IndicatorActivity" />
         <activity android:name=".activity.customview.SunAndMoonActivity" />
         <activity android:name=".activity.customview.TickViewActivity" />
-        <activity android:name=".activity.ToolbarActivity"
-            android:theme="@style/AppBaseTheme"
-            />
+        <activity
+            android:name=".activity.ToolbarActivity"
+            android:theme="@style/AppBaseTheme" />
         <activity android:name=".activity.customview.GifViewActivity" />
         <activity
             android:name=".activity.customviewgroup.ScrollViewActivity"
